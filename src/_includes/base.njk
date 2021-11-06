@@ -5,11 +5,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Askeland.me - {{ title }}</title>
+        <title>DSEV - {{ title }}</title>
 
         <!-- Stylesheet -->
         <link rel="stylesheet" href="/style.css" />
-        
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto&display=swap" rel="stylesheet" />
@@ -17,10 +16,40 @@
         <!-- Alpine js -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     </head>
-    <body>
-        <!-- Content -->
-        <main class="flex flex-col flex-grow p-3">
-            {{ content | safe }}
-        </main>
+    <body class="bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-background">
+        <div class="flex flex-col h-screen justify-between max-w-6xl mx-auto">
+            <!-- Navbar -->
+            {% include "navbar.njk" %}
+
+            <!-- Content -->
+            <main class="flex flex-col flex-grow p-3">
+                {{ content | safe }}
+            </main>
+
+            <!-- Footer -->
+            {% include "footer.njk" %}
+        </div>
     </body>
 </html>
+
+<!-- Scripts -->
+<script>
+    /* Sets theme based on loalstorage */
+    if (localStorage.theme === "dark" || (!"theme" in localStorage && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+        document.querySelector("html").classList.add("dark");
+    } else if (localStorage.theme === "dark") {
+        document.querySelector("html").classList.add("dark");
+    }
+
+    /* Change theme */
+    document.getElementById("switchTheme").addEventListener("click", function () {
+        let htmlClasses = document.querySelector("html").classList;
+        if (localStorage.theme == "dark") {
+            htmlClasses.remove("dark");
+            localStorage.removeItem("theme");
+        } else {
+            htmlClasses.add("dark");
+            localStorage.theme = "dark";
+        }
+    });
+</script>

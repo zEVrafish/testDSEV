@@ -1,8 +1,9 @@
 {
-    "title": "DSEV",
+    "title": "Danish Society for Extracellular Vesicles",
     "url": "http://www.dsev.dk",
     "language": "en",
     "description": "Webpage for the Danish Society for Extracellular Vesicles.",
+    "source_code_url": "https://github.com/Danish-Society-of-EVs/webpage/tree/develop",
     "contact_info": {
         "name": "Danish Society for Extracellular vesicles",
         "email": "contact@dsev.dk"
