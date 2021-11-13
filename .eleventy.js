@@ -22,22 +22,19 @@ const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(type, src, alt, style, sizes) {
     /* Check if logo or not */
+    format = ["avif", "webp", "jpeg"]
     if (type == "logo") {
-        let metadata = await Image(src, {
-            widths: [300, 600],
-            formats: ["avif", "png"],
-            urlPath: "/images/",
-            outputDir: "dist/images/",
-        });
-    } else {
-        let metadata = await Image(src, {
-            widths: [300, 600],
-            formats: ["avif", "webp", "jpeg"],
-            urlPath: "/images/",
-            outputDir: "dist/images/",
-        });
+        let format = ["avif", "png"];
     }
 
+    /* Write metadata */
+    let metadata = await Image(src, {
+        widths: [300, 600],
+        formats: format,
+        urlPath: "/images/",
+        outputDir: "dist/images/",
+    });
+    
     /* Set image attributes */
     let image_attributes = {
         alt,
@@ -48,7 +45,7 @@ async function imageShortcode(type, src, alt, style, sizes) {
     };
 
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return Image.generateHTML(metadata, imagimage_attributes);
+    return Image.generateHTML(metadata, image_attributes);
 }
 
 /* Config settings */
