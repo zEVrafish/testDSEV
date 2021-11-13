@@ -22,11 +22,13 @@ const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(type, src, alt, style, sizes) {
     /* Check if logo or not */
-    format = ["avif", "webp", "jpeg"]
-    if (type == "logo") {
-        let format = ["avif", "png"];
-    }
+    let format = ["avif", "webp", "jpeg"]
 
+    console.log(type)    
+    if (type == "logo") {
+        format = ["avif", "png"];
+    }
+    console.log(format)
     /* Write metadata */
     let metadata = await Image(src, {
         widths: [300, 600],
@@ -34,7 +36,7 @@ async function imageShortcode(type, src, alt, style, sizes) {
         urlPath: "/images/",
         outputDir: "dist/images/",
     });
-    
+
     /* Set image attributes */
     let image_attributes = {
         alt,
