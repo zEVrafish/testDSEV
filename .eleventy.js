@@ -20,15 +20,26 @@ const Image = require("@11ty/eleventy-img");
     return `<img src="${data.url}" class="${style}" alt="${alt}" loading="lazy" decoding="async">`;
 } */
 
-async function imageShortcode(src, alt, style, sizes) {
-    let metadata = await Image(src, {
-        widths: [300, 600],
-        formats: ["avif", "webp", "jpeg"],
-        urlPath: "/images/",
-        outputDir: "dist/images/",
-    });
+async function imageShortcode(type, src, alt, style, sizes) {
+    /* Check if logo or not */
+    if (type == "logo") {
+        let metadata = await Image(src, {
+            widths: [300, 600],
+            formats: ["avif", "png"],
+            urlPath: "/images/",
+            outputDir: "dist/images/",
+        });
+    } else {
+        let metadata = await Image(src, {
+            widths: [300, 600],
+            formats: ["avif", "webp", "jpeg"],
+            urlPath: "/images/",
+            outputDir: "dist/images/",
+        });
+    }
 
-    let imageAttributes = {
+    /* Set image attributes */
+    let image_attributes = {
         alt,
         sizes,
         loading: "lazy",
@@ -37,7 +48,7 @@ async function imageShortcode(src, alt, style, sizes) {
     };
 
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return Image.generateHTML(metadata, imageAttributes);
+    return Image.generateHTML(metadata, imagimage_attributes);
 }
 
 /* Config settings */
