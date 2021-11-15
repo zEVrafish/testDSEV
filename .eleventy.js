@@ -67,7 +67,7 @@ async function backgroundShortcode(src, alt, style) {
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
     let data = metadata.jpeg[metadata.jpeg.length - 1];
 
-    return `<div class="bg-cover 
+    return `<div class="bg-cover bg-center
     full-width h-full curved mix-blend-multiply" style="background-image: url(${data.url})" alt="${alt}" loading="lazy" decoding="async">`;
 }
 
