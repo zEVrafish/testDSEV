@@ -70,7 +70,7 @@ async function backgroundShortcode(src, alt, effect) {
 
     /* Return */
     return `<div class="bg-cover bg-center bg-fixed
-    full-width h-full curved ${effect}" style="background-image: url(${data.url})" alt="${alt}" loading="lazy" decoding="async">`;
+    full-width h-full curved ${effect}" style="background-image: url(${data.url})" alt="${alt}">`;
 }
 
 /* Config settings */
