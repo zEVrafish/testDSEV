@@ -3,18 +3,23 @@
 @tailwind utilities;
 @layer utilities {
     .curved {
-        border-bottom-left-radius: 95% 65%;
-        border-bottom-right-radius: 95% 65%;
+        border-bottom-left-radius: 95% 90%;
+        border-bottom-right-radius: 95% 90%;
+    }
+    .wrapper {
+        position: absolute;
+        width: 100%;
+        left:0px;
+        z-index: -1;
+        overflow: hidden;
+
+        
     }
     .full-width {
-        min-width: 150%;
-        display: flex;
+        min-width: 150vw;
         margin-left: -25vw;
         margin-right: -25vw;
-        justify-content: center;
-    }
-    .overlay:hover .after {
-        display: block;
-        background: rgba(0, 0, 0, .6);
+
+
     }
 }

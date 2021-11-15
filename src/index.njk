@@ -3,23 +3,20 @@ title: home
 layout: base.njk
 ---
 
-    
-    <div>
-        <!-- Image section -->
-        <div class="h-64">
-            {% image "logo", "src/images/vesicle.jpg", "Vesicles", "h-full object-cover curved full-width", "(min-width: 1) 1, 1" %}
- <!--            <div class="mix-blend-c absolute inset-0 h-full curved full-width bg-blue-800 ">
-            </div> -->
+<div>
+    <!-- Image section -->
+    <div class="">
+        <!-- Paralax image -->
+        <div class="wrapper h-32">
+            {% background "src/images/vesicle.jpg", "Vesicles", "", "(min-width: 200%) 1, 1" %}
+            <div class="bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500"></div>
         </div>
     </div>
-    
-<p>This is just a test to see if the setup works.</p>
-<p>2easda</p>
-<p class="text-2xl text-blue-600">Test of tailwind</p>
-<h1>Test</h1>
-<div>
 
-    <div class="curved bg-red-200 full-width h-24">
-</div>
+    <!-- Text -->
+    <div class="flex justify-center pt-36">
+        <p class="text-4xl">Welcome</p>
+    </div>
 
+    <div class="pt-96"></div>
 </div>

@@ -22,7 +22,7 @@ const Image = require("@11ty/eleventy-img");
 
 async function imageShortcode(type, src, alt, style, sizes) {
     /* Standard format */
-    let format = ["avif", "webp", "jpeg"]
+    let format = ["avif", "webp", "jpeg"];
 
     /* Logo formats */
     if (type == "logo") {
@@ -50,6 +50,27 @@ async function imageShortcode(type, src, alt, style, sizes) {
     return Image.generateHTML(metadata, image_attributes);
 }
 
+/* Background */
+async function backgroundShortcode(src, alt, style, sizes) {
+    if (alt === undefined) {
+        // You bet we throw an error on missing alt (alt="" works okay)
+        throw new Error(`Missing \`alt\` on myImage from: ${src}`);
+    }
+    /* Standard format */
+    let metadata = await Image(src, {
+        widths: [600],
+        formats: ["jpeg"],
+        urlPath: "/images/",
+        outputDir: "dist/images/",
+    });
+
+    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    let data = metadata.jpeg[metadata.jpeg.length - 1];
+
+    return `<div class="bg-fixed bg-cover overflow-auto 
+    full-width h-full curved" style="background-image: url(${data.url})">`;
+}
+
 /* Config settings */
 module.exports = function (eleventyConfig) {
     /* Eleventy will pick up content at build (_tmp is for dev) */
@@ -63,6 +84,7 @@ module.exports = function (eleventyConfig) {
 
     /* Image plugin */
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+    eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
 
     /* Set input and output directories */
     return {
