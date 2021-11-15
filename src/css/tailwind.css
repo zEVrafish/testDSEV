@@ -7,11 +7,14 @@
         border-bottom-right-radius: 95% 65%;
     }
     .full-width {
-        width: 120vw;
-        position: relative;
-        left: 40%;
-        right: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
+        min-width: 150%;
+        display: flex;
+        margin-left: -25vw;
+        margin-right: -25vw;
+        justify-content: center;
+    }
+    .overlay:hover .after {
+        display: block;
+        background: rgba(0, 0, 0, .6);
     }
 }
