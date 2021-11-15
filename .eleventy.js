@@ -51,7 +51,7 @@ async function imageShortcode(type, src, alt, style, sizes) {
 }
 
 /* Background */
-async function backgroundShortcode(src, alt, style, sizes) {
+async function backgroundShortcode(src, alt, style) {
     if (alt === undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error(`Missing \`alt\` on myImage from: ${src}`);
@@ -67,8 +67,8 @@ async function backgroundShortcode(src, alt, style, sizes) {
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
     let data = metadata.jpeg[metadata.jpeg.length - 1];
 
-    return `<div class="bg-fixed bg-cover overflow-auto 
-    full-width h-full curved mix-blend-multiply" style="background-image: url(${data.url})">`;
+    return `<div class="bg-fixed bg-cover 
+    full-width h-full curved mix-blend-multiply" style="background-image: url(${data.url})" alt="${alt}" loading="lazy" decoding="async">`;
 }
 
 /* Config settings */
