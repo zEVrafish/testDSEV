@@ -58,7 +58,7 @@ async function backgroundShortcode(src, alt, style) {
     }
     /* Standard format */
     let metadata = await Image(src, {
-        widths: [600],
+        widths: [1200],
         formats: ["jpeg"],
         urlPath: "/images/",
         outputDir: "dist/images/",
