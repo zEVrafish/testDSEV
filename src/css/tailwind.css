@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+    .curved {
+        border-bottom-left-radius: 95% 65%;
+        border-bottom-right-radius: 95% 65%;
+    }
+    .full-width {
+        width: 120vw;
+        position: relative;
+        left: 40%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+    }
+}
