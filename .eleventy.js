@@ -68,7 +68,7 @@ async function backgroundShortcode(src, alt, style, sizes) {
     let data = metadata.jpeg[metadata.jpeg.length - 1];
 
     return `<div class="bg-fixed bg-cover overflow-auto 
-    full-width h-full curved mix-blend-darken	" style="background-image: url(${data.url})">`;
+    full-width h-full curved mix-blend-multiply" style="background-image: url(${data.url})">`;
 }
 
 /* Config settings */

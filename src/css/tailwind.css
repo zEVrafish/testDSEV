@@ -11,9 +11,7 @@
         width: 100%;
         left:0px;
         z-index: -1;
-        overflow: hidden;
-
-        
+        overflow: hidden;        
     }
     .full-width {
         min-width: 150vw;

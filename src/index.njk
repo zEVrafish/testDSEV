@@ -3,17 +3,26 @@ title: home
 layout: base.njk
 ---
 
-<div>
+<div class="">
     <!-- Image section -->
-    <div class="h-32">
-        <!-- Paralax image -->
-        <div class="wrapper full-width curved h-32 bg-gradient-to-r from-green-400 to-blue-500">
-            {% background "src/images/vesicle.jpg", "Vesicles", "", "(min-width: 200%) 1, 1" %}</div>
-        <div class="bg-gradient-to-r full-width h-32 from-yellow-400 via-red-500 to-pink-500"></div>
+    <div>
+        <div class="h-44 bg-transparent">
+            <!-- Paralax image -->
+            <div class="wrapper full-width curved h-44 bg-gradient-to-r from-green-400 to-blue-500">{% background "src/images/vesicle.jpg", "Vesicles", "", "(min-width: 200%) 1, 1" %}</div>
+        </div>
     </div>
 
     <!-- Text -->
-    <div class="relative flex justify-center pt-36">
-        <p class="text-4xl">Welcome</p>
+    <div>
+        <div class="flex flex-col text-center p-2 ">
+            <p class="text-4xl">Welcome</p>
+            <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
+            <br>
+            <p>As an organization, DSEV connects researchers at its Annual Meeting and reach out to global EV researcheres and workshops/events</p>
+<br>
+<p>If you are a researcher interested in learning more about extracellular vesicle, please consider joining DSEV.</p>
+        </div>
     </div>
 </div>
+
+<div class="pt-96"></div>
