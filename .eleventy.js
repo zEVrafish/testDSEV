@@ -51,11 +51,12 @@ async function imageShortcode(type, src, alt, style, sizes) {
 }
 
 /* Background */
-async function backgroundShortcode(src, alt, style) {
+async function backgroundShortcode(src, alt, effect) {
+    /* Error checking */
     if (alt === undefined) {
-        // You bet we throw an error on missing alt (alt="" works okay)
         throw new Error(`Missing \`alt\` on myImage from: ${src}`);
     }
+    
     /* Standard format */
     let metadata = await Image(src, {
         widths: [1200],
@@ -64,11 +65,12 @@ async function backgroundShortcode(src, alt, style) {
         outputDir: "dist/images/",
     });
 
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    /* Dont know that this does */
     let data = metadata.jpeg[metadata.jpeg.length - 1];
 
+    /* Return */
     return `<div class="bg-cover bg-center
-    full-width h-full curved mix-blend-multiply" style="background-image: url(${data.url})" alt="${alt}" loading="lazy" decoding="async">`;
+    full-width h-full curved ${effect}" style="background-image: url(${data.url})" alt="${alt}" loading="lazy" decoding="async">`;
 }
 
 /* Config settings */
