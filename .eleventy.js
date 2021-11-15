@@ -69,7 +69,7 @@ async function backgroundShortcode(src, alt, effect) {
     let data = metadata.jpeg[metadata.jpeg.length - 1];
 
     /* Return */
-    return `<div class="bg-rcove bg-center
+    return `<div class="object-cover object-center
     full-width h-full curved ${effect}" style="background-image: url(${data.url})" alt="${alt}" loading="lazy" decoding="async">`;
 }
 
