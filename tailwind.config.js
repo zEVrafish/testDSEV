@@ -11,6 +11,7 @@ module.exports = {
             },
         },
     },
+    important: true,
     variants: {
         extend: {
             display: ["dark"],

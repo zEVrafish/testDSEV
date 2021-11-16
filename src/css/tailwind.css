@@ -10,7 +10,6 @@
         position: absolute;
         width: 100%;
         left:0px;
-        z-index: -1;
         overflow: hidden;        
     }
     .full-width {

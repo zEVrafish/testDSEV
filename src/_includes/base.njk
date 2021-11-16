@@ -16,18 +16,22 @@
         <!-- Alpine js -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     </head>
-    <body class="bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-background">
-        <div class="flex flex-col h-screen justify-between max-w-6xl mx-auto">
+    <body class="bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-background ">
+        <div class="flex flex-col h-screen justify-between">
             <!-- Navbar -->
-            {% include "navbar.njk" %} 
+            <header class="container mx-auto flex max-w-4xl justify-between">
+            {% include "navbar.njk" %}
+            </header>
 
             <!-- Content -->
-            <main class="flex flex-col flex-grow">
+            <main class="">
                 {{ content | safe }}
             </main>
 
             <!-- Footer -->
-            {% include "footer.njk" %}
+            <footer class="flex flex-col items-center h-6 pb-2">
+                {% include "footer.njk" %}
+            </footer>
         </div>
     </body>
 </html>
