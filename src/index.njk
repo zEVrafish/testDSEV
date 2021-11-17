@@ -5,32 +5,35 @@ layout: base.njk
 
 <!-- Top section -->
 
-<div class="">
-    <div class="h-72 relative overflow-hidden">
+<div class="bg-red-200 screen/2">
+
+</div>
+<div>
+    <div class="h-screen relative overflow-hidden md:h-72 ">
         <!-- Logo -->
-        <div id="Logo container" class="w-screen h-52 overflow-hidden">
+        <div id="Logo container" class="w-screen h-60 overflow-hidden md:h-56">
             <div class="h-full bg-gradient-to-r full-width from-blue-500 to-green-400 curved overflow-hidden">{% background "src/images/vesicle.jpg", "Parallaxed background with EVs", "full-width h-full curved bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
         </div>
 
         <!-- Text -->
-        <div class="absolute inset-x-0 top-4 align-middle text-center h-10 text-white">
-            <div class="flex flex-col space-y-2">
-                <h2 class="text-4xl">Danish Society for Extracellular Vesicles</h2>
-                <hr class="border-0 bg-gray-100 text-gray-500 h-0.5 w-16 mx-auto">
-    
-                <p class="text-gray-300">Supporting Extracellular vesicle researh and education across Denmark. </p>
-            </div>
+        <div class="absolute inset-x-0 top-10 align-middle text-center h-10 text-white">
+            <div class="flex flex-col space-y-2 font-montserrat">
+                <h2 class="text-4xl font-medium">Danish Society for Extracellular Vesicles</h2>
+                <hr class="border-0 bg-gray-100 text-gray-500 h-0.5 w-16 mx-auto" />
 
+                <p class="text-gray-300">Supporting Extracellular vesicle researh and education across Denmark.</p>
+            </div>
         </div>
 
         <!-- All cards -->
         <div class="absolute inset-x-0 bottom-0 p-2">
-            <div class="relative flex flex-row space-x-6 justify-between max-w-2xl mx-auto text-black">
+            <div class="flex flex-col space-y-2 max-w-2xl text-black md:flex-row md:space-x-6 md:justify-between md:mx-auto">
+
                 <!-- Card 1 -->
-                <div class="bg-white w-1/3 rounded-md flex flex-col h-36 justify-between text-center p-3 shadow-lg">
+                <div class="relative bg-white w-4/5 rounded-md flex flex-col h-36 justify-between text-center p-3 shadow-lg mx-auto md:w-1/3">
                     <!-- Logo -->
-                    <div class="text-red-900 flex fill_current h-16 ">
-                            {{ '/src/images/icons/icon_about.svg' | svgContents("fill-current text-teal-500 block h-12 w-12 block mx-auto my-auto") | safe }}
+                    <div class="text-red-900 flex fill_current h-16">
+                        {{ '/src/images/icons/icon_about.svg' | svgContents("fill-current text-teal-500 block h-12 w-12 block mx-auto my-auto") | safe }}
                     </div>
 
                     <!-- Heading -->
@@ -39,28 +42,32 @@ layout: base.njk
                 </div>
 
                 <!-- Card 2 -->
-                <div class="bg-white w-1/3 rounded-md flex flex-col h-2/3 justify-between text-center p-3 shadow-lg">
+                <div class="relative bg-white w-4/5 rounded-md flex flex-col h-36 justify-between text-center p-3 shadow-lg mx-auto md:w-1/3">
                     <!-- Logo -->
-                    <div class="text-red-900 flex fill_current h-16 ">
+                    <div class="text-red-900 flex fill_current h-16">
                         {{ '/src/images/icons/icon_registration.svg' | svgContents("fill-current text-teal-500 block h-12 w-12 block mx-auto my-auto") | safe }}
-                </div>
+                    </div>
 
                     <!-- Heading -->
                     <h2 class="text-xl">Membership</h2>
-                    <p class="text-sm text-gray-600">How to become a member of <br> DSEV!</p>
-                </div>    
-
-                <!-- Card 3 -->            
-                <div class="bg-white w-1/3 rounded-md flex flex-col h-36 justify-between text-center p-3 shadow-lg">
-                    <!-- Logo -->
-                    <div class="text-red-900 flex fill_current h-16 ">
-                        {{ '/src/images/icons/icon_phone.svg' | svgContents("fill-current text-teal-500 block h-12 w-12 block mx-auto my-auto") | safe }}
+                    <p class="text-sm text-gray-600">
+                        How to become a member of <br />
+                        DSEV!
+                    </p>
                 </div>
+
+                <!-- Card 3 -->
+                <div class="relative bg-white w-4/5 rounded-md flex flex-col h-36 justify-between text-center p-3 shadow-lg mx-auto md:w-1/3">
+                    <!-- Logo -->
+                    <div class="text-red-900 flex fill_current h-16">
+                        {{ '/src/images/icons/icon_phone.svg' | svgContents("fill-current text-teal-500 block h-12 w-12 block mx-auto my-auto") | safe }}
+                    </div>
 
                     <!-- Heading -->
                     <h2 class="text-xl">Contact</h2>
                     <p class="text-sm text-gray-600">Find out how to contact us!</p>
-                </div>            </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -68,7 +75,7 @@ layout: base.njk
 <!-- Text section -->
 <div class="max-w-3xl pt-2 flex mx-auto p-2">
     <div class="flex flex-col space-y-2">
-        <p class="text-4xl text-center">Welcome</p>
+        <p class="text-4xl text-center">Who are we?</p>
         <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
         <p>As an organization, DSEV connects researchers at its Annual Meeting and reach out to global EV researcheres and workshops/events</p>
         <p>If you are a researcher interested in learning more about extracellular vesicle, please consider joining DSEV.</p>

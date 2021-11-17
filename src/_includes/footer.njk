@@ -1,14 +1,22 @@
 <!-- Footer -->
 <div class="flex flex-row items-center fill-current space-x-2 text-xs">
+    
+    <!-- Copyright -->
     <p id="footer"><!-- Javasrcipt --></p>
     <p>|</p>
+
+    <!-- Github -->
     <a class="items-center" href="{{ metadata.source_code_url }}" target="_blank">
         <div class="flex flex-row space-x-2 items-center fill-current">
-            <img class="fill_current" src="images/icon_github.svg" alt="">
+            {{ '/src/images/icons/icon_github.svg' | svgContents("fill-current text-teal-500 block h-3 w-3 block mx-auto my-auto") | safe }}
 
             <p>Source code</p>
         </div>
     </a>
+    <p>|</p>
+
+    <!-- Admin login -->
+    <a href="#">Admin login</a>
 </div>
 
 <!-- Scripts -->
