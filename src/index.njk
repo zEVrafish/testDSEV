@@ -106,36 +106,35 @@ layout: base.njk
 
 <!-- Spacer -->
 <div class="h-10"></div>
+<div>
+    {% include "src/_includes/carousel.njk" %}
 
+</div>
 <!-- Article wheel -->
 <div>
     <div>
         <div class="relative h-80 overflow-hidden">
-            
             <!-- background -->
             <div class="absolute bg-gray-500 h-full left-0 w-full">{% background "src/images/Scientific-articles.jpg", "Parallaxed background with EVs", "h-full bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
 
             <!-- Main container -->
-            <div id="Container" class="overflow-hidden h-full ">
+            <div id="Container" class="overflow-hidden h-full">
                 <!-- Content -->
-                <div class="absolute inset-x-0 max-w-3xl mx-auto top-0 flex flex-col h-full w-full">
+                <div class="absolute inset-x-0 max-w-3xl mx-auto top-0 flex flex-col h-full w-full p-4">
                     <!-- Text -->
                     <div class="flex flex-col w-full p-4 space-y-2">
-                        <h3 class="text-2xl text-center text-white font-semibold font-montserrat">
-                            Featured scientific articles
-                        </h3>
+                        <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
                         <p class="text-gray-300 font-montserrat text-center max-w-2xl mx-auto">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
                     </div>
 
                     <!-- Article wheel -->
-                    <div class="flex flex-col w-full bg-gray-50 h-full p-4 space-y-4">
-                        <p class="text-center text-white">Not yet completed</p>
+                    <div class="flex flex-col w-full bg-gray-50 h-full p-4 space-y-4 overflow-hidden">
+                        {% include "src/_includes/carousel.njk" %}
                     </div>
 
                     <!-- Buttons -->
                     <div>
                         <p class="text-center text-white p-2">Not yet completed</p>
-
                     </div>
                 </div>
             </div>
@@ -144,3 +143,4 @@ layout: base.njk
     <!-- Spacer -->
     <div class="h-10"></div>
 </div>
+
