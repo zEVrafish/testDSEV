@@ -4,6 +4,9 @@
 <div class="h-full" x-data="{ loading: false, showAlertMessage: false, showSuccessMessage: false, name: '', email: '', errors: [] }" x-cloak>
     <!-- Form -->
     <div class="h-full flex flex-col justify-between ">
+        <form hidden name="my-form-name" data-netlify-honeypot="bot-field" data-netlify="true">
+            <input name="email">
+        </form>
         <form class="h-full"
             method="POST"
             x-on:submit.prevent="loading=true; 
@@ -99,23 +102,3 @@
         </div>
     </div>
 </div>
-<form name="contact" method="POST" data-netlify="true">
-    <p>
-      <label>Your Name: <input type="text" name="name" /></label>   
-    </p>
-    <p>
-      <label>Your Email: <input type="email" name="email" /></label>
-    </p>
-    <p>
-      <label>Your Role: <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-      </select></label>
-    </p>
-    <p>
-      <label>Message: <textarea name="message"></textarea></label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
