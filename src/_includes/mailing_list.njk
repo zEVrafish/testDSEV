@@ -1,78 +1,51 @@
-<form hidden name="my-form-name" data-netlify-honeypot="bot-field" data-netlify="true">
-    <input name="email">
-</form>
 <div class="h-full" x-data="{ loading: false, showAlertMessage: false, showSuccessMessage: false, name: '', email: '', errors: [] }" x-cloak>
     <!-- Form -->
     <div class="h-full flex flex-col justify-between ">
-        <form hidden name="my-form-name" data-netlify-honeypot="bot-field" data-netlify="true">
-            <input name="email">
-        </form>
-        <form class="h-full"
+        <form 
+            id="my-form" 
+            action="https://formspree.io/f/xqkwrndd" 
             method="POST"
-            x-on:submit.prevent="loading=true; 
-                        if (email == '') {
-                            errors = {
-                                email: ['The email field is required']
-                            }
+            x-on:submit.prevent="loading=true;
+                const expression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+                const validEmail = expression.test(String(email).toLowerCase())
+                
+                if (email == '') {
+                    errors = {
+                        email: ['The email field is required']
+                    }
 
-                            loading = false;
-                            showAlertMessage = true;
-                            return;
-                        }
+                    loading = false;
+                    showAlertMessage = true;
+                    return;
+                } else if (email != '' && ! validEmail) {
+                    errors = {
+                        email: ['Please enter a valid email address']
+                    }
 
-                        const expression = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-                        const validEmail = expression.test(String(email).toLowerCase())
-
-                        if (email != '' && ! validEmail) {
-                            errors = {
-                                email: ['Enter a valid email']
-                            }
-
-                            loading = false;
-                            showAlertMessage = true;
-                            return;
-                        }
-                        
-                        // Replace this with your own Sheety API
-                        fetch('https://v2-api.sheety.co/8ab38e8355f6f144fb93048354178f03/subscribersApi/subscribers', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                subscriber: {
-                                    name: name,
-                                    email: email
-                                }
-                            })
-                        }).then(response => response.json())
-                            .then(data => {
-                                loading = false;
-                                showAlertMessage = false;
-                                showSuccessMessage = true;
-                                name = '';
-                                email = '';
-                            });
-                    "
-        >
-        <div class="flex h-full flex-col justify-between">
-            <div class="mb-2">
-                <div x-show="!showSuccessMessage">
-                    <label for="email" class="mb-1 block text-gray-700">Email</label>
-                </div>
-                <div class="relative">
+                    loading = false;
+                    showAlertMessage = true;
+                    return;
+                } else {
+                    showSuccessMessage = true;
+                }">
+            <div class="flex h-full flex-col justify-between">
+                <div class="mb-2">
                     <div x-show="!showSuccessMessage">
-                        <input  id="email" x-model="email" x-on:keydown="delete errors['email']" x-bind:class="{ 'border-red-500 text-red-500': errors['email'] }" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" type="text" placeholder="jane@example.com" />
-    
-                        <template x-if="errors['email']">
-                            <span>
-                                <svg class="w-6 h-6 absolute text-red-600 fill-current" style="top: 7px; right: 12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                    <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
-                                </svg>
-                                <span class="text-red-600 mt-1 text-sm block" x-text="errors['email']"></span>
-                            </span>
-                        </template>
+                        <label for="email" class="mb-1 block text-gray-700">Email</label>
                     </div>
+                    <div class="relative">
+                        <div x-show="!showSuccessMessage">
+                            <input id="email" name="Mailing list email" x-model="email" x-on:keydown="delete errors['email']" x-bind:class="{ 'border-red-500 text-red-500': errors['email'] }" class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" type="text" placeholder="jane@example.com" />
+        
+                            <template x-if="errors['email']">
+                                <span>
+                                    <svg class="w-6 h-6 absolute text-red-600 fill-current" style="top: 7px; right: 12px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                                    </svg>
+                                    <span class="text-red-600 mt-1 text-sm block" x-text="errors['email']"></span>
+                                </span>
+                            </template>
+                        </div>
                     <div x-show="showSuccessMessage" x-transition:enter="transition ease-out duration-300"
                     x-transition:enter-start="opacity-0 transform scale-90"
                     x-transition:enter-end="opacity-100 transform scale-100"
@@ -84,21 +57,44 @@
                         <p>Thank you for subscribing!</p>
                     </div>
                 </div>
-                </div>
             </div>
-
-            <!-- Button -->
-            <div x-show="!showSuccessMessage">
-                <button type="submit" class="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading == true">
-                <template x-if="loading == false">
-                    <div>Subscribe</div>
-                    </template>
-                    <template x-if="loading == true">
-                        <div>Subscribing...</div>
-                    </template>
-                </button>
-            </div>
-        </form>
         </div>
-    </div>
+
+        <!-- Button -->
+        <div x-show="!showSuccessMessage">
+            <button type="submit" class="text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading == true">
+            <template x-if="loading == false">
+                <div>Subscribe</div>
+                </template>
+                <template x-if="loading == true">
+                    <div>Subscribing...</div>
+                </template>
+            </button>
+        </div>
+    </form>
 </div>
+
+<script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+</script>
+</body>
+
