@@ -106,9 +106,7 @@ layout: base.njk
 
 <!-- Spacer -->
 <div class="h-10"></div>
-<div>
 
-</div>
 <!-- Article wheel -->
 <div>
     <div>
@@ -119,7 +117,7 @@ layout: base.njk
             <!-- Main container -->
             <div id="Container" class="overflow-hidden h-full">
                 <!-- Content -->
-                <div class="absolute inset-x-0 max-w-3xl mx-auto top-0 flex flex-col h-full w-full p-4">
+                <div class="absolute inset-x-0 max-w-3xl mx-auto top-0 flex flex-col h-full w-full">
                     <!-- Text -->
                     <div class="flex flex-col w-full p-4 space-y-2">
                         <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
@@ -127,7 +125,7 @@ layout: base.njk
                     </div>
 
                     <!-- Article wheel -->
-                    <div class="flex h-40 flex-col w-full space-y-4 overflow-hidden">
+                    <div class="h-40 w-full overflow-hidden">
                         {% include "src/_includes/carousel.njk" %}
                     </div>
 
