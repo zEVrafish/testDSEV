@@ -4,9 +4,7 @@ layout: base.njk
 ---
 
 <!-- Top section -->
-<div>
-    {% include "src/_includes/home_top.njk" %}
-</div>
+<div>{% include "src/_includes/home_top.njk" %}</div>
 
 <!-- Text section -->
 <div class="max-w-3xl pt-2 flex mx-auto p-4">
@@ -19,10 +17,7 @@ layout: base.njk
 </div>
 
 <!-- News and mailing list -->
-<div>
-    {% include "src/_includes/news_mail.njk" %}
-
-</div>
+<div>{% include "src/_includes/news_mail.njk" %}</div>
 
 <!-- Spacer -->
 <div class="h-10"></div>
@@ -45,19 +40,18 @@ layout: base.njk
                     </div>
 
                     <!-- Article wheel -->
-                    <div class="h-40 max-w-4xl mx-auto w-full overflow-hidden pl-5 pr-5">
-                        {% include "src/_includes/carousel.njk" %}
-                    </div>
+                    {% include "src/_includes/carousel.njk" %}
 
                     <!-- Buttons -->
-                    <div>
-                        <p class="text-center text-white p-2">Not yet completed</p>
+                    <div class="text-center p-2">
+                        <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-gray-600 rounded-lg focus:shadow-outline hover:bg-gray-800">View more</button>
+                        <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-gray-600 rounded-lg focus:shadow-outline hover:bg-gray-800">Submit article</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- Spacer -->
     <div class="h-10"></div>
 </div>
-
