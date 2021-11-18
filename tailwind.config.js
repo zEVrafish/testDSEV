@@ -7,6 +7,9 @@ module.exports = {
     darkMode: "class", // or 'media' or 'class'
     theme: {
         extend: {
+            width: {
+                "carousel": "calc(50% - 4px)",
+            },
             height: {
                 "100": "28rem",
                 "104": "32rem",
