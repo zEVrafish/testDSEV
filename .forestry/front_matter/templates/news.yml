@@ -4,7 +4,20 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  description: The news title
 - type: datetime
   name: date
-  label: date
+  label: Publication date
+  description: The date the article was published
+  config:
+    date_format: yyyy-mm-dd
+    display_utc: false
+    required: true
+  default: now
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+  description: The person which wrote it
