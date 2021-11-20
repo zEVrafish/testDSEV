@@ -83,12 +83,12 @@ layout: base.njk
 <div>
     <!-- Hidden part -->
     <form hidden name="contact_test" data-netlify="true" netlify-honeypot="bot-field">
-        <input type="email" name="email">
+        <input name="email" />
     </form>
 
     <!-- Actual form -->
     <form
-    method="POST"
+        method="POST"
         x-data="{
                 loading: false,
                 sucess: false,
@@ -98,7 +98,7 @@ layout: base.njk
         x-on:submit.prevent="
                   emailDirty = true;
                   submitMessage(email);"
-        id="contact"
+        id="contact_test"
     >
         <!-- Design -->
         <div class="flex h-full flex-col justify-between p-2 w-52">
@@ -108,7 +108,7 @@ layout: base.njk
 
             <!-- Input -->
             <label>Email </label>
-            <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" x-model="email" x-on:blur="emailDirty = true" type="email" name="email" />
+            <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" x-model="email" x-on:blur="emailDirty = true" name="email" />
 
             <!-- Error handling -->
             <div class="text-red-600" x-show.transition="emailDirty && !isEmail(email)" x-cloak>
@@ -118,7 +118,6 @@ layout: base.njk
                 </svg>
             </div>
 
-            
             <!-- Button -->
             <button type="submit" class="h-10 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading == true">
                 <template x-if="loading == false">
