@@ -1,10 +1,13 @@
 ---
-date: 2021-11-21T23:00:00Z
-title: New webpage
+date: 2021-11-20T00:00:00+01:00
+title: We got a new webpage
 author: Anders Askeland
 
 ---
+## What happened?
 
-## This is a test of forestry publication.
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Our previous webpage was hosted using Wordpress. Unfortunately, the installation was corrupted causing the entire webpage to become defective. We were not able to restore the site from a backup.
 
+## The new www.DSEV.dk
+
+The new version of www.DSEV.dk is coded using much better tooling and will never become defective. Some features from the old webpage might not yet be available, however, they will be added as soon as they become ready.
