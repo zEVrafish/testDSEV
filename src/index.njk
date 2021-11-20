@@ -82,14 +82,14 @@ layout: base.njk
 <!-- New form -->
 <div>
     <!-- Hidden part -->
-    <form hidden name="contact_test" data-netlify="true" netlify-honeypot="bot-field">
+    <form hidden name="mailing-list" data-netlify="true" netlify-honeypot="bot-field">
         <input name="email" />
     </form>
 
     <!-- Actual form -->
     <form
         method="POST"
-        id="contact_test"
+        id="mailing-list"
         x-data="{
             loading: false,
             sucess: false,
@@ -103,15 +103,15 @@ layout: base.njk
     >
         <!-- Design -->
         <div class="flex h-full flex-col justify-between p-2 w-52">
-
             <!-- Honeypot for bots (is hidden) -->
             <p hidden>
                 <label>ignore: <input name="bot-field" /></label>
             </p>
 
-            <!-- Input -->
-            <input type="hidden" name="form-name" value="contact_test" />
+            <!-- Netlify parse (Must be included for netlify to work) -->
+            <input type="hidden" name="form-name" value="mailing-list" />
 
+            <!-- Input -->
             <label>Email </label>
             <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" x-model="email" x-on:blur="emailDirty = true" name="email" />
 
@@ -124,11 +124,11 @@ layout: base.njk
             </div>
 
             <!-- Button -->
-            <button type="submit" class="h-10 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading == true">
-                <template x-if="loading == false">
+            <button type="submit" class="h-10 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading">
+                <template x-if="!loading">
                     <div>Subscribe</div>
                 </template>
-                <template x-if="loading == true">
+                <template x-if="loading">
                     <div>Subscribing...</div>
                 </template>
             </button>
@@ -136,18 +136,133 @@ layout: base.njk
     </form>
 </div>
 
+<!-- Test form -->
+<div>
+    <!-- Hidden part -->
+    <form hidden name="mailing-test" data-netlify="true" netlify-honeypot="bot-field">
+        <input name="email" />
+    </form>
+
+    <!-- Actual form -->
+    <form method="POST" id="mailing-test" x-data="contactForm_new()" @submit.prevent="submitData_new()" x-data="{loading_test: true}" x-on:submit.prevent="submitData()">
+        <!-- Design -->
+        <div class="flex h-full flex-col justify-between p-2 w-52">
+            <!-- Honeypot for bots (is hidden) -->
+            <p hidden>
+                <label>ignore: <input name="bot-field" /></label>
+            </p>
+
+            <!-- Netlify parse (Must be included for netlify to work) -->
+            <input type="hidden" name="form-name" value="mailing-test" />
+
+            <!-- Input -->
+            <label
+                >Email
+                <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" @keydown="{emailValid = false, emailMissing = false}" />
+            </label>
+
+            <!-- Error handling -->
+            <div class="text-red-600" x-show.transition="emailValid || emailMissing" x-cloak>
+                <p x-show="emailValid">Please provide a valid email</p>
+                <p x-show="emailMissing">Please provide a email</p>
+                <svg class="w-6 h-6 text-red-600 fill-current right-5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                </svg>
+            </div>
+
+            <!-- Button (Disabled when loading) -->
+            <button type="submit" class="h-10 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading">
+                <template x-if="!loading">
+                    <p>Subscribe</p>
+                </template>
+
+                <!-- Loading - Maybe create round thingy? -->
+                <template x-if="loading">
+                    <p>Subscribing...</p>
+                </template>
+            </button>
+        </div>
+    </form>
+</div>
+
 <script type="text/javascript">
+    /* Check for valid email */
     function isEmail(value) {
         return new RegExp("^\\S+@\\S+[\\.][0-9a-z]+$").test(String(value).toLowerCase());
     }
 
+    /* Contact form */
+    function contactForm_new() {
+        return {
+            loading: false,
+            sucess: false,
+            email_submitted: false,
+            email: "",
+            emailValid: false,
+            emailMissing: false,
+
+            submitData_new() {
+                /* Set loading loading */
+                this.loading = true;
+                this.email_submitted = true;
+
+                /* Check if email is valid or not */
+                if (this.email == "") {
+                    this.emailMissing = true;
+                    this.loading = false;
+                    return;
+                } else if (!isEmail(this.email)) {
+                    this.emailValid = true;
+                    this.loading = false;
+                    return;
+                }
+
+                /* Generate formdata element */
+                let formElement = document.getElementById("mailing-test");
+                let body = new URLSearchParams(new FormData(formElement)).toString();
+
+                /* Submit form */
+                return fetch("/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: body,
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            formElement.reset();
+                            alert("Thank you for your message!");
+                        } else {
+                            throw new Error(`Something went wrong: ${response.statusText}`);
+                        }
+                    })
+                    .catch((error) => console.error(error));
+            },
+        };
+    }
+
+    /* Handle submission */
+    function contactForm_test(email_test) {
+        /* Standard x-data definition */
+        return {
+            loading_test: false,
+            sucess_test: false,
+            email_submitted_test: false,
+            email_test: "",
+
+            submitData() {
+                /* Loading */
+                this.loading_test = true;
+            },
+        };
+    }
 
     function submitMessage(email) {
-
         if (!email || !isEmail) {
             return;
         }
-        let formElement = document.getElementById("contact_test");
+        let formElement = document.getElementById("mailing-list");
         let body = new URLSearchParams(new FormData(formElement)).toString();
         return fetch("/", {
             method: "POST",
@@ -167,5 +282,3 @@ layout: base.njk
             .catch((error) => console.error(error));
     }
 </script>
-
-<!-- Actual form -->
