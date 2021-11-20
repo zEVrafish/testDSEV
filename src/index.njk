@@ -79,52 +79,59 @@ layout: base.njk
     <div class="h-10"></div>
 </div>
 
-<form hidden name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
-    <label><input type="text" name="name" /></label>
-    <label> <input type="email" name="email" /></label>
-    <label><textarea name="message"></textarea></label>
-    <div data-netlify-recaptcha="true"></div>
-</form>
-<form
-    x-data="{
-                name : '',
-                nameDirty: false,
-                message: '',
-                messageDirty: false,
+<!-- New form -->
+<div>
+    <!-- Hidden part -->
+    <form hidden name="contact_test" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="email" name="email">
+    </form>
+
+    <!-- Actual form -->
+    <form
+    method="POST"
+        x-data="{
+                loading: false,
+                sucess: false,
                 email: '',
                 emailDirty: false,
                }"
-    x-on:submit.prevent="
-                  nameDirty = true;
+        x-on:submit.prevent="
                   emailDirty = true;
-                  messageDirty = true;
-                  submitMessage(name, email, message);"
-    id="contact"
->
-    <p hidden>
-        <label>ignore: <input name="bot-field" /></label>
-    </p>
-    <input type="hidden" name="form-name" value="contact" />
-    <p>
-        <label>Full Name: <input x-model="name" x-on:blur="nameDirty = true" type="text" name="name" /></label>
-    </p>
-    <p x-show.transition="nameDirty && name.length == 0" style="color: red" x-cloak>Please fill out your full name.</p>
-    <p>
-        <label>Email: <input x-model="email" x-on:blur="emailDirty = true" type="email" name="email" /></label>
-    </p>
-    <p x-show.transition="emailDirty && !isEmail(email)" style="color: red" x-cloak>Please provide a valid email.</p>
-    <p>
-        <label
-            >Message:
-            <textarea x-model="message" x-on:blur="messageDirty = true" name="message"></textarea>
-        </label>
-    </p>
-    <p x-show.transition="messageDirty && message.length == 0" style="color: red" x-cloak>Please fill out your Message.</p>
-    <div data-netlify-recaptcha="true"></div>
-    <p>
-        <button type="submit">Send</button>
-    </p>
-</form>
+                  submitMessage(email);"
+        id="contact"
+    >
+        <!-- Design -->
+        <div class="flex h-full flex-col justify-between p-2 w-52">
+            <p hidden>
+                <label>ignore: <input name="bot-field" /></label>
+            </p>
+
+            <!-- Input -->
+            <label>Email </label>
+            <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" x-model="email" x-on:blur="emailDirty = true" type="email" name="email" />
+
+            <!-- Error handling -->
+            <div class="text-red-600" x-show.transition="emailDirty && !isEmail(email)" x-cloak>
+                <p>Please provide a valid email.</p>
+                <svg class="w-6 h-6 text-red-600 fill-current right-5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                </svg>
+            </div>
+
+            
+            <!-- Button -->
+            <button type="submit" class="h-10 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading == true">
+                <template x-if="loading == false">
+                    <div>Subscribe</div>
+                </template>
+                <template x-if="loading == true">
+                    <div>Subscribing...</div>
+                </template>
+            </button>
+        </div>
+    </form>
+</div>
+
 <script type="text/javascript">
     function isEmail(value) {
         return new RegExp("^\\S+@\\S+[\\.][0-9a-z]+$").test(String(value).toLowerCase());
@@ -154,3 +161,5 @@ layout: base.njk
             .catch((error) => console.error(error));
     }
 </script>
+
+<!-- Actual form -->
