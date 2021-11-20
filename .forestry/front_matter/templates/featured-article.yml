@@ -21,3 +21,9 @@ fields:
     required: false
   label: DOI
   description: Long DOI
+- name: link
+  type: text
+  config:
+    required: false
+  label: Website link
+  description: Link to webpage.
