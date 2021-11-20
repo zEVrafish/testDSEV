@@ -121,7 +121,7 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("remaining", (...numbers) => {
-        return 2- numbers;
+        return 2 - numbers;
     });
 
     /* Image plugin */

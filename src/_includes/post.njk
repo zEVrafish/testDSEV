@@ -21,8 +21,8 @@
             </header>
 
             <!-- Content -->
-            <main class="mx-auto flex-grow dark:text-gray-50">
-                <div class=" text-center p-10">
+            <main class="mx-auto flex-grow dark:text-gray-50 ">
+                <div class=" text-center p-10 max-w-5xl">
 
                     <h2 class="text-5xl p-2">
                         {{ title }}
@@ -31,7 +31,7 @@
                         {{ date | readableDate}}
                     </h4>
                 </div>
-                <article class="prose dark:prose-dark p-5">
+                <article class="prose dark:prose-dark p-5 mx-auto ">
                 {{ content | safe }}
                 </article>
             </main>
