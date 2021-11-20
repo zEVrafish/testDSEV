@@ -11,7 +11,7 @@ fields:
   label: Publication date
   description: The date the article was published
   config:
-    date_format: yyyy-mm-dd
+    date_format: YYYY-MM-DD
     display_utc: false
     required: true
   default: now
