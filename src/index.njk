@@ -28,11 +28,11 @@ layout: base.njk
         <div class="relative flex flex-col sm:flex-row sm:h-full w-full">
             <!-- Newsfeed -->
             <div class="flex flex-col h-64 sm:w-2/3 sm:h-full bg-gray-200 p-4 pb-0">
-                <h3 class="text-2xl font-montserrat">Latest news</h3>
+                <h3 class="text-2xl font-montserrat dark:text-gray-900">Latest news</h3>
                 <div class="flex flex-col space-y-2">
                     {% set total_posts = collections.posts | length  %}
                     {% set postslist = collections.posts | head(-2) %}
-                    {{ total_posts }}
+
                     {% for post in postslist | reverse %}
                     <div class="pl-1 flex flex-col">
                         <a class="text-lg text-blue-400" href="{{ post.url }}">{{ post.data.title }}</a>
@@ -50,7 +50,7 @@ layout: base.njk
 
             <!-- Mailing list -->
             <div class="flex flex-col h-48 sm:w-1/3 sm:h-full bg-gray-300 p-4 pb-0">
-                <h3 class="text-2xl font-montserrat">Mailing list</h3>
+                <h3 class="text-2xl font-montserrat dark:text-gray-900">Mailing list</h3>
                 {% include "src/_includes/mailing_list.njk" %}
             </div>
         </div>
