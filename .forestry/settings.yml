@@ -5,10 +5,27 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: src/groups
+  label: EV groups in Denmark
+  create: documents
+  match: "**/*"
+- type: directory
+  path: src/articles
+  label: Featured articles
+  create: documents
+  match: "**/*"
+- type: directory
+  path: src/members
+  label: Board members
+  create: documents
+  match: "**/*"
+  exclude: "*.json"
+- type: directory
   path: src/posts
   label: News
-  create: all
+  create: documents
   match: "**/*"
+  exclude: "*.json"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
