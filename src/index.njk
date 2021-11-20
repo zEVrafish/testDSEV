@@ -78,3 +78,79 @@ layout: base.njk
     <!-- Spacer -->
     <div class="h-10"></div>
 </div>
+
+<form hidden name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+    <label><input type="text" name="name" /></label>
+    <label> <input type="email" name="email" /></label>
+    <label><textarea name="message"></textarea></label>
+    <div data-netlify-recaptcha="true"></div>
+</form>
+<form
+    x-data="{
+                name : '',
+                nameDirty: false,
+                message: '',
+                messageDirty: false,
+                email: '',
+                emailDirty: false,
+               }"
+    x-on:submit.prevent="
+                  nameDirty = true;
+                  emailDirty = true;
+                  messageDirty = true;
+                  submitMessage(name, email, message);"
+    id="contact"
+>
+    <p hidden>
+        <label>ignore: <input name="bot-field" /></label>
+    </p>
+    <input type="hidden" name="form-name" value="contact" />
+    <p>
+        <label>Full Name: <input x-model="name" x-on:blur="nameDirty = true" type="text" name="name" /></label>
+    </p>
+    <p x-show.transition="nameDirty && name.length == 0" style="color: red" x-cloak>Please fill out your full name.</p>
+    <p>
+        <label>Email: <input x-model="email" x-on:blur="emailDirty = true" type="email" name="email" /></label>
+    </p>
+    <p x-show.transition="emailDirty && !isEmail(email)" style="color: red" x-cloak>Please provide a valid email.</p>
+    <p>
+        <label
+            >Message:
+            <textarea x-model="message" x-on:blur="messageDirty = true" name="message"></textarea>
+        </label>
+    </p>
+    <p x-show.transition="messageDirty && message.length == 0" style="color: red" x-cloak>Please fill out your Message.</p>
+    <div data-netlify-recaptcha="true"></div>
+    <p>
+        <button type="submit">Send</button>
+    </p>
+</form>
+<script type="text/javascript">
+    function isEmail(value) {
+        return new RegExp("^\\S+@\\S+[\\.][0-9a-z]+$").test(String(value).toLowerCase());
+    }
+
+    function submitMessage(name, email, message) {
+        if (!name || name.length == 0 || !email || !isEmail || !message || message.length == 0) {
+            return;
+        }
+        let formElement = document.getElementById("contact");
+        let body = new URLSearchParams(new FormData(formElement)).toString();
+        return fetch("/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: body,
+        })
+            .then((response) => {
+                if (response.ok) {
+                    formElement.reset();
+                    alert("Thank you for your message!");
+                } else {
+                    throw new Error(`Something went wrong: ${response.statusText}`);
+                }
+            })
+            .catch((error) => console.error(error));
+    }
+</script>
