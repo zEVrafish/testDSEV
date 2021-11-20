@@ -145,7 +145,7 @@ layout: base.njk
 
     <!-- Actual form -->
     <form method="POST" id="mailing-test" x-data="contactForm_new()" @submit.prevent="submitData_new()" x-data="{loading_test: true}" x-on:submit.prevent="submitData()">
-        <!-- Design -->
+        <!-- Form design -->
         <div class="flex h-full flex-col justify-between p-2 w-52">
             <!-- Honeypot for bots (is hidden) -->
             <p hidden>
@@ -156,31 +156,43 @@ layout: base.njk
             <input type="hidden" name="form-name" value="mailing-test" />
 
             <!-- Input -->
-            <label
-                >Email
-                <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" @keydown="{emailValid = false, emailMissing = false}" />
-            </label>
+            <div x-show="!sucess">
+                <!-- Input -->
+                <label
+                    >Email
+                    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" @keydown="{emailValid = false, emailMissing = false}" />
+                </label>
 
-            <!-- Error handling -->
-            <div class="text-red-600" x-show.transition="emailValid || emailMissing" x-cloak>
-                <p x-show="emailValid">Please provide a valid email</p>
-                <p x-show="emailMissing">Please provide a email</p>
-                <svg class="w-6 h-6 text-red-600 fill-current right-5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
-                </svg>
+                <!-- Error handling -->
+                <div class="text-red-600" x-show.transition="emailValid || emailMissing" x-cloak>
+                    <p x-show="emailValid">Please provide a valid email</p>
+                    <p x-show="emailMissing">Please provide a email</p>
+                    <svg class="w-6 h-6 text-red-600 fill-current right-5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                    </svg>
+                </div>
+
+                <!-- Button (Disabled when loading) -->
+                <button type="submit" class="h-10 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading">
+                    <template x-if="!loading">
+                        <p>Subscribe</p>
+                    </template>
+
+                    <!-- Loading - Maybe create round thingy inside box instead? -->
+                    <template x-if="loading">
+                        <p>Subscribing...</p>
+                    </template>
+                </button>
             </div>
 
-            <!-- Button (Disabled when loading) -->
-            <button type="submit" class="h-10 text-sm bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-2 rounded-lg w-1/2" x-bind:disabled="loading">
-                <template x-if="!loading">
-                    <p>Subscribe</p>
-                </template>
-
-                <!-- Loading - Maybe create round thingy? -->
-                <template x-if="loading">
-                    <p>Subscribing...</p>
-                </template>
-            </button>
+            <!-- Sucess message -->
+            <div>
+                <div x-show="sucess" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
+                    <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 my-4" role="success">
+                        <p>Thank you for subscribing!</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </form>
 </div>
@@ -196,7 +208,6 @@ layout: base.njk
         return {
             loading: false,
             sucess: false,
-            email_submitted: false,
             email: "",
             emailValid: false,
             emailMissing: false,
@@ -204,7 +215,6 @@ layout: base.njk
             submitData_new() {
                 /* Set loading loading */
                 this.loading = true;
-                this.email_submitted = true;
 
                 /* Check if email is valid or not */
                 if (this.email == "") {
@@ -232,7 +242,8 @@ layout: base.njk
                     .then((response) => {
                         if (response.ok) {
                             formElement.reset();
-                            alert("Thank you for your message!");
+                            /* Show sucess */
+                            this.sucess = true;
                         } else {
                             throw new Error(`Something went wrong: ${response.statusText}`);
                         }
