@@ -9,11 +9,9 @@ sections:
 - type: document
   path: src/_data/metadata.json
   label: General
-  match: "**/*"
 - type: document
   path: src/_data/menu.json
   label: Menu
-  match: "**/*"
 - type: heading
   label: Content
 - type: directory
