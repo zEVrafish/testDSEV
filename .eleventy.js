@@ -95,6 +95,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("./src");
     eleventyConfig.addWatchTarget("./dist");
 
+    /* Datetime */
+    eleventyConfig.addFilter("readableDate", (dateObj) => {
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy");
+    });
+
+    eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+        return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+    });
+
     /* Image plugin */
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
