@@ -99,9 +99,29 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("readableDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy");
     });
-
     eleventyConfig.addFilter("htmlDateString", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
+    });
+
+    // Return the smallest number argument
+    eleventyConfig.addFilter("min", (...numbers) => {
+        return Math.min.apply(null, numbers);
+    });
+
+    // Get the first `n` elements of a collection.
+    eleventyConfig.addFilter("head", (array, n) => {
+        if (!Array.isArray(array) || array.length === 0) {
+            return [];
+        }
+        if (n < 0) {
+            return array.slice(n);
+        }
+
+        return array.slice(0, n);
+    });
+
+    eleventyConfig.addFilter("remaining", (...numbers) => {
+        return 2- numbers;
     });
 
     /* Image plugin */
