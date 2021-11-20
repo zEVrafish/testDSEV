@@ -102,8 +102,6 @@
                 /* Generate formdata element */
                 let formElement = document.getElementById("mailing-list");
                 let body = new URLSearchParams(new FormData(formElement)).toString();
-                alert("test");
-                this.sucess = true;
 
                 /* Submit form */
                 return fetch("/", {
