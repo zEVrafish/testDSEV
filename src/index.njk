@@ -103,12 +103,13 @@ layout: base.njk
     >
         <!-- Design -->
         <div class="flex h-full flex-col justify-between p-2 w-52">
+
+            <!-- Honeypot for bots (is hidden) -->
             <p hidden>
                 <label>ignore: <input name="bot-field" /></label>
             </p>
 
             <!-- Input -->
-            <input type="hidden" name="form-name" value="contact_test" />
 
             <label>Email </label>
             <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" x-model="email" x-on:blur="emailDirty = true" name="email" />
