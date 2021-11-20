@@ -108,6 +108,8 @@ layout: base.njk
             </p>
 
             <!-- Input -->
+            <input type="hidden" name="form-name" value="contact_test" />
+
             <label>Email </label>
             <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" x-model="email" x-on:blur="emailDirty = true" name="email" />
 
@@ -137,7 +139,9 @@ layout: base.njk
         return new RegExp("^\\S+@\\S+[\\.][0-9a-z]+$").test(String(value).toLowerCase());
     }
 
+
     function submitMessage(email) {
+
         if (!email || !isEmail) {
             return;
         }
