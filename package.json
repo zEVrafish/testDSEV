@@ -7,7 +7,6 @@
     "dev": "eleventy --serve & postcss src/css/tailwind.css --o src/_tmp/style.css --watch",
     "build": "ELEVENTY_PRODUCTION=true eleventy & NODE_ENV=production npx tailwindcss -i src/css/tailwind.css -c tailwind.config.js -o dist/style.css --minify",
     "preview": "postcss src/css/tailwind.css --o src/_tmp/style.css & ELEVENTY_ENV=development npx eleventy --serve --watch"
-
   },
   "repository": {
     "type": "git",
@@ -31,6 +30,7 @@
   "dependencies": {
     "@tailwindcss/typography": "^0.4.1",
     "eleventy-plugin-svg-contents": "^0.7.0",
+    "fitty": "^2.3.5",
     "nunjucks": "^3.2.3"
   },
   "prettier": {

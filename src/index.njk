@@ -13,7 +13,7 @@ layout: layouts/base.njk
         <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
 
         <p>As an organization, DSEV connects researchers at its Annual Meeting and reach out to global EV researcheres and workshops/events.</p>
-        
+
         <p>If you are a researcher interested in learning more about extracellular vesicle, please consider joining DSEV.</p>
     </article>
     <noscript class="text-3xl font-bold"> If you see this line, it means that your JavaSript is disabled. Several features of this webpage will not work. </noscript>
@@ -23,34 +23,31 @@ layout: layouts/base.njk
 <div class="relative sm:h-52 overflow-hidden">{% include "src/_includes/sections/news_mail.njk" %}</div>
 
 <!-- Article wheel -->
-<div>
-    <div>
-        <div class="relative h-80 overflow-hidden">
-            <!-- background -->
-            <div class="absolute bg-gray-500 h-full left-0 w-full">{% background "src/images/Scientific-articles.jpg", "Parallaxed background with EVs", "h-full bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
+<div class="relative h-104 overflow-hidden">
+    <!-- background -->
 
-            <!-- Main container -->
-            <div id="Container" class="overflow-hidden h-full">
-                <!-- Content -->
-                <div class="absolute inset-x-0 max-w-5xl mx-auto top-0 flex flex-col h-full w-full">
-                    <!-- Text -->
-                    <div class="flex flex-col w-full p-4 space-y-2">
-                        <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
-                        <div class="text-gray-300 font-montserrat text-center max-w-2xl text-sm sm:text-base mx-auto">
-                            <p class="hidden sm:block">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
-                            <p class="sm:hidden">Scientific works within EV research authored or co-autorhed by members of DSEV.</p>
-                        </div>
-                    </div>
+    <div class="absolute bg-gray-500 h-full left-0 w-full">{% background "src/images/Scientific-articles.jpg", "Parallaxed background with EVs", "h-full bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
 
-                    <!-- Article wheel -->
-                    {% include "src/_includes/sections/carousel.njk" %}
-
-                    <!-- Buttons -->
-                    <div class="text-center p-2">
-                        <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-gray-600 rounded-lg focus:shadow-outline hover:bg-gray-800">View more</button>
-                        <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-gray-600 rounded-lg focus:shadow-outline hover:bg-gray-800">Submit article</button>
-                    </div>
+    <!-- Main container -->
+    <div class="overflow-hidden h-auto">
+        <!-- Content -->
+        <div class="absolute inset-x-0 max-w-5xl mx-auto top-0 flex flex-col h-full w-full">
+            <!-- Text -->
+            <div class="flex flex-col w-full p-4 space-y-2">
+                <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
+                <div class="text-gray-300 font-montserrat text-center max-w-2xl text-sm sm:text-base mx-auto">
+                    <p class="hidden sm:block">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
+                    <p class="sm:hidden">Scientific works within EV research authored or co-autorhed by members of DSEV.</p>
                 </div>
+            </div>
+
+            <!-- Article wheel -->
+            {% include "src/_includes/sections/carousel.njk" %}
+
+            <!-- Buttons -->
+            <div class="text-center p-2">
+                <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">View more</button>
+                <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">Submit article</button>
             </div>
         </div>
     </div>
