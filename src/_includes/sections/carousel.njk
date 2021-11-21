@@ -12,7 +12,7 @@
         {% for article in article_list | reverse %}
         <a href="{{ article.data.link }}" class="carousel-cell carousel-style flex h-80 flex-col" style="background-color: {{ article.data.color }};" target="_blank">
             <!-- Image -->
-            <div class="md:w-3/4 sm:w-1/2 w-3/4 mx-auto">{% image "image", article.data.journal_image, "DSEV logo", "pt-6 pb-6", "(min-width: 10em) 20vw, 10vw"%}</div>
+            <div class="h-1/2 overflow-hidden my-auto  md:w-3/4 sm:w-1/2 w-3/4 mx-auto flex justify-center flex-col	">{% image "image", article.data.journal_image, "DSEV logo", "pt-6 pb-6 ", "(min-width: 10em) 20vw, 10vw"%}</div>
 
             <!-- Text -->
             <div class="flex flex-col space-y-2 pb-6 justify-between h-full">
