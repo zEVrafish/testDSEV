@@ -16,7 +16,7 @@ sections:
   label: Text
 - type: document
   path: src/_includes/text/front_page.html
-  label: Front page text
+  label: Front page
 - type: heading
   label: Content
 - type: directory
