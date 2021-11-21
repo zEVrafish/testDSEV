@@ -10,7 +10,7 @@
         {% set article_list = collections.articles | head(-6) %} 
         
         {% for article in article_list | reverse %}
-        <a href="{{ article.data.link }}" class="carousel-cell carousel-style bg-green-300 flex h-80 flex-col" target="_blank">
+        <a href="{{ article.data.link }}" class="carousel-cell carousel-style flex h-80 flex-col" style="background-color: {{ article.data.color }};" target="_blank">
             <!-- Image -->
             <div class="md:w-3/4 sm:w-1/2 w-3/4 mx-auto">{% image "image", article.data.journal_image, "DSEV logo", "pt-6 pb-6", "(min-width: 10em) 20vw, 10vw"%}</div>
 
