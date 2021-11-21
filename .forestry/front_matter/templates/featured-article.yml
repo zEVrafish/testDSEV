@@ -27,3 +27,5 @@ fields:
     required: false
   label: Website link
   description: Link to webpage.
+pages:
+- src/articles/10.3390/biomedicines8080246.md
