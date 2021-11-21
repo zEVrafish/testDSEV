@@ -1,68 +1,18 @@
 ---
 title: Front page
-layout: base.njk
+layout: layouts/base.njk
 ---
 
 <!-- Top section -->
-<div>{% include "src/_includes/home_top.njk" %}</div>
+<div>{% include "src/_includes/sections/banner.njk" %}</div>
 
 <!-- Text section -->
 <div class="max-w-3xl pt-2 flex mx-auto p-4">
-    <div class="flex flex-col space-y-2">
-        <p class="text-4xl text-center">Who are we?</p>
-        <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
-        <p>As an organization, DSEV connects researchers at its Annual Meeting and reach out to global EV researcheres and workshops/events</p>
-        <p>If you are a researcher interested in learning more about extracellular vesicle, please consider joining DSEV.</p>
-        <noscript>
-            If you see this line, it means that your JavaSript is disabled. Several features of this webpage will not work.
-        </noscript>
-    </div>
+    {% include "src/_includes/text/front_page.html" %}
 </div>
-
 
 <!-- News and mailing list -->
-<div class="relative sm:h-52 overflow-hidden">
-    <!-- Main container -->
-    <div id="Container" class="max-w-3xl mx-auto overflow-hidden h-full">
-        <!-- background -->
-        <div class="hidden sm:block absolute bg-gray-200 h-full w-1/2 left-0"></div>
-        <div class="hidden sm:block absolute bg-gray-300 h-full w-1/2 right-0"></div>
-
-        <!-- Content -->
-        <div class="relative flex flex-col sm:flex-row sm:h-full w-full">
-            <!-- Newsfeed -->
-            <div class="flex flex-col h-64 sm:w-2/3 sm:h-full bg-gray-200 p-4 pb-0">
-                <h3 class="text-2xl font-montserrat dark:text-gray-900">Latest news</h3>
-                <div class="flex flex-col space-y-2">
-                    {% set total_posts = collections.posts | length  %}
-                    {% set postslist = collections.posts | head(-2) %}
-
-                    {% for post in postslist | reverse %}
-                    <div class="pl-1 flex flex-col">
-                        <a class="text-lg text-blue-400" href="{{ post.url }}">{{ post.data.title }}</a>
-                        <time class="text-sm text-gray-600 postlist-date" datetime="{{ post.date | htmlDateString }}">
-                            {{ post.date | readableDate }}
-                        </time>
-                    </div>
-                    {% endfor %}
-                    <button type="submit" class="h-8 text-sm bg-blue-500 hover:bg-blue-700 text-white font-base font-montserrat rounded-lg w-1/3">
-                        <p class="text-center self-center">See {{ totlal_posts | remaining }} more</p>
-                    </button>
-                </div>
-
-            </div>
-
-            <!-- Mailing list -->
-            <div class="flex flex-col h-48 sm:w-1/3 sm:h-full bg-gray-300 p-4 pb-0">
-                <h3 class="text-2xl font-montserrat dark:text-gray-900">Mailing list</h3>
-                {% include "src/_includes/mailing_list.njk" %}
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Spacer -->
-<div class="h-10"></div>
+<div class="relative sm:h-52 overflow-hidden">{% include "src/_includes/sections/news_mail.njk" %}</div>
 
 <!-- Article wheel -->
 <div>
@@ -85,7 +35,7 @@ layout: base.njk
                     </div>
 
                     <!-- Article wheel -->
-                    {% include "src/_includes/carousel.njk" %}
+                    {% include "src/_includes/sections/carousel.njk" %}
 
                     <!-- Buttons -->
                     <div class="text-center p-2">
@@ -97,6 +47,4 @@ layout: base.njk
         </div>
     </div>
 
-    <!-- Spacer -->
-    <div class="h-10"></div>
 </div>

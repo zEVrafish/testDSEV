@@ -1,0 +1,45 @@
+<!-- Footer -->
+<div class="flex flex-row items-center fill-current space-x-2 text-xs">
+    <!-- Copyright -->
+    <p id="footer"><!-- Javasrcipt --></p>
+    <p>|</p>
+
+    <!-- Mail to -->
+    <a href="mailto: contact@dsev.dk">
+        <div class="flex flex-row space-x-1 items-center fill-current">
+            {{ '/src/images/icons/icon_email.svg' | svgContents("fill-current text-teal-500 block h-3 w-3 block mx-auto my-auto") | safe }}
+
+            <p>Contact@DSEV.dk</p>
+        </div>
+    </a>
+
+    <p>|</p>
+
+    <!-- Source code -->
+    <a class="items-center" href="{{ metadata.source_code_url }}" target="_blank">
+        <div class="flex flex-row space-x-1 items-center fill-current">
+            {{ '/src/images/icons/icon_github.svg' | svgContents("fill-current text-teal-500 block h-3 w-3 block mx-auto my-auto") | safe }}
+
+            <p>Source code</p>
+        </div>
+    </a>
+    <p>|</p>
+
+    <!-- Admin login -->
+    <a href="https://app.forestry.io/sites/dgdx5xwemvqxaa/#/" target="_blank">
+        <div class="flex flex-row space-x-1 items-center fill-current">
+            {{ '/src/images/icons/icon_admin.svg' | svgContents("fill-current text-teal-500 block h-3 w-3 block mx-auto my-auto") | safe }}
+
+            <p>Admin login</p>
+    
+        </div>
+        </a>
+    </div>
+
+<!-- Scripts -->
+<script>
+    /* Write year to footer*/
+    var today = new Date();
+    var year = today.getFullYear();
+    document.querySelector("#footer").innerHTML = "&copy; " + year + " - DSEV";
+</script>
