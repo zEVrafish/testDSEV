@@ -42,6 +42,15 @@ fields:
     color_format: Hex
   description: The color of the card
   default: "#D3D3D3"
+- name: published
+  type: datetime
+  description: Date content was published on DSEV.dk (not the journal)
+  config:
+    required: false
+    date_format: YYYY-MM-DD
+    time_format: 
+    display_utc: false
+  label: Published on
 pages:
 - src/articles/Anders_Boysen.md
 - src/articles/Jonas_ellegaard.md
