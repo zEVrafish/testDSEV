@@ -8,7 +8,13 @@ layout: layouts/base.njk
 
 <!-- Text section -->
 <div class="max-w-3xl pt-2 flex mx-auto p-4">
-    {% include "src/_includes/text/front_page.html" %}
+    <div class="flex flex-col space-y-2">
+        <p class="text-4xl text-center">Who are we?</p>
+        <article class="prose dark:prose-dark p-5 mx-auto">
+            {% include "src/_includes/text/front_page.md" %}
+        </article>
+    </div>
+    <noscript class="text-3xl font-bold"> If you see this line, it means that your JavaSript is disabled. Several features of this webpage will not work. </noscript>
 </div>
 
 <!-- News and mailing list -->
@@ -46,5 +52,4 @@ layout: layouts/base.njk
             </div>
         </div>
     </div>
-
 </div>
