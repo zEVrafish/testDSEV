@@ -1,0 +1,192 @@
+<!-- Overflow -->
+<div class="bg-modal " x-show="!contact" @keydown.escape="contact = false" x-cloak>
+
+    <div class="h-full flex flex-col justify-center">
+        <!-- Dialog -->
+        <div class="relative flex flex-col bg-white w-1/2 h-auto mx-auto max-w-md rounded-lg shadow-lg" @click.away="contact = false">
+            <!-- Top bar -->
+            <div>
+                <!-- Close icon -->
+                <button @click="contact = false" class="absolute right-0 top-0 p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
+                </button>
+    
+                <!-- Title -->
+                <div class="rounded-t-lg w-full shadow-lg bg-white h-auto text-left p-2 pl-4">
+                    <h2 class="text-2xl font-montserrat">Contact DSEV</h2>
+                </div>
+            </div>
+    
+            <!-- Form -->
+            <div>
+                <!-- Hidden part -->
+                <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field">
+                    <input name="name" />
+                    <input name="email" />
+                    <input name="message" />
+                </form>
+    
+                <!-- Actual form -->
+                <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactEmail()" @submit.prevent="submitData()" x-cloak>
+                    <div>
+                        <!-- Setup stuff -->
+                        <p hidden>
+                            <label>ignore: <input name="bot-field" /></label>
+                        </p>
+                        <input type="hidden" name="form-name" value="contact" />
+    
+                        <!-- Form -->
+                        <div x-show="!sucess" class="p-3 flex flex-col space-y-4 ">
+                            <!-- Ñame -->
+                            <div class="flex flex-col space-y-1">
+                                <!-- Label -->
+                                <label>Name</label>
+    
+                                <!-- Input -->
+                                <div class="relative">
+                                    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="name" x-model="name" @keydown="{nameMissing = false}" placeholder="Your name" />
+        
+                                    <!-- Error handling -->
+                                    <div class="text-red-400">
+                                        <svg x-show.transition="nameMissing" class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                                        </svg>
+                                        <p x-show.transition="nameMissing">Please provide a name</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Email -->
+                            <div class="flex flex-col space-y-1">
+                                <label>Email</label>
+                                <!-- Actual input -->
+                                <div class="relative">
+
+                                    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" @keydown="{emailValid = false, emailMissing = false}" placeholder="jane@doe.dk" />
+                                    
+                                    <!-- Error handling -->
+                                    <div class="text-red-400">
+                                        <svg x-show.transition="emailValid || emailMissing" class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                                        </svg>
+                                        <p x-show.transition="emailValid">Please provide a valid email</p>
+                                        <p x-show.transition="emailMissing">Please provide a email</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!-- Message -->
+                            <div class="flex flex-col space-y-1">
+                                <!-- Label -->
+                                <label class="text-l">Message</label>
+    
+                                <div class="relative">
+
+                                    <!-- Text area -->
+                                    <textarea class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="message" form="contact" @keydown="{messageMissing = false}" x-model="message" placeholder="Your message here"></textarea>
+                                    
+                                    <!-- Error handling -->
+                                    <div class="text-red-400">
+                                        <svg x-show.transition="messageMissing" class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                                        </svg>
+                                        <p x-show.transition="messageMissing">Please provide a message</p>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <object class="pb-4">
+                            <button type="submit" class="w-40 rounded-md bg-blue-400">Contact</button>
+                        </object>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    /* Check for valid email */
+    function isEmail(value) {
+        return new RegExp("^\\S+@\\S+[\\.][0-9a-z]+$").test(String(value).toLowerCase());
+    }
+
+    /* Contact form */
+    function contactEmail() {
+        return {
+            loading: false,
+            sucess: false,
+            email: "",
+            emailValid: false,
+            emailMissing: false,
+            name: "",
+            nameMissing: false,
+            message: "",
+            messageMissing: false,
+
+            submitData() {
+                /* Set loading loading */
+                this.loading = true;
+                let error = false;
+
+                /* Check if email is valid or not */
+                if (this.email == "") {
+                    this.emailMissing = true;
+                    this.loading = false;
+                    error = true;
+                } else if (!isEmail(this.email)) {
+                    this.emailValid = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Check if name is missing */
+                if (this.name == "") {
+                    this.nameMissing = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Check if message is missing */
+                if (this.message == "") {
+                    this.messageMissing = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Run code if no error */
+                if (error) {
+                    error = false;
+                    return;
+                } else {
+                    /* Generate formdata element */
+                    let formElement = document.getElementById("contact");
+                    let body = new URLSearchParams(new FormData(formElement)).toString();
+
+                    /* Submit form */
+                    return fetch("/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: body,
+                    })
+                        .then((response) => {
+                            if (response.ok) {
+                                formElement.reset();
+                                /* Show sucess */
+                                this.sucess = true;
+                            } else {
+                                throw new Error(`Something went wrong: ${response.statusText}`);
+                            }
+                        })
+                        .catch((error) => console.error(error));
+                }
+            },
+        };
+    }
+</script>

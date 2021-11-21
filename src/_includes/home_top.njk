@@ -43,18 +43,24 @@
                 </div>
 
                 <!-- Card 3 -->
-                <div class="card-1">
-                    <!-- Logo -->
-                    <div class="text-red-900 flex fill_current h-16">
-                        {{ '/src/images/icons/icon_phone.svg' | svgContents("fill-current text-teal-500 block h-12 w-12 block mx-auto my-auto") | safe }}
-                    </div>
+                <div class="card-1 border hover:border-gray-500" x-data="{ 'contact': false }" @keydown.escape="contact = false">
+                    <button type="button" class="" @click="contact = true">
+                        <!-- Logo -->
+                        <div class="text-red-900 flex fill_current h-16">
+                            {{ '/src/images/icons/icon_phone.svg' | svgContents("fill-current text-teal-500 block h-12 w-12 block mx-auto my-auto") | safe }}
+                        </div>
 
-                    <!-- Heading -->
-                    <h2 class="text-xl">Contact</h2>
-                    <p class="text-sm text-gray-600">Find out how to contact us!</p>
+                        <!-- Heading -->
+                        <h2 class="text-xl">Contact</h2>
+                        <p class="text-sm text-gray-600">Find out how to contact us!</p>
+                    </button>
+
+                    <!-- Modal -->
+                    {% include "src/_includes/modal_contact.njk" %}
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 

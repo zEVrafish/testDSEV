@@ -6,7 +6,7 @@
     </form>
 
     <!-- Actual form -->
-    <form class="h-full pl-0.5" method="POST" id="mailing-list" x-data="contactForm()" @submit.prevent="submitData_new()" x-on:submit.prevent="submitData()" x-cloak>
+    <form class="h-full pl-0.5" method="POST" id="mailing-list" x-data="contactForm()" @submit.prevent="submitData()" x-cloak>
         <!-- Form -->
         <div class="flex flex-col space-y-1">
             <!-- Setup (Related to netlify) -->
@@ -84,7 +84,7 @@
             emailValid: false,
             emailMissing: false,
 
-            submitData_new() {
+            submitData() {
                 /* Set loading loading */
                 this.loading = true;
 
