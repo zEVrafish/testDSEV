@@ -13,6 +13,11 @@ sections:
   path: src/_data/menu.json
   label: Menu
 - type: heading
+  label: Text
+- type: document
+  path: src/_includes/text/front_page.html
+  label: Front page text
+- type: heading
   label: Content
 - type: directory
   path: src/posts
