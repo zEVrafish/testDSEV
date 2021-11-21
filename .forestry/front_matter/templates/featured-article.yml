@@ -34,5 +34,13 @@ fields:
   label: Journal image
   description: An image representing the journal. Important to have an image with
     no background.
+- name: color
+  type: color
+  label: Card color
+  config:
+    required: false
+    color_format: Hex
+  description: The color of the card
+  default: "#D3D3D3"
 pages:
 - src/articles/biomedicines8080246.md
