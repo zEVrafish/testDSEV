@@ -27,5 +27,12 @@ fields:
     required: false
   label: Website link
   description: Link to webpage.
+- name: journal_image
+  type: file
+  config:
+    maxSize: 64
+  label: Journal image
+  description: An image representing the journal. Important to have an image with
+    no background.
 pages:
 - src/articles/10.3390/biomedicines8080246.md
