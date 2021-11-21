@@ -30,6 +30,7 @@ sections:
   label: Featured articles
   create: documents
   match: "**/*"
+  exclude: "*.json"
 - type: directory
   path: src/members
   label: Board members
@@ -41,6 +42,7 @@ sections:
   label: EV groups in Denmark
   create: documents
   match: "**/*"
+  exclude: "*.json"
 upload_dir: src/images
 public_path: images
 front_matter_path: ''
