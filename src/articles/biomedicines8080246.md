@@ -7,5 +7,6 @@ authors: Askeland, A., Borup, A., Østergaard, O., Olsen, J. V., Lund, S. M., Ch
 doi: https://doi.org/10.3390/biomedicines8080246
 link: https://www.mdpi.com/2227-9059/8/8/246
 journal_image: src/images/biomedicines-logo-print.png
+color: "#4A90E2"
 
 ---
