@@ -17,7 +17,6 @@ sections:
 - type: document
   path: src/_includes/text/front_page.html
   label: Front page text
-  match: "**/*"
 - type: heading
   label: Content
 - type: directory
