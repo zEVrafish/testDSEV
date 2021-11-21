@@ -4,11 +4,22 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Settings
+- type: document
+  path: src/_data/metadata.json
+  label: General
+- type: document
+  path: src/_data/menu.json
+  label: Menu
+- type: heading
+  label: Content
 - type: directory
-  path: src/groups
-  label: EV groups in Denmark
+  path: src/posts
+  label: News
   create: documents
   match: "**/*"
+  exclude: "*.json"
 - type: directory
   path: src/articles
   label: Featured articles
@@ -21,11 +32,10 @@ sections:
   match: "**/*"
   exclude: "*.json"
 - type: directory
-  path: src/posts
-  label: News
+  path: src/groups
+  label: EV groups in Denmark
   create: documents
   match: "**/*"
-  exclude: "*.json"
 upload_dir: src/images
 public_path: images
 front_matter_path: ''
@@ -35,6 +45,6 @@ build:
   preview_output_directory: dist
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
-  mount_path: "/srv"
-  working_dir: "/srv"
-  instant_preview_command: npm run dev
+  mount_path: "/src"
+  working_dir: "/src"
+  instant_preview_command: npm run preview

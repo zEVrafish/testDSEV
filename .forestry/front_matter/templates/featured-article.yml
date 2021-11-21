@@ -1,0 +1,29 @@
+---
+label: Featured article
+hide_body: true
+fields:
+- name: article_name
+  type: text
+  config:
+    required: false
+  label: Article name
+  description: The name of the article
+- name: authors
+  type: text
+  config:
+    required: false
+  label: Authors
+  description: The authors (APA format). Find APA style <a href="https://scholar.google.com/schhp?hl=da&amp;as_sdt=0,5"
+    title="google scholar" target="_blank">here</a>.
+- name: doi
+  type: text
+  config:
+    required: false
+  label: DOI
+  description: Long DOI
+- name: link
+  type: text
+  config:
+    required: false
+  label: Website link
+  description: Link to webpage.
