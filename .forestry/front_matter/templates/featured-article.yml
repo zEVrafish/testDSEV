@@ -34,3 +34,5 @@ fields:
   label: Journal image
   description: An image representing the journal. Important to have an image with
     no background.
+pages:
+- src/articles/biomedicines8080246.md
