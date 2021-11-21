@@ -44,4 +44,5 @@ fields:
   default: "#D3D3D3"
 pages:
 - src/articles/Anders_Boysen.md
+- src/articles/Jonas_ellegaard.md
 - src/articles/biomedicines8080246.md
