@@ -23,4 +23,3 @@ fields:
   description: The person which wrote it
 pages:
 - src/posts/new-webpage.md
-- src/posts/post_1.md
