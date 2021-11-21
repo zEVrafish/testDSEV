@@ -82,8 +82,8 @@ async function backgroundShortcode(src, alt, style) {
 }
 
 /* Config settings */
-module.exports = function (eleventyConfig) {
-    /* SVG package */
+module.exports = function(eleventyConfig) {
+    /* Plugins */
     eleventyConfig.addPlugin(svgContents);
 
     /* Eleventy will pick up content at build (_tmp is for dev) */
@@ -120,6 +120,7 @@ module.exports = function (eleventyConfig) {
         return array.slice(0, n);
     });
 
+    /* Calculate remaining */
     eleventyConfig.addFilter("remaining", (...numbers) => {
         return 2 - numbers;
     });
@@ -128,7 +129,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("svg", svgShortcode);
-
+    
     /* Set input and output directories */
     return {
         dir: {
