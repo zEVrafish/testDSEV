@@ -9,6 +9,7 @@
 
     ],
     "resources": [
+      "src/pages/groups.html",
       "src/pages/board_members.html"
     ]
   },
