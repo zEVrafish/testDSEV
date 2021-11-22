@@ -25,6 +25,25 @@ fields:
   - name: resources
     type: field_group_list
     fields:
+    - name: menu_name
+      type: text
+      config:
+        required: true
+      label: Menu name
+      description: The displayed name
+    - name: page
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: pages
+          file: 
+          path: 
+      label: Page
+      description: The chosen page
     - name: text_field
       type: list
       config:
@@ -55,7 +74,7 @@ fields:
     config:
       min: 
       max: 
-      labelField: 
+      labelField: menu_name
     label: Resources
   description: Text of main menu items
 - type: field_group
