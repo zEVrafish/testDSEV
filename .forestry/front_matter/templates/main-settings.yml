@@ -4,19 +4,20 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  description: Main title of webpage
 - type: text
   name: url
-  label: url
+  label: Main URL
+  description: Main accessable URL.
 - type: text
   name: language
-  label: language
+  label: Lanuage
+  default: en
 - type: text
   name: description
-  label: description
-- type: text
-  name: source_code_url
-  label: source_code_url
+  label: Description
+  description: Description of Webpage
 - type: field_group
   name: menu
   label: menu
@@ -42,7 +43,7 @@ fields:
     label: email
 - type: field_group
   name: footer
-  label: footer
+  label: Footer settings
   fields:
   - type: text
     name: copyright
