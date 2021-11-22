@@ -1,0 +1,64 @@
+---
+label: Main settings
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: url
+  label: url
+- type: text
+  name: language
+  label: language
+- type: text
+  name: description
+  label: description
+- type: text
+  name: source_code_url
+  label: source_code_url
+- type: field_group
+  name: menu
+  label: menu
+  fields:
+  - type: text
+    name: item_1
+    label: item_1
+  - type: text
+    name: item_2
+    label: item_2
+  - type: text
+    name: item_3
+    label: item_3
+- type: field_group
+  name: contact_info
+  label: contact_info
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: email
+    label: email
+- type: field_group
+  name: footer
+  label: footer
+  fields:
+  - type: text
+    name: copyright
+    label: copyright
+  - type: text
+    name: contact
+    label: contact
+  - type: text
+    name: source_text
+    label: source_text
+  - type: text
+    name: source_url
+    label: source_url
+  - type: text
+    name: admin_text
+    label: admin_text
+  - type: text
+    name: admin_url
+    label: admin_url
