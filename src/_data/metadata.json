@@ -8,10 +8,12 @@
     "about": [
 
     ],
-    "resources": [
-      "src/pages/groups.html",
-      "src/pages/board_members.html"
-    ]
+    "resources": {
+      "item_1": {
+        "name": "Board Members",
+        "url": "pages/board_members"
+      }
+    }
   },
   "contact_info": {
     "name": "Danish Society for Extracellular vesicles",
