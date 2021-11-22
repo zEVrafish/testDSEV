@@ -13,6 +13,12 @@
     ],
     "About": [
       "about"
+    ],
+    "about": [
+
+    ],
+    "resources": [
+      "src/pages/board_members.html"
     ]
   },
   "contact_info": {
