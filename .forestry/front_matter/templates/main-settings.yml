@@ -21,27 +21,6 @@ fields:
 - type: field_group
   name: menu
   label: Menu items
-  fields:
-  - name: about
-    type: list
-    config:
-      use_select: true
-      min: 
-      max: 
-      source:
-        type: pages
-        section: pages
-    label: About
-  - name: resources
-    type: list
-    config:
-      use_select: true
-      min: 
-      max: 
-      source:
-        type: pages
-        section: pages
-    label: Resources
   description: Text of main menu items
 - type: field_group
   name: contact_info
