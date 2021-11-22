@@ -6,13 +6,10 @@
 <div class="h-full max-w-4xl mx-auto w-full overflow-hidden pl-5 pr-5">
     <div class="carousel md:pr-16 md:pl-16 w-full h-auto" data-flickity='{ "wrapAround": true , "autoPlay": 4500, "contain": true, "cellAlign": "right" }'>
         <!-- Settings for articles -->
-        {% set total_posts = collections.posts | length %} 
-        {% set article_list = collections.articles | head(-6) %} 
-        
-        {% for article in article_list | reverse %}
+        {% set total_posts = collections.posts | length %} {% set article_list = collections.articles | head(-6) %} {% for article in article_list | reverse %}
         <a href="{{ article.data.link }}" class="carousel-cell carousel-style flex h-80 flex-col" style="background-color: {{ article.data.color }};" target="_blank">
             <!-- Image -->
-            <div class="h-1/2 overflow-hidden my-auto  md:w-3/4 sm:w-1/2 w-3/4 mx-auto flex justify-center flex-col	">{% image "logo", article.data.journal_image, "DSEV logo", "pt-6 pb-6 ", "(min-width: 10em) 20vw, 10vw"%}</div>
+            <div class="h-1/2 overflow-hidden my-auto md:w-3/4 sm:w-1/2 w-3/4 mx-auto flex justify-center flex-col">{% image "logo", article.data.journal_image, "DSEV logo", "pt-6 pb-6 bg", "(min-width: 10em) 20vw, 10vw"%}</div>
 
             <!-- Text -->
             <div class="flex flex-col space-y-2 pb-6 justify-between h-full">
@@ -20,24 +17,12 @@
                 <h2 class="font-semibold md:w-11/12 md:text-base sm:text-xl text-sm mx-auto text-center h-auto w-3/4">
                     {{ article.data.article_name }}
                 </h2>
-                <h3 class="md:text-sm md:w-10/12 sm:text-base text-xs text-gray-700  text-center mx-auto h-auto w-8/12">
+                <h3 class="md:text-sm md:w-10/12 sm:text-base text-xs text-gray-700 text-center mx-auto h-auto w-8/12">
                     {{ article.data.authors }}
                 </h3>
             </div>
-
-
-
         </a>
 
         {% endfor %}
-
-        <!--        <div class="carousel-cell carousel-style bg-red-300">        </div>
-
-     
-    <div class="carousel-cell carousel-style bg-blue-300"></div>
-        <div class="carousel-cell carousel-style bg-yellow-300"></div>
-        <div class="carousel-cell carousel-style bg-gray-300"></div> -->
     </div>
 </div>
-
-
