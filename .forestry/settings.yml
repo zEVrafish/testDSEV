@@ -13,6 +13,13 @@ sections:
   path: src/_data/menu.json
   label: Menu
 - type: heading
+  label: Pages
+- type: directory
+  path: src/pages
+  label: Pages
+  create: all
+  match: "**/*"
+- type: heading
   label: Text
 - type: document
   path: src/_includes/text/front_page.html
