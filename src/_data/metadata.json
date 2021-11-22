@@ -1,24 +1,24 @@
 {
-    "title": "Danish Society for Extracellular Vesicles",
-    "url": "http://www.dsev.dk",
-    "language": "en",
-    "description": "Webpage for the Danish Society for Extracellular Vesicles.",
-    "source_code_url": "https://github.com/Danish-Society-of-EVs/webpage/tree/develop",
-    "menu": {
-        "item_1": "About",
-        "item_2": "Resources",
-        "item_3": "Contact"
-    },
-    "contact_info": {
-        "name": "Danish Society for Extracellular vesicles",
-        "email": "contact@dsev.dk"
-    },
-    "footer": {
-        "copyright": "DSEV",
-        "contact": "contact@dsev.dk",
-        "source_text": "Source code",
-        "source_url": "https://github.com/Danish-Society-of-EVs/webpage/tree/develop",
-        "admin_text": "Admin login",
-        "admin_url": "https://app.forestry.io/sites/dgdx5xwemvqxaa/"
-    }
+  "title": "Danish Society for Extracellular Vesicles",
+  "url": "http://www.dsev.dk",
+  "language": "en",
+  "description": "Webpage for the Danish Society for Extracellular Vesicles.",
+  "source_code_url": "https://github.com/Danish-Society-of-EVs/webpage/tree/develop",
+  "menu": {
+    "item_1": "About",
+    "item_2": "Resources",
+    "item_3": "Contact"
+  },
+  "contact_info": {
+    "name": "Danish Society for Extracellular vesicles",
+    "email": "contact@dsev.dk"
+  },
+  "footer": {
+    "copyright": "DSEV",
+    "contact": "contact@dsev.dk",
+    "source_text": "Source",
+    "source_url": "https://github.com/Danish-Society-of-EVs/webpage/tree/develop",
+    "admin_text": "Admin",
+    "admin_url": "https://app.forestry.io/sites/dgdx5xwemvqxaa/"
+  }
 }
