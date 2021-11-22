@@ -4,8 +4,21 @@ hide_body: true
 fields:
 - name: test
   type: field_group_list
+  fields:
+  - name: include
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Include
   config:
     min: 1
     max: 4
-    labelField: 
+    labelField: include
   label: test
