@@ -44,38 +44,37 @@ fields:
           path: 
       label: Page
       description: The chosen page
-    - name: text_field
-      type: list
-      config:
-        use_select: false
-        min: 
-        max: 
-      label: text_field
-    - name: section
-      type: list
-      config:
-        use_select: true
-        min: 
-        max: 
-        source:
-          type: documents
-          section: pages
-      label: section
-    - name: pages
-      type: list
-      config:
-        use_select: true
-        min: 
-        max: 
-        source:
-          type: pages
-          section: pages
-      label: pages
     config:
       min: 
       max: 
       labelField: menu_name
     label: Resources
+  - name: about
+    type: field_group_list
+    fields:
+    - name: menu_name
+      type: text
+      config:
+        required: true
+      label: Menu name
+    - name: page
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: pages
+          file: 
+          path: 
+      label: Page
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: About
+    description: About menu
   description: Text of main menu items
 - type: field_group
   name: contact_info
