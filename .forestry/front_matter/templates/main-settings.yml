@@ -63,10 +63,10 @@ fields:
         file: 
         path: 
     label: dsadsadsa
-  - name: tags
+  - name: Resources
     type: tag_list
     default: []
-    label: Tags
+    label: Resources
   description: Text of main menu items
 - type: field_group
   name: contact_info
