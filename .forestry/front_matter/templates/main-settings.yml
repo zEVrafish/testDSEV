@@ -44,6 +44,13 @@ fields:
         path: 
     label: About
     description: About menu
+  - name: test
+    type: blocks
+    label: test
+    template_types: []
+    config:
+      min: 
+      max: 
   description: Text of main menu items
 - type: field_group
   name: contact_info
