@@ -22,51 +22,14 @@ fields:
   name: menu
   label: Menu items
   fields:
-  - type: text
-    name: item_1
-    label: item_1
-  - type: text
-    name: item_2
-    label: item_2
-  - type: text
-    name: item_3
-    label: item_3
-  - name: About
-    type: select
-    default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: simple
-        section: 
-        file: 
-        path: 
-    label: About
-    description: About menu
-  - name: test
-    type: blocks
-    label: test
-    template_types: []
-    config:
-      min: 
-      max: 
-  - name: dsadsadsa
-    type: select
-    default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: pages
-        section: pages
-        file: 
-        path: 
-    label: dsadsadsa
   - name: Resources
     type: tag_list
     default: []
     label: Resources
+  - name: About
+    type: tag_list
+    default: []
+    label: About
   description: Text of main menu items
 - type: field_group
   name: contact_info
