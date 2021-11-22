@@ -14,8 +14,10 @@
 
         ],
         "pages": [
-          "src/pages/board_members.html"
-        ]
+
+        ],
+        "menu_name": "Board members",
+        "page": "src/pages/board_members.html"
       }
     ]
   },
