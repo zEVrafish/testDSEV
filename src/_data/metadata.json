@@ -25,7 +25,10 @@
       }
     ],
     "about": [
-
+      {
+        "menu_name": "Test",
+        "page": "src/pages/board_members.html"
+      }
     ]
   },
   "contact_info": {
