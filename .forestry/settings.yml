@@ -17,8 +17,9 @@ sections:
 - type: directory
   path: src/pages
   label: Pages
-  create: all
+  create: documents
   match: "**/*"
+  new_doc_ext: ".html"
 - type: heading
   label: Text
 - type: document
