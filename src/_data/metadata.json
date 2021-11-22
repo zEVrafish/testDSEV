@@ -7,7 +7,13 @@
   "menu": {
     "item_1": "About",
     "item_2": "Resources",
-    "item_3": "Contact"
+    "item_3": "Contact",
+    "Resources": [
+      "resource"
+    ],
+    "About": [
+
+    ]
   },
   "contact_info": {
     "name": "Danish Society for Extracellular vesicles",
