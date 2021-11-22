@@ -1,4 +1,11 @@
 ---
 label: Menu - Resources
 hide_body: true
-fields: []
+fields:
+- name: test
+  type: field_group_list
+  config:
+    min: 1
+    max: 4
+    labelField: 
+  label: test
