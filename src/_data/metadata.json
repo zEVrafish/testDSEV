@@ -5,15 +5,6 @@
   "description": "Webpage for the Danish Society for Extracellular Vesicles.",
   "source_code_url": "https://github.com/Danish-Society-of-EVs/webpage/tree/develop",
   "menu": {
-    "item_1": "About",
-    "item_2": "Resources",
-    "item_3": "Contact",
-    "Resources": [
-      "resource"
-    ],
-    "About": [
-      "about"
-    ],
     "about": [
 
     ],
