@@ -20,7 +20,7 @@ fields:
   description: Description of Webpage
 - type: field_group
   name: menu
-  label: menu
+  label: Menu items
   fields:
   - type: text
     name: item_1
@@ -31,6 +31,20 @@ fields:
   - type: text
     name: item_3
     label: item_3
+  - name: About
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: About
+    description: About menu
+  description: Text of main menu items
 - type: field_group
   name: contact_info
   label: contact_info
