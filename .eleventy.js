@@ -136,5 +136,6 @@ module.exports = function(eleventyConfig) {
             input: "src",
             output: "dist",
         },
+        htmlTemplateEngine: "njk"
     };
 };
