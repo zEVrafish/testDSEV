@@ -1,4 +1,60 @@
 ---
 label: Menu
 hide_body: true
-fields: []
+fields:
+- name: about
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+    description: Name
+  - name: page
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: pages
+        file: 
+        path: 
+    label: Page
+    description: The page to link to
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: About
+  description: The about menu
+- name: resources
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: Name
+    description: Name
+  - name: page
+    type: select
+    default: []
+    config:
+      required: false
+      options: []
+      source:
+        type: pages
+        section: pages
+        file: 
+        path: 
+    label: Page
+    description: Page to link to
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Resources
+  description: Resources
