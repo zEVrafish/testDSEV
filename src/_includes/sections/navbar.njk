@@ -22,7 +22,7 @@
                 <a href="/" class="md:inline-block text-teal-200 hover:text-white">Home</a>
 
                 <!-- Rest of pages -->
-                {% for name, item in metadata.menu %}
+                {% for name, item in menu %}
                 <a href="#" class="md:inline-block text-teal-200 hover:text-white">{{ name | capatilize }}</a>
                 {% endfor %}
 
@@ -62,7 +62,7 @@
                     <a href="#" class="flex items-center p-3 border-b hover:bg-gray-100 mx-2">
                         <p class="dark:text-gray-700 text-lg items-center">Home</p>
                     </a>
-                    {% for name, item in metadata.menu %}
+                    {% for name, item in menu %}
                     <a href="#" class="flex items-center p-3 border-b hover:bg-gray-100 mx-2">
                         <p class="dark:text-gray-700 text-lg items-center">
                             {{ name | capatilize }}
