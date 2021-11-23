@@ -22,6 +22,32 @@ fields:
   name: menu
   label: Menu items
   fields:
+  - name: about
+    type: field_group_list
+    fields:
+    - name: menu_name
+      type: text
+      config:
+        required: true
+      label: Menu name
+    - name: page
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: pages
+          file: 
+          path: 
+      label: Page
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: About
+    description: About menu
   - name: resources
     type: field_group_list
     fields:
@@ -49,32 +75,6 @@ fields:
       max: 
       labelField: menu_name
     label: Resources
-  - name: about
-    type: field_group_list
-    fields:
-    - name: menu_name
-      type: text
-      config:
-        required: true
-      label: Menu name
-    - name: page
-      type: select
-      default: []
-      config:
-        required: false
-        options: []
-        source:
-          type: pages
-          section: pages
-          file: 
-          path: 
-      label: Page
-    config:
-      min: 
-      max: 
-      labelField: 
-    label: About
-    description: About menu
   description: Text of main menu items
 - type: field_group
   name: contact_info
