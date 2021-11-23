@@ -7,10 +7,6 @@
   "menu": {
     "resources": [
       {
-        "menu_name": "EV groups",
-        "page": "src/pages/groups.html"
-      },
-      {
         "text_field": [
 
         ],
@@ -22,6 +18,10 @@
         ],
         "menu_name": "Board members",
         "page": "src/pages/board_members.html"
+      },
+      {
+        "menu_name": "EV groups",
+        "page": "src/pages/groups.html"
       }
     ],
     "about": [
