@@ -6,38 +6,11 @@ layout: layouts/base.njk
 <!-- Top section -->
 <div>{% include "src/_includes/sections/banner.njk" %}</div>
 
-
 <!-- Text section -->
 <div class="max-w-3xl p-4 flex flex-col mx-auto">
     <p class="text-4xl text-center">Who are we?</p>
     <article class="prose dark:prose-dark p-2 mx-auto">
-        <p>
-            {% for item in metadata.menu.resources %}
-                {{ item.menu_name }}
-
-            {% endfor %}
-            {{ metadata.menu.resources[0].menu_name }}
-            {{ metadata.menu.resources[0].menu_name }}
-            <a href="{{ metadata.menu.resources[0].page | slug }}"> Press me to go</a>
-
-            {{ metadata.menu.resources[0].page | slug }}
-<br>
-            {{ metadata.menu.keys | dump | safe }}
-            {% set animals = ['🐱', '🐶', '🐺'] %}
-
-            {% for item in animals %}
-                Value: {{ item }}
-            {% endfor %}
-
-            {% set animals = ['🐱', '🐶', '🐺'] %}
-
-            <ul>
-                {% for name, item in metadata.menu %}
-                   <li>{{ name }}: {{ item }}</li>
-                {% endfor %}
-             </ul>
-
-            <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
+        <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
 
         <p>As an organization, DSEV connects researchers at its Annual Meeting and reach out to global EV researcheres and workshops/events.</p>
 
@@ -50,32 +23,36 @@ layout: layouts/base.njk
 <div class="relative sm:h-52 overflow-hidden">{% include "src/_includes/sections/news_mail.njk" %}</div>
 
 <!-- Article wheel -->
-<div class="relative h-104 overflow-hidden">
-    <!-- background -->
+<div>
 
-    <div class="absolute bg-gray-500 h-full left-0 w-full">{% background "src/images/Scientific-articles.jpg", "Parallaxed background with EVs", "h-full bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
-
-    <!-- Main container -->
-    <div class="overflow-hidden h-auto">
-        <!-- Content -->
-        <div class="absolute inset-x-0 max-w-5xl mx-auto top-0 flex flex-col h-full w-full">
-            <!-- Text -->
-            <div class="flex flex-col w-full p-4 space-y-2">
-                <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
-                <div class="text-gray-300 font-montserrat text-center max-w-2xl text-sm sm:text-base mx-auto">
-                    <p class="hidden sm:block">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
-                    <p class="sm:hidden">Scientific works within EV research authored or co-autorhed by members of DSEV.</p>
+    <div class="relative h-104 overflow-hidden">
+        <!-- background -->
+        
+        <div class="absolute bg-gray-500 h-full left-0 w-full">{% background "src/images/Scientific-articles.jpg", "Parallaxed background with EVs", "h-full bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
+        
+        <!-- Main container -->
+        <div class="overflow-hidden h-auto">
+            <!-- Content -->
+            <div class="absolute inset-x-0 max-w-5xl mx-auto top-0 flex flex-col h-full w-full">
+                <!-- Text -->
+                <div class="flex flex-col w-full p-4 space-y-2">
+                    <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
+                    <div class="text-gray-300 font-montserrat text-center max-w-2xl text-sm sm:text-base mx-auto">
+                        <p class="hidden sm:block">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
+                        <p class="sm:hidden">Scientific works within EV research authored or co-autorhed by members of DSEV.</p>
+                    </div>
                 </div>
-            </div>
-
-            <!-- Article wheel -->
-            {% include "src/_includes/sections/carousel.njk" %}
-
-            <!-- Buttons -->
-            <div class="text-center p-2">
-                <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">View more</button>
-                <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">Submit article</button>
+                
+                <!-- Article wheel -->
+                {% include "src/_includes/sections/carousel.njk" %}
+                
+                <!-- Buttons -->
+                <div class="text-center p-2">
+                    <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">View more</button>
+                    <button class="h-10 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">Submit article</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+    

@@ -2,6 +2,7 @@
 const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
+const slugify = require("slugify");
 
 /* Images (Standard) */
 async function imageShortcode(type, src, alt, style, sizes) {
@@ -83,20 +84,23 @@ async function backgroundShortcode(src, alt, style) {
 
 /* Config settings */
 module.exports = function (eleventyConfig) {
-    /* Plugins */
+    /*--------- General --------*/
+    // Plugins
     eleventyConfig.addPlugin(svgContents);
 
-    /* Eleventy will pick up content at build (_tmp is for dev) */
+    // Eleventy will pick up content at build (_tmp is for dev)
     eleventyConfig.addPassthroughCopy({ "./src/css/tailwind.css": "./style.css" });
     eleventyConfig.addPassthroughCopy({ "./src/_tmp/style.css": "./style.css" });
     eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./images/" });
     eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./images/" });
 
-    /* Will watch for changes during dev */
+    // Will watch for changes during dev
     eleventyConfig.addWatchTarget("./src");
     eleventyConfig.addWatchTarget("./dist");
 
-    /* Datetime */
+
+    /*--------- Filters --------*/
+    // Datetime
     eleventyConfig.addFilter("readableDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy");
     });
@@ -109,9 +113,20 @@ module.exports = function (eleventyConfig) {
         return Math.min.apply(null, numbers);
     });
 
-    /* Slugify */
+    /* Capatilize first letter */
     eleventyConfig.addFilter("capatilize", (str) => {
         return str.charAt(0).toUpperCase() + str.slice(1);
+    });
+    /* Slugify */
+    eleventyConfig.addFilter("slug", (str) => {
+        if (!str) {
+            return;
+        }
+
+        /* Create working relative url */
+        url = slugify(str).replace(/(\b\.html)/gi, "");
+        url = slugify(url).replace(/(\bsrcpages)/gi, "pages/");
+        return url;
     });
 
     // Get the first `n` elements of a collection.
@@ -131,12 +146,14 @@ module.exports = function (eleventyConfig) {
         return 2 - numbers;
     });
 
-    /* Image plugin */
+
+    /*--------- Shortcodes --------*/
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("svg", svgShortcode);
 
-    /* Set input and output directories */
+    
+    /*--------- Settings --------*/
     return {
         dir: {
             input: "src",
