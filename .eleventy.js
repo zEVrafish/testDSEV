@@ -2,7 +2,6 @@
 const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
-const slugify = require("slugify");
 
 /* Images (Standard) */
 async function imageShortcode(type, src, alt, style, sizes) {
@@ -111,15 +110,8 @@ module.exports = function (eleventyConfig) {
     });
 
     /* Slugify */
-    eleventyConfig.addFilter("slug", (str) => {
-        if (!str) {
-            return;
-        }
-
-        /* Create working relative url */
-        url = slugify(str).replace(/(\b\.html)/gi, "");
-        url = slugify(url).replace(/(\bsrcpages)/gi, "pages/");
-        return url;
+    eleventyConfig.addFilter("capatilize", (str) => {
+        return str.charAt(0).toUpperCase() + str.slice(1);
     });
 
     // Get the first `n` elements of a collection.
