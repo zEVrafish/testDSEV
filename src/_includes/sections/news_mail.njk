@@ -12,7 +12,8 @@
             <div class="flex flex-col space-y-2">
                 {% set total_posts = collections.posts | length %} {% set postslist = collections.posts | head(-2) %} {% for post in postslist | reverse %}
                 <div class="pl-1 flex flex-col">
-                    <a class="text-lg text-blue-400" href="{{ post.url }}">{{ post.data.title }}</a>
+                    <a class="text-lg text-blue-400" href="{{ post.url }}">{{ post.data.title }}                         {{ post.url }}
+                    </a>
                     <time class="text-sm text-gray-600 postlist-date" datetime="{{ post.date | htmlDateString }}">
                         {{ post.date | readableDate }}
                     </time>

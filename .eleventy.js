@@ -2,6 +2,7 @@
 const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
+const slugify = require("slugify");
 
 /* Images (Standard) */
 async function imageShortcode(type, src, alt, style, sizes) {
@@ -82,13 +83,14 @@ async function backgroundShortcode(src, alt, style) {
 }
 
 /* Config settings */
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
     /* Plugins */
     eleventyConfig.addPlugin(svgContents);
 
     /* Eleventy will pick up content at build (_tmp is for dev) */
     eleventyConfig.addPassthroughCopy({ "./src/css/tailwind.css": "./style.css" });
     eleventyConfig.addPassthroughCopy({ "./src/_tmp/style.css": "./style.css" });
+    eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./images/" });
     eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./images/" });
 
     /* Will watch for changes during dev */
@@ -106,6 +108,18 @@ module.exports = function(eleventyConfig) {
     // Return the smallest number argument
     eleventyConfig.addFilter("min", (...numbers) => {
         return Math.min.apply(null, numbers);
+    });
+
+    /* Slugify */
+    eleventyConfig.addFilter("slug", (str) => {
+        if (!str) {
+            return;
+        }
+
+        /* Create working relative url */
+        url = slugify(str).replace(/(\b\.html)/gi, "");
+        url = slugify(url).replace(/(\bsrcpages)/gi, "pages/");
+        return url;
     });
 
     // Get the first `n` elements of a collection.
@@ -129,13 +143,13 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("svg", svgShortcode);
-    
+
     /* Set input and output directories */
     return {
         dir: {
             input: "src",
             output: "dist",
         },
-        htmlTemplateEngine: "njk"
+        htmlTemplateEngine: "njk",
     };
 };

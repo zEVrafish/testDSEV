@@ -22,9 +22,10 @@
                 <a href="/" class="md:inline-block text-teal-200 hover:text-white">Home</a>
 
                 <!-- Rest of pages -->
-                {% for data, item in metadata.menu %}
-                <a href="#" class="md:inline-block text-teal-200 hover:text-white">{{ item }}</a>
+                {% for name, item in metadata.menu %}
+                <a href="#" class="md:inline-block text-teal-200 hover:text-white">{{ name }}</a>
                 {% endfor %}
+
             </div>
 
             <!-- Toggle dark mode -->
@@ -64,7 +65,7 @@
                     {% for name, item in metadata.menu %}
                     <a href="#" class="flex items-center p-3 border-b hover:bg-gray-100 mx-2">
                         <p class="dark:text-gray-700 text-lg items-center">
-                            {{ item }}
+                            {{ name }}
                         </p>
                     </a>
                     {% endfor %}

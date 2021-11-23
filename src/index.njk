@@ -6,11 +6,38 @@ layout: layouts/base.njk
 <!-- Top section -->
 <div>{% include "src/_includes/sections/banner.njk" %}</div>
 
+
 <!-- Text section -->
 <div class="max-w-3xl p-4 flex flex-col mx-auto">
     <p class="text-4xl text-center">Who are we?</p>
     <article class="prose dark:prose-dark p-2 mx-auto">
-        <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
+        <p>
+            {% for item in metadata.menu.resources %}
+                {{ item.menu_name }}
+
+            {% endfor %}
+            {{ metadata.menu.resources[0].menu_name }}
+            {{ metadata.menu.resources[0].menu_name }}
+            <a href="{{ metadata.menu.resources[0].page | slug }}"> Press me to go</a>
+
+            {{ metadata.menu.resources[0].page | slug }}
+<br>
+            {{ metadata.menu.keys | dump | safe }}
+            {% set animals = ['🐱', '🐶', '🐺'] %}
+
+            {% for item in animals %}
+                Value: {{ item }}
+            {% endfor %}
+
+            {% set animals = ['🐱', '🐶', '🐺'] %}
+
+            <ul>
+                {% for name, item in metadata.menu %}
+                   <li>{{ name }}: {{ item }}</li>
+                {% endfor %}
+             </ul>
+
+            <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
 
         <p>As an organization, DSEV connects researchers at its Annual Meeting and reach out to global EV researcheres and workshops/events.</p>
 
