@@ -1,6 +1,15 @@
 {
-    "title": {
-        "item_1": "Info",
-        "item_2": "Board members"
+  "title": {
+    "item_1": "Info",
+    "item_2": "Board members"
+  },
+  "resources": [
+    {
+      "name": "Board members",
+      "page": "src/pages/board_members.html"
     }
+  ],
+  "about": [
+
+  ]
 }

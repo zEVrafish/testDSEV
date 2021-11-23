@@ -58,3 +58,5 @@ fields:
     labelField: 
   label: Resources
   description: Resources
+pages:
+- src/_data/menu.json
