@@ -2,47 +2,6 @@
 label: Board members
 hide_body: true
 fields:
-- name: position
-  type: text
-  config:
-    required: false
-  label: Position
-- name: current_board_member
-  type: boolean
-  label: Current board member
-  default: true
-- name: period
-  type: datetime
-  label: Period
-  description: ''
-  config:
-    required: false
-    date_format: YYYY
-    time_format: YYYY
-    display_utc: false
-    export_format: YYYY
-- name: end_date
-  type: datetime
-  label: End date
-  description: ''
-  config:
-    required: false
-    date_format: YYYY
-    time_format: YYYY
-    display_utc: false
-    export_format: YYYY
-  showOnly:
-    field: current_board_member
-- name: name
-  type: text
-  config:
-    required: true
-  label: Name
-- name: picture
-  type: file
-  config:
-    maxSize: 64
-  label: Picture
 - name: board_members
   type: field_group_list
   fields:
@@ -51,6 +10,43 @@ fields:
     config:
       required: false
     label: Name
+  - name: photo
+    type: file
+    config:
+      maxSize: 64
+    label: Photo
+  - name: position
+    type: text
+    config:
+      required: false
+    label: Position
+  - name: current_board_member
+    type: boolean
+    label: Current board member
+    default: true
+  - name: start_date
+    type: datetime
+    label: Start date
+    description: ''
+    config:
+      required: false
+      date_format: yyyy
+      time_format: yyyy
+      display_utc: false
+      export_format: yyyy
+  - name: end_date
+    type: datetime
+    label: End date
+    description: ''
+    config:
+      required: false
+      date_format: yyyy
+      time_format: yyyy
+      display_utc: false
+      export_format: yyyy
+    showOnly:
+      field: current_board_member
+      value: false
   config:
     min: 
     max: 
