@@ -30,20 +30,20 @@ fields:
     description: ''
     config:
       required: false
-      date_format: yyyy
-      time_format: yyyy
+      date_format: YYYY
+      time_format: YYYY
       display_utc: false
-      export_format: yyyy
+      export_format: YYYY
   - name: end_date
     type: datetime
     label: End date
     description: ''
     config:
       required: false
-      date_format: yyyy
-      time_format: yyyy
+      date_format: YYYY
+      time_format: YYYY
       display_utc: false
-      export_format: yyyy
+      export_format: YYYY
     showOnly:
       field: current_board_member
       value: false
