@@ -2,11 +2,6 @@
 label: Board members
 hide_body: true
 fields:
-- name: name
-  type: text
-  config:
-    required: true
-  label: Name
 - name: picture
   type: file
   config:
@@ -43,3 +38,15 @@ fields:
     export_format: YYYY
   showOnly:
     field: current_board_member
+- name: name
+  type: text
+  config:
+    required: true
+  label: Name
+- name: board_members
+  type: field_group_list
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Board members
