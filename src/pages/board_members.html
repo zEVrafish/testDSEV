@@ -2,7 +2,9 @@
 title: Board members
 layout: layouts/base.njk
 description: View information about current and former board members of DSEV
-tags: resources
+tags:
+- resources
+
 ---
 
 <div class="flex flex-col h-full p-4 max-w-5xl mx-auto">
@@ -10,6 +12,30 @@ tags: resources
     <div class="flex flex-col space-y-2 pb-4">
         <h2 class="text-5xl">Board members</h2>
         <h3 class="text-3xl">Current board members</h3>
+    </div>
+
+    <!--  Cards -->
+    <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        {% for name, item in board_members %}
+        {% for inner_data in item %}
+        <div class="flex flex-col bg-white shadow-xl h-auto w-auto rounded-lg p-2 ">
+            <!-- Image -->
+            <div class="flex items-center justify-center p-6">
+                {% image "", inner_data.photo, "Portrait", "w-36 h-36 rounded-full object-cover object-top", "(min-width: 10em) 20vw, 10vw"%}            
+            </div>
+
+            <!-- Text -->
+            <div class="pl-4 pr-4">
+                <p class="font-semibold text-lg">{{ inner_data.name }}</p>
+                <p class="text-indigo-800">{{ inner_data.position }} </p>
+            </div>
+                    </div>
+
+        {% endfor %}
+        {% endfor %}
+        <div></div>
+    </div>
+</div>
     </div>
 
     <!--  Cards -->
