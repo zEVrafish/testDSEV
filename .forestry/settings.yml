@@ -14,12 +14,10 @@ sections:
   label: Menu
 - type: heading
   label: Pages
-- type: directory
-  path: src/pages
-  label: Pages
-  create: documents
+- type: document
+  path: src/pages/board_members.html
+  label: Board members
   match: "**/*"
-  new_doc_ext: html
 - type: heading
   label: Text
 - type: document
