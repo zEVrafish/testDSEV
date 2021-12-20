@@ -23,3 +23,5 @@ fields:
   type: tag_list
   default: []
   label: tags
+pages:
+- src/pages/board_members.html
