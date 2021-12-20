@@ -1,6 +1,12 @@
 {
   "resources": [
     {
+      "name": "Test",
+      "page": [
+
+      ]
+    },
+    {
       "name": "Board members",
       "page": "src/pages/board_members.html"
     }
