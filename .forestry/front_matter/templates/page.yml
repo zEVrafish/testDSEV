@@ -1,4 +1,25 @@
 ---
 label: Page
 hide_body: false
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
+- name: layout
+  type: text
+  config:
+    required: false
+  label: Layout
+  default: layouts/base.njk
+  hidden: true
+- name: description
+  type: text
+  config:
+    required: false
+  label: Description
+- name: tags
+  type: tag_list
+  default: []
+  label: tags
