@@ -1,6 +1,14 @@
 {
   "board_members": [
     {
+      "name": "Aase Handberg",
+      "photo": "src/images/250px-aase_handberg.jpg",
+      "position": "Vice president",
+      "current_board_member": true,
+      "start_date": "2020",
+      "end_date": ""
+    },
+    {
       "name": "Malene Møller Jørgensen",
       "photo": "src/images/malenemoller.jpg",
       "position": "President",
