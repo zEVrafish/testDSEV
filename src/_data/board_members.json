@@ -1,6 +1,14 @@
 {
   "board_members": [
     {
+      "name": "Anne Borup",
+      "photo": "src/images/unnamed.jpg",
+      "position": "Treasurer",
+      "current_board_member": true,
+      "start_date": "2020",
+      "end_date": ""
+    },
+    {
       "name": "Malene Møller Jørgensen",
       "photo": "src/images/malenemoller.jpg",
       "position": "President",
