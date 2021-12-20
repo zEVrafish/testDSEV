@@ -1,8 +1,7 @@
 {
   "resources": [
     {
-      "name": "Board members",
-      "page": "src/pages/board_members.html"
+      "name": "Board members"
     }
   ],
   "about": [

@@ -15,11 +15,14 @@
         @apply bg-white dark:bg-gray-200 w-4/5 rounded-md flex flex-col h-36 justify-between text-center p-3 shadow-lg mx-auto md:w-1/3;
     }
     .bg-modal {
-        @apply fixed top-0 left-0 w-full h-full bg-gray-600 bg-opacity-50 z-50
+        @apply fixed top-0 left-0 w-full h-full bg-gray-600 bg-opacity-50 z-50;
+    }
+    .menu-button {
+        @apply pl-2 pr-2 md:inline-block bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200  focus:outline-none focus:ring;
     }
 }
-
-/* Extend CSS utilities */
+/* 
+ *//* Extend CSS utilities */
 @layer utilities {
     .curved {
         border-bottom-left-radius: 95% 90%;

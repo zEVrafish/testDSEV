@@ -98,8 +98,20 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addWatchTarget("./src");
     eleventyConfig.addWatchTarget("./dist");
 
+    /*--------- Collections --------*/
+    eleventyConfig.addCollection("byTag", function (collectionApi) {
+        return collectionApi.getFilteredByTag("resources");
+    });
+
+    eleventyConfig.addCollection("keyMustExistInData", (data) => {
+        // Side-step tags and do your own filtering
+        return data;
+    });
 
     /*--------- Filters --------*/
+    // Extract test
+    eleventyConfig.addFilter("onlyTag", (tag) => {});
+
     // Datetime
     eleventyConfig.addFilter("readableDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy");
@@ -146,13 +158,11 @@ module.exports = function (eleventyConfig) {
         return 2 - numbers;
     });
 
-
     /*--------- Shortcodes --------*/
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("svg", svgShortcode);
 
-    
     /*--------- Settings --------*/
     return {
         dir: {
