@@ -12,9 +12,6 @@ sections:
 - type: document
   path: src/_data/menu.json
   label: Menu
-- type: document
-  path: src/_data/board_members.json
-  label: Board members
 - type: heading
   label: Pages
 - type: directory
@@ -30,6 +27,9 @@ sections:
   label: Front page
 - type: heading
   label: Content
+- type: document
+  path: src/_data/board_members.json
+  label: Board members
 - type: directory
   path: src/posts
   label: News
