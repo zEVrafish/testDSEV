@@ -17,7 +17,6 @@ sections:
 - type: document
   path: src/pages/board_members.html
   label: Board members
-  match: "**/*"
 - type: heading
   label: Text
 - type: document
