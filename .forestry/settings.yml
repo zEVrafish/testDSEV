@@ -12,6 +12,9 @@ sections:
 - type: document
   path: src/_data/menu.json
   label: Menu
+- type: document
+  path: src/_data/board_members.json
+  label: Board members
 - type: heading
   label: Pages
 - type: directory
@@ -36,12 +39,6 @@ sections:
 - type: directory
   path: src/articles
   label: Featured articles
-  create: documents
-  match: "**/*"
-  exclude: "*.json"
-- type: directory
-  path: src/members
-  label: Board members
   create: documents
   match: "**/*"
   exclude: "*.json"

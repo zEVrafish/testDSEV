@@ -11,19 +11,6 @@ fields:
       required: true
     label: Name
     description: Name
-  - name: page
-    type: select
-    default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: pages
-        section: pages
-        file: 
-        path: 
-    label: Page
-    description: The page to link to
   config:
     min: 
     max: 
@@ -39,19 +26,6 @@ fields:
       required: true
     label: Name
     description: Name
-  - name: page
-    type: select
-    default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: pages
-        section: pages
-        file: 
-        path: 
-    label: Page
-    description: Page to link to
   config:
     min: 
     max: 
