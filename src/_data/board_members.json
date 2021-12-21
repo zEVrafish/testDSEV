@@ -6,7 +6,9 @@
       "position": "Secretary",
       "current_board_member": false,
       "start_date": "2019",
-      "end_date": "2021"
+      "end_date": "2021",
+      "email": "",
+      "web_url": ""
     },
     {
       "name": "Malene Møller Jørgensen",
@@ -14,7 +16,9 @@
       "position": "President",
       "current_board_member": true,
       "start_date": "2020",
-      "end_date": ""
+      "end_date": "",
+      "email": "",
+      "web_url": ""
     },
     {
       "name": "Aase Handberg",
@@ -22,7 +26,9 @@
       "position": "Vice president",
       "current_board_member": true,
       "start_date": "2020",
-      "end_date": ""
+      "end_date": "",
+      "email": "",
+      "web_url": ""
     },
     {
       "name": "Anne Borup",
@@ -30,7 +36,9 @@
       "position": "Treasurer",
       "current_board_member": true,
       "start_date": "2020",
-      "end_date": ""
+      "end_date": "",
+      "email": "",
+      "web_url": ""
     },
     {
       "name": "Anders Askeland",
@@ -38,7 +46,9 @@
       "position": "Web manager",
       "current_board_member": true,
       "start_date": "2020",
-      "end_date": ""
+      "end_date": "",
+      "email": "a.askeland@rn.dk",
+      "web_url": "www.askeland.me"
     }
   ]
 }

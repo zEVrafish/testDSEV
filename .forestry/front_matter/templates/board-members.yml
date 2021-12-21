@@ -47,6 +47,16 @@ fields:
     showOnly:
       field: current_board_member
       value: false
+  - name: email
+    type: text
+    config:
+      required: false
+    label: Email
+  - name: web_url
+    type: text
+    config:
+      required: false
+    label: Web url
   config:
     min: 
     max: 
