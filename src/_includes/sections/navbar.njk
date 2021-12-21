@@ -38,8 +38,8 @@
                                 <a class="flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ post.url }}">
                                     <!-- Inner menu -->
                                     <div class="flex flex-row">
-                                        <div class="w-1/5 mx-auto text-gray-600 pl-1 pr-1">
-                                            {% svg post.data.figure, "Portrait", "fill-current stroke-current mx-auto w-12 h-12", "(min-width: 10em) 20vw, 10vw" %}
+                                        {{post.data.figure}}
+                                        <div class="w-1/5 mx-auto text-gray-600 pl-2 pr-2 stroke-current fill-white bg-indigo-600 rounded-lg">
                                         </div>
                                         <div class="ml-3 w-4/5">
                                             <p class="font-semibold">{{ post.data.title }}</p>

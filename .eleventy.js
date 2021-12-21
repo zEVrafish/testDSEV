@@ -36,28 +36,23 @@ async function imageShortcode(type, src, alt, style, sizes) {
 }
 
 /* Images (SVG icons) */
-async function svgShortcode(src, alt, style, sizes) {
+async function svgShortcode(src, alt, style) {
     /* Standard format */
-    let format = ["svg", "avif", "jpeg"];
+    let format = ["svg"];
 
     /* Write metadata */
     let metadata = await Image(src, {
-        widths: [300, 600],
-        formats: format,
-        urlPath: "/images/",
-        outputDir: "dist/images/",
+        formats: ["svg"],
+        svgShortCircuit: true,
     });
 
     /* Set image attributes */
-    let image_attributes = {
-        alt,
-        sizes,
-        loading: "lazy",
-        decoding: "async",
-        class: style,
-    };
+    let data = metadata.svg[metadata.svg.length - 1];
+
 
     // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
+
     return Image.generateHTML(metadata, image_attributes);
 }
 /* Images (Background) */

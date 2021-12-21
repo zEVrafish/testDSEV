@@ -10,8 +10,8 @@ figure: src/images/groups_black_24dp.svg
 <div class="flex flex-col h-full p-4 max-w-5xl mx-auto">
     <!--  text -->
     <div class="flex flex-col space-y-2 pb-4">
-        <h2 class="text-5xl">Board members</h2>
-        <h3 class="text-3xl">Current board members</h3>
+        <h2 class="text-4xl font-semibold">Meet our board members</h2>
+        <h3 class="text-2xl">Current board members</h3>
     </div>
 
     <!--  Cards -->
@@ -35,7 +35,7 @@ figure: src/images/groups_black_24dp.svg
         <!--  Cards -->
     </div>
 
-    <h3 class="text-3xl pt-6">Former board members</h3>
+    <h3 class="text-2xl pt-16 pb-4">Former board members</h3>
     <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
         {% for name, item in board_members %} 
         {% for inner_data in item %} 
@@ -48,7 +48,7 @@ figure: src/images/groups_black_24dp.svg
             <div class="pl-4 pr-4 pb-4">
                 <p class="font-semibold text-lg">{{ inner_data.name }}</p>
                 <p class="text-indigo-900">{{ inner_data.position }}</p>
-                <p>Period: {{ inner_data.start_date }} - {{ inner_data.end_date }}</p>
+                <p class="italic text-xs text-gray-700">{{ inner_data.start_date }} - {{ inner_data.end_date }}</p>
             </div>
         </div>
 
