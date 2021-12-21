@@ -36,25 +36,6 @@ async function imageShortcode(type, src, alt, style, sizes) {
 }
 
 /* Images (SVG icons) */
-async function svgShortcode(src, alt, style) {
-    /* Standard format */
-    let format = ["svg"];
-
-    /* Write metadata */
-    let metadata = await Image(src, {
-        formats: ["svg"],
-        svgShortCircuit: true,
-    });
-
-    /* Set image attributes */
-    let data = metadata.svg[metadata.svg.length - 1];
-
-
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
-    return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async">`;
-
-    return Image.generateHTML(metadata, image_attributes);
-}
 /* Images (Background) */
 async function backgroundShortcode(src, alt, style) {
     /* Error checking */
@@ -156,7 +137,6 @@ module.exports = function (eleventyConfig) {
     /*--------- Shortcodes --------*/
     eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
     eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
-    eleventyConfig.addNunjucksAsyncShortcode("svg", svgShortcode);
 
     /*--------- Settings --------*/
     return {
