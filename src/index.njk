@@ -10,18 +10,6 @@ layout: layouts/base.njk
 <div class="max-w-3xl p-4 flex flex-col mx-auto">
     <p class="text-4xl text-center">Who are we?</p>
     <article class="prose dark:prose-dark p-2 mx-auto">
-        {% for name, item in menu %}
-        <p>Menu name: {{ name }}</p>
-
-        {% for post in collections[name] %}
-        <p>url: {{ post.url }}</p>
-        <p>title: {{ post.data.title }}</p>
-        <p>description: {{ post.data.description }}</p>
-        <p>figure: {{post.data.figure }} </p>
-        {% endfor %} {% endfor %}
-
-        
-
         <p>The Danish Society for Extracellular Vesicles (DSEV) is a Danish community of extracellular vesicles-, exosomes-, and microvesicle researchers. The objective of DSEV is to promote the interests of Danish scientists nationally and internationally.</p>
 
         <p>As an organization, DSEV connects researchers at its Annual Meeting and reach out to global EV researcheres and workshops/events.</p>
@@ -35,18 +23,18 @@ layout: layouts/base.njk
 <div class="relative sm:h-52 overflow-hidden">{% include "src/_includes/sections/news_mail.njk" %}</div>
 
 <!-- Article wheel -->
-<div>
-    <div class="relative h-102 overflow-hidden">
-        <!-- background -->
+<div x-data="{ expand: false }">
+    <div class="relative h-101 overflow-hidden transition-all" :class="expand && 'h-104 transition-all'">
 
+        <!-- Background -->
         <div class="absolute bg-gray-500 h-full left-0 w-full">{% background "src/images/Scientific-articles.jpg", "Parallaxed background with EVs", "h-full bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
 
-        <!-- Main container -->
+        <!-- Content -->
         <div class="overflow-hidden h-auto">
             <!-- Content -->
             <div class="absolute inset-x-0 max-w-5xl mx-auto top-0 flex flex-col h-full w-full">
                 <!-- Text -->
-                <div class="flex flex-col w-full p-4 space-y-2">
+                <div class="flex flex-col h-auto w-full p-4 space-y-2">
                     <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
                     <div class="text-gray-300 font-montserrat text-center max-w-2xl text-sm sm:text-base mx-auto">
                         <p class="hidden sm:block">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
@@ -55,14 +43,25 @@ layout: layouts/base.njk
                 </div>
 
                 <!-- Article wheel -->
-                {% include "src/_includes/sections/carousel.njk" %}
+                <div class="h-auto">
+                    {% include "src/_includes/sections/carousel.njk" %}
 
-                <!-- Buttons -->
-                <div class="text-center p-2">
-                    <button class="h-8 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">View more</button>
-                    <button class="h-8 px-5 m-2 text-gray-100 transition-colors duration-150 bg-blue-600 rounded-lg focus:shadow-outline hover:bg-blue-800">Submit article</button>
                 </div>
+
+                <!-- View more -->
+                <div class="mt-4 h-auto flex flex-col justify-center text-gray-50 -space-y-1">
+                    <p class="text-center text-sm" x-text="expand ? 'View less': 'View more'"></p>
+                    <button class="" @click="expand = !expand">
+                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': expand, 'rotate-0': !expand}" class="inline w-5 h-5 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                </div>
+                
+                <!-- Buttons (JS) -->
+                <p>Test</p>
             </div>
         </div>
     </div>
 </div>
+
+
+
