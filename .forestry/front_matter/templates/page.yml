@@ -30,3 +30,4 @@ fields:
   label: tags
 pages:
 - src/pages/board_members.html
+- src/pages/bylaws.html
