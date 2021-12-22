@@ -4,6 +4,14 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: src/pages/bylaws.html
+  label: Bylaws
+  match: "**/*"
+- type: document
+  path: src/pages/membership.html
+  label: Membership
+  match: "**/*"
 - type: heading
   label: Settings
 - type: document
