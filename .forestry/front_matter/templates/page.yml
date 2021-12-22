@@ -7,18 +7,26 @@ fields:
   config:
     required: false
   label: Title
+- name: layout
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - layouts/bylaws.njk
+    - layouts/base.njk
+    - layout/post.njk
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Layout
 - name: figure
   type: file
   config:
     maxSize: 64
   label: Figure
-- name: layout
-  type: text
-  config:
-    required: false
-  label: Layout
-  default: layouts/base.njk
-  hidden: true
 - name: description
   type: text
   config:
