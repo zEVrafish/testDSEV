@@ -21,7 +21,7 @@ sections:
   path: src/pages/featured_articles.html
   label: Featured articles
 - type: document
-  path: src/pages/bylaws.html
+  path: src/pages/bylaws.md
   label: Bylaws
 - type: document
   path: src/pages/logo.html
