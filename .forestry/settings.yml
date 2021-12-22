@@ -18,21 +18,21 @@ sections:
   path: src/pages/board_members.html
   label: Board members
 - type: document
+  path: src/pages/featured_articles.html
+  label: Featured articles
+  match: "**/*"
+- type: document
   path: src/pages/bylaws.html
   label: Bylaws
-  match: "**/*"
 - type: document
   path: src/pages/logo.html
   label: Logo
-  match: "**/*"
 - type: document
   path: src/pages/membership.html
   label: Membership
-  match: "**/*"
 - type: document
   path: src/pages/sponsorship.html
   label: Sponsorship
-  match: "**/*"
 - type: heading
   label: Text
 - type: document
