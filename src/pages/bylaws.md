@@ -1,13 +1,13 @@
 ---
 layout: layouts/bylaws.njk
 tags:
-    - about
+- about
 title: Bylaws
-date: 2019-01-02T00:00:00.000+01:00
+date: '2019-01-02T00:00:00.000+01:00'
 figure: "/src/images/gavel_black_24dp.svg"
 description: Bylaws for the Danish Society of Extracellular Vesicles (DSEV)
----
 
+---
 ## NAME and OBJECTIVE:
 §1. The name of the society is ”Danish Society of Extracellular Vesicles” in Danish “Dansk Selskab for Ekstracellulære Vesikler”, abbreviated DSEV.
 
