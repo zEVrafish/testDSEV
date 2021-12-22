@@ -31,4 +31,5 @@ fields:
 pages:
 - src/pages/board_members.html
 - src/pages/bylaws.html
+- src/pages/featured_articles.html
 - src/pages/logo.html
