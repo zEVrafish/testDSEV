@@ -20,7 +20,6 @@ sections:
 - type: document
   path: src/pages/featured_articles.html
   label: Featured articles
-  match: "**/*"
 - type: document
   path: src/pages/bylaws.html
   label: Bylaws
