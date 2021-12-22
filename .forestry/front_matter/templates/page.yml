@@ -22,6 +22,20 @@ fields:
       file: 
       path: 
   label: Layout
+- name: tags
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - about
+    - resources
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Menu tag
 - name: figure
   type: file
   config:
@@ -32,10 +46,6 @@ fields:
   config:
     required: false
   label: Description
-- name: tags
-  type: tag_list
-  default: []
-  label: tags
 pages:
 - src/pages/board_members.html
 - src/pages/bylaws.md
