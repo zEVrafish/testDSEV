@@ -1,10 +1,10 @@
 # This workflow will install node dependencies and deploy site to dist folder.
 
-name: Deploy to dist
+name: Deploy site
 
 on:
   push:
-    branches: [develop]
+    branches: [vite]
     paths:
       - 'src/**.js}'
       - 'src/**.md'

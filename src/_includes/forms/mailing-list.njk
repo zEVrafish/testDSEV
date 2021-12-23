@@ -22,10 +22,10 @@
 
             <!-- Input -->
             <div x-show="!sucess" class="">
-                <label class="mb-1 m-1 block text-gray-700">Email </label>
+                <label class="mb-1 m-1 block text-gray-700 dark:text-gray-200">Email</label>
                 <div class="relative flex flex-col space-y-1">
                     <!-- Actual input -->
-                    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" @keydown="{emailValid = false, emailMissing = false}" placeholder="jane@doe.dk" />
+                    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" x-on:keydown="{emailValid = false, emailMissing = false}" placeholder="jane@doe.dk" />
 
                     <!-- Error handling -->
                     <div class="text-red-400">
@@ -125,4 +125,3 @@
         };
     }
 </script>
-<style></style>
