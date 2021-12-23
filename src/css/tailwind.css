@@ -20,9 +20,11 @@
     .menu-button {
         @apply pl-2 pr-2 md:inline-block bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200  focus:outline-none focus:ring;
     }
+
+
 }
 /* 
- *//* Extend CSS utilities */
+ */ /* Extend CSS utilities */
 @layer utilities {
     .curved {
         border-bottom-left-radius: 95% 90%;

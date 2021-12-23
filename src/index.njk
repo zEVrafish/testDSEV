@@ -4,9 +4,11 @@ layout: layouts/base.njk
 ---
 
 <!-- Top section -->
-<div>{% include "src/_includes/sections/banner.njk" %}</div>
+<div>
+    {% include "src/_includes/sections/banner.njk" %}
+</div>
 
-<!-- Text section -->
+    <!-- Text section -->
 <div class="max-w-3xl p-4 flex flex-col mx-auto">
     <p class="text-4xl text-center">Who are we?</p>
     <article class="prose dark:prose-dark p-2 mx-auto">
@@ -16,52 +18,45 @@ layout: layouts/base.njk
 
         <p>If you are a researcher interested in learning more about extracellular vesicle, please consider joining DSEV.</p>
     </article>
-    <noscript class="text-3xl font-bold"> If you see this line, it means that your JavaSript is disabled. Several features of this webpage will not work. </noscript>
+    <noscript class="text-3xl font-bold"> If you see this line, it means that your JavaSript is disabled. Several features of this webpage might not display correctly. </noscript>
 </div>
 
 <!-- News and mailing list -->
 <div class="relative sm:h-52 overflow-hidden">{% include "src/_includes/sections/news_mail.njk" %}</div>
 
 <!-- Article wheel -->
-<div x-data="{ expand: false }">
-    <div class="relative h-101 overflow-hidden transition-all" :class="expand && 'h-104 transition-all'">
+<div class="h-auto overflow-hidden transition-all" x-data="{ expand: false }">
+    <!-- Background -->
+    {% background "src/images/articles_new.jpg", "Parallaxed background with EVs", "max-w-screen h-full bg-no-repeat bg-cover bg-left bg-fixed" %}
 
-        <!-- Background -->
-        <div class="absolute bg-gray-500 h-full left-0 w-full">{% background "src/images/Scientific-articles.jpg", "Parallaxed background with EVs", "h-full bg-no-repeat bg-cover bg-left bg-fixed mix-blend-multiply" %}</div>
-
-        <!-- Content -->
-        <div class="overflow-hidden h-auto">
-            <!-- Content -->
-            <div class="absolute inset-x-0 max-w-5xl mx-auto top-0 flex flex-col h-full w-full">
-                <!-- Text -->
-                <div class="flex flex-col h-auto w-full p-4 space-y-2">
-                    <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
-                    <div class="text-gray-300 font-montserrat text-center max-w-2xl text-sm sm:text-base mx-auto">
-                        <p class="hidden sm:block">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
-                        <p class="sm:hidden">Scientific works within EV research authored or co-autorhed by members of DSEV.</p>
-                    </div>
-                </div>
-
-                <!-- Article wheel -->
-                <div class="h-auto">
-                    {% include "src/_includes/sections/carousel.njk" %}
-
-                </div>
-
-                <!-- View more -->
-                <div class="mt-4 h-auto flex flex-col justify-center text-gray-50 -space-y-1">
-                    <p class="text-center text-sm" x-text="expand ? 'View less': 'View more'"></p>
-                    <button class="" @click="expand = !expand">
-                        <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': expand, 'rotate-0': !expand}" class="inline w-5 h-5 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-                
-                <!-- Buttons (JS) -->
-                <p>Test</p>
+    <!-- Content -->
+    <div class="max-w-5xl mx-auto flex flex-col h-auto w-full">
+        <!-- Text -->
+        <div class="flex flex-col h-auto w-full p-4 space-y-2">
+            <h3 class="text-2xl text-center text-white font-semibold font-montserrat">Featured scientific articles</h3>
+            <div class="text-gray-300 font-montserrat text-center max-w-2xl text-sm sm:text-base mx-auto">
+                <p class="hidden sm:block">Scientific works within EV research authored or co-autorhed by members of the Danish Society for Extracellular Vesicles.</p>
+                <p class="sm:hidden">Scientific works within EV research authored or co-autorhed by members of DSEV.</p>
             </div>
         </div>
+
+        <!-- Article wheel -->
+        <div class="h-auto">{% include "src/_includes/sections/carousel.njk" %}</div>
+
+        <!-- View more -->
+        <button class="text-gray-200 flex flex-col w-full pt-2 pb-2 justify-center -space-y-0.5" @click="expand = !expand">
+            <!-- Text -->
+            <p class="text-center text-sm mx-auto">
+                <span x-text="expand ? 'Hide information': 'View information'"></span>
+            </p>
+
+            <!-- Icon -->
+            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': expand, 'rotate-0': !expand}" class="mx-auto w-5 h-5 transition-transform duration-200 transform md:-mt-1">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
     </div>
+
+    <!-- Expand -->
+    <div x-show="expand" class="h-10 transition-all"></div>
 </div>
-
-
-
