@@ -46,14 +46,13 @@
 
 <!-- Scripts -->
 <script>
-    /* Sets theme based on loalstorage */
+    /* Set theme */
     if (localStorage.theme === "dark" || (!"theme" in localStorage && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
         document.querySelector("html").classList.add("dark");
     } else if (localStorage.theme === "dark") {
         document.querySelector("html").classList.add("dark");
     }
 
-    /* Change theme */
     document.getElementById("switchTheme").addEventListener("click", function () {
         let htmlClasses = document.querySelector("html").classList;
         if (localStorage.theme == "dark") {
@@ -74,4 +73,11 @@
             localStorage.theme = "dark";
         }
     });
+
+    /* Calculate year */
+    calculate_year = function () {
+        var today = new Date();
+        var year = today.getFullYear();
+        return year;
+    };
 </script>

@@ -13,7 +13,7 @@
         @apply mr-2 w-full md:w-carousel rounded-lg h-full;
     }
     .card-banner {
-        @apply z-50 bg-white dark:bg-gray-200 sm:w-full w-3/4 rounded-md flex flex-col space-y-2 text-center p-3 shadow-lg mx-auto;
+        @apply z-10 bg-white dark:bg-gray-200 sm:w-full w-3/4 rounded-md flex flex-col space-y-2 text-center p-3 shadow-lg mx-auto;
     }
     .bg-modal {
         @apply fixed top-0 left-0 w-full h-full bg-gray-600 bg-opacity-50 z-50;
