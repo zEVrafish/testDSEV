@@ -1,0 +1,54 @@
+{
+  "board_members": [
+    {
+      "name": "Kim Ryun Drasbek",
+      "photo": "src/images/csm_kim_ryun_drasbek_2017_e784d4c535.jpg",
+      "position": "Secretary",
+      "current_board_member": false,
+      "start_date": "2019",
+      "end_date": "2021",
+      "email": "",
+      "web_url": ""
+    },
+    {
+      "name": "Malene Møller Jørgensen",
+      "photo": "src/images/malenemoller.jpg",
+      "position": "President",
+      "current_board_member": true,
+      "start_date": "2020",
+      "end_date": "",
+      "email": "",
+      "web_url": ""
+    },
+    {
+      "name": "Aase Handberg",
+      "photo": "src/images/250px-aase_handberg.jpg",
+      "position": "Vice president",
+      "current_board_member": true,
+      "start_date": "2020",
+      "end_date": "",
+      "email": "",
+      "web_url": ""
+    },
+    {
+      "name": "Anne Borup",
+      "photo": "src/images/unnamed.jpg",
+      "position": "Treasurer",
+      "current_board_member": true,
+      "start_date": "2020",
+      "end_date": "",
+      "email": "",
+      "web_url": ""
+    },
+    {
+      "name": "Anders Askeland",
+      "photo": "src/images/tdhixnpq_400x400.jpg",
+      "position": "Web manager",
+      "current_board_member": true,
+      "start_date": "2020",
+      "end_date": "",
+      "email": "a.askeland@rn.dk",
+      "web_url": "www.askeland.me"
+    }
+  ]
+}

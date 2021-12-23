@@ -1,10 +1,4 @@
 {
-  "resources": [
-    {
-      "name": "Board members"
-    }
-  ],
-  "about": [
-
-  ]
+    "about": "about",
+    "resources": "resources"
 }

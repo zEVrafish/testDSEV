@@ -1,43 +1,64 @@
-/* Constants */
+/*--------- Imports --------*/
 const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
 const slugify = require("slugify");
 
-/* Images (Standard) */
-async function imageShortcode(type, src, alt, style, sizes) {
-    /* Standard format */
-    let format = ["avif", "webp", "jpeg"];
-
-    /* Logo formats */
-    if (type == "logo") {
-        format = ["avif", "png"];
-    }
+/*--------- Functions --------*/
+/* Optimize logo (eleventy-img) */
+async function image_logo(src, alt, classes) {
+    /* Set format - Macos does not support avif */
+    let format = ["avif", "png"];
 
     /* Write metadata */
     let metadata = await Image(src, {
         widths: [300, 600],
         formats: format,
         urlPath: "/images/",
-        outputDir: "dist/images/",
+        outputDir: "_site/images/",
     });
 
     /* Set image attributes */
     let image_attributes = {
+        sizes: "(min-width: 10em) 20vw, 10vw",
         alt,
-        sizes,
         loading: "lazy",
         decoding: "async",
-        class: style,
+        class: classes,
     };
 
-    // You bet we throw an error on missing alt in `imageAttributes` (alt="" works okay)
+    // Return
     return Image.generateHTML(metadata, image_attributes);
 }
 
-/* Images (SVG icons) */
+/* Optimize images (eleventy-img) */
+async function image_image(src, alt, classes) {
+    /* Set format - Macos does not support avif */
+    let format = ["avif", "webp", "jpeg"];
+
+    /* Write metadata */
+    let metadata = await Image(src, {
+        widths: [300, 600],
+        formats: format,
+        urlPath: "/images/",
+        outputDir: "_site/images/",
+    });
+
+    /* Set image attributes */
+    let image_attributes = {
+        sizes: "(min-width: 10em) 20vw, 10vw",
+        alt,
+        loading: "lazy",
+        decoding: "async",
+        class: classes,
+    };
+
+    // Return
+    return Image.generateHTML(metadata, image_attributes);
+}
+
 /* Images (Background) */
-async function backgroundShortcode(src, alt, style) {
+async function image_background(src, alt, style) {
     /* Error checking */
     if (alt === undefined) {
         throw new Error(`Missing \`alt\` on myImage from: ${src}`);
@@ -48,31 +69,45 @@ async function backgroundShortcode(src, alt, style) {
         widths: [1200],
         formats: ["jpeg"],
         urlPath: "/images/",
-        outputDir: "dist/images/",
+        outputDir: "_site/images/",
     });
 
     /* Dont know that this does */
     let data = metadata.jpeg[metadata.jpeg.length - 1];
 
     /* Return */
-    return `<div class="${style}" style="background-image: url(${data.url})" alt="${alt}">`;
+    return `<div class="${style}" style="background-image: url(${data.url})" alt="${alt}"></div>`;
 }
 
-/* Config settings */
+async function bg_test(src) {
+    /* Standard format */
+    let metadata = await Image(src, {
+        widths: [1200],
+        formats: ["jpeg"],
+        urlPath: "/images/",
+        outputDir: "_site/images/",
+    });
+
+    let data = metadata.jpeg[metadata.jpeg.length - 1];
+
+    /* Return */
+    return `url(${data.url})`;
+}
+
+/*--------- Settings --------*/
 module.exports = function (eleventyConfig) {
     /*--------- General --------*/
     // Plugins
     eleventyConfig.addPlugin(svgContents);
 
-    // Eleventy will pick up content at build (_tmp is for dev)
+    // Pass trough files (You dont need to write entire path)
     eleventyConfig.addPassthroughCopy({ "./src/css/tailwind.css": "./style.css" });
-    eleventyConfig.addPassthroughCopy({ "./src/_tmp/style.css": "./style.css" });
-    eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./images/" });
-    eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./images/" });
+    eleventyConfig.addPassthroughCopy({ "./src/images": "./images/" });
+    eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./icons/" });
+    eleventyConfig.addPassthroughCopy({ "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js" });
 
     // Will watch for changes during dev
     eleventyConfig.addWatchTarget("./src");
-    eleventyConfig.addWatchTarget("./dist");
 
     /*--------- Collections --------*/
     eleventyConfig.addCollection("byTag", function (collectionApi) {
@@ -135,14 +170,16 @@ module.exports = function (eleventyConfig) {
     });
 
     /*--------- Shortcodes --------*/
-    eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
-    eleventyConfig.addNunjucksAsyncShortcode("background", backgroundShortcode);
+    eleventyConfig.addNunjucksAsyncShortcode("logo", image_logo);
+    eleventyConfig.addNunjucksAsyncShortcode("image", image_image);
+    eleventyConfig.addNunjucksAsyncShortcode("background", image_background);
+    eleventyConfig.addNunjucksAsyncShortcode("test", bg_test);
 
     /*--------- Settings --------*/
     return {
         dir: {
             input: "src",
-            output: "dist",
+            output: "_site",
         },
         htmlTemplateEngine: "njk",
     };

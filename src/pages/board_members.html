@@ -20,7 +20,9 @@ figure: "/src/images/groups_black_24dp.svg"
         {% if inner_data.current_board_member %} 
         <div class="flex flex-col bg-white shadow-xl h-auto w-auto rounded-lg p-2">
             <!-- Image -->
-            <div class="flex items-center justify-center p-4">{% image "", inner_data.photo, "Portrait", "w-44 h-44 rounded-full object-cover object-top", "(min-width: 10em) 20vw, 10vw"%}</div>
+            <div class="flex items-center justify-center p-4">
+                {% image inner_data.photo, "Portrait", "w-44 h-44 rounded-full object-cover object-top" %}
+                </div>
 
             <!-- Text -->
             <div class="flex flex-row justify-between pl-4 pr-4 pb-4">
@@ -57,7 +59,7 @@ figure: "/src/images/groups_black_24dp.svg"
         {% if not inner_data.current_board_member %} 
         <div class="flex flex-col bg-white shadow-xl h-auto w-auto rounded-lg p-2">
             <!-- Image -->
-            <div class="flex items-center justify-center p-4">{% image "", inner_data.photo, "Portrait", "w-44 h-44 rounded-full object-cover object-top", "(min-width: 10em) 20vw, 10vw"%}</div>
+            <div class="flex items-center justify-center p-4">{% image inner_data.photo, "Portrait", "w-44 h-44 rounded-full object-cover object-top" %}</div>
 
             <!-- Text -->
             <div class="pl-4 pr-4 pb-4">

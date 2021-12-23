@@ -13,16 +13,16 @@
         <!-- Alpine js -->
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     </head>
-    <body class="bg-gray-100 text-gray-900 dark:text-gray-100 dark:bg-background ">
+    <body class="bg-light-primary text-gray-900 dark:text-gray-100 dark:bg-dark-primary  font-montserrat">
         <div class="flex flex-col h-screen justify-between">
             <!-- Navbar -->
             <header class="container mx-auto flex max-w-4xl justify-between">
-            {% include "sections/navbar.njk" %}
+            {% include "section/navbar.njk" %}
             </header>
 
             <!-- Content -->
-            <main class="mx-auto flex-grow dark:text-gray-50 ">
-                <div class=" text-center p-10 max-w-5xl">
+            <main class="flex-grow w-full">
+                <div class="mx-auto text-center p-10 max-w-5xl">
 
                     <h2 class="text-5xl p-2">
                         {{ title }}
@@ -31,14 +31,14 @@
                         {{ date | readableDate}}
                     </h4>
                 </div>
-                <article class="prose dark:prose-dark p-5 mx-auto ">
+                <article class="prose dark:prose-invert p-5 mx-auto ">
                 {{ content | safe }}
                 </article>
             </main>
 
             <!-- Footer -->
             <footer class="flex flex-col items-center h-6 pb-2">
-                {% include "sections/footer.njk" %}
+                {% include "section/footer.njk" %}
             </footer>
         </div>
     </body>
