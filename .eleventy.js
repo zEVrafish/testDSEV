@@ -104,7 +104,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./src/css/tailwind.css": "./style.css" });
     eleventyConfig.addPassthroughCopy({ "./src/images": "./images/" });
     eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./icons/" });
-    eleventyConfig.addPassthroughCopy({ "./node_modules/alpinejs/dist/cdn.js": "./js/alpine.js" });
 
     // Will watch for changes during dev
     eleventyConfig.addWatchTarget("./src");

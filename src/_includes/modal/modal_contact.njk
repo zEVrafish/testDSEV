@@ -1,4 +1,4 @@
-<div class="bg-modal" x-show="contact" @keydown.escape="contact = false">
+<div class="bg-modal" x-cloak x-show="contact" @keydown.escape="contact = false">
     <div class="h-full flex flex-col justify-center">
         <!-- Dialog -->
         <div class="relative flex flex-col bg-white w-1/2 h-auto mx-auto max-w-md rounded-lg shadow-lg" @click.away="contact = false">

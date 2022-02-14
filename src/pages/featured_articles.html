@@ -7,182 +7,76 @@ figure: "/src/images/article_black_24dp.svg"
 description: Submit or view previously featured articles
 ---
 
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-      <script src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js" defer></script>
+<div class="bg-gray-100 h-screen w-screen flex justify-center">
+    <div class="mr-8">
+        <div class="bg-white max-w-xl mx-auto border border-gray-200">
+            <ul class="shadow-box">
+                <li class="relative border-b border-gray-200" x-data="{selected:null}">
+                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
+                        <div class="flex items-center justify-between">
+                            <span> Should I use reCAPTCHA v2 or v3? </span>
+                            <span class="ico-plus"></span>
+                        </div>
+                    </button>
 
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+                        <div class="p-6">
+                            <p>reCAPTCHA v2 is not going away! We will continue to fully support and improve security and usability for v2.</p>
+                            <p>reCAPTCHA v3 is intended for power users, site owners that want more data about their traffic, and for use cases in which it is not appropriate to show a challenge to the user.</p>
+                        </div>
+                    </div>
+                </li>
 
-      <div class="flex justify-center items-start my-2">
-        <div class="w-full sm:w-10/12 md:w-1/2 my-1">
-          <h2 class="text-xl font-semibold text-vnet-blue mb-2">FAQ - Order, Shipping, Etc.</h2>
-          <ul class="flex flex-col">
-            <li class="bg-white my-2 shadow-lg" x-data="accordion(1)">
-              <h2
-                @click="handleClick()"
-                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
-              >
-                <span>When will my order arrive?</span>
-                <svg
-                  :class="handleRotate()"
-                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                </svg>
-              </h2>
-              <div
-                x-ref="tab"
-                :style="handleToggle()"
-                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
-              >
-                <p class="p-3 text-gray-900">
-                  Shipping time is set by our delivery partners, according to the delivery method chosen by you. Additional details can be found in the order confirmation
-                </p>
-              </div>
-            </li>
-            <li class="bg-white my-2 shadow-lg" x-data="accordion(2)">
-              <h2
-                @click="handleClick()"
-                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
-              >
-                <span>How do I track my order?</span>
-                <svg
-                  :class="handleRotate()"
-                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                </svg>
-              </h2>
-              <div
-                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
-                x-ref="tab"
-                :style="handleToggle()"
-              >
-                <p class="p-3 text-gray-900">
-                  Once shipped, you’ll get a confirmation email that includes a tracking number and additional information regarding tracking your order.
-                </p>
-              </div>
-            </li>
-            <li class="bg-white my-2 shadow-lg" x-data="accordion(3)">
-              <h2
-                @click="handleClick()"
-                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
-              >
-                <span>What’s your return policy?</span>
-                <svg
-                  :class="handleRotate()"
-                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                </svg>
-              </h2>
-              <div
-                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
-                x-ref="tab"
-                :style="handleToggle()"
-              >
-                <p class="p-3 text-gray-900">
-                  We allow the return of all items within 30 days of your original order’s date. If you’re interested in returning your items, send us an email with your order number and we’ll ship a return label.
-                </p>
-              </div>
-            </li>
-            <li class="bg-white my-2 shadow-lg" x-data="accordion(4)">
-              <h2
-                @click="handleClick()"
-                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
-              >
-                <span>How do I make changes to an existing order?</span>
-                <svg
-                  :class="handleRotate()"
-                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                </svg>
-              </h2>
-              <div
-                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
-                x-ref="tab"
-                :style="handleToggle()"
-              >
-                <p class="p-3 text-gray-900">
-                  Changes to an existing order can be made as long as the order is still in “processing” status. Please contact our team via email and we’ll make sure to apply the needed changes. If your order has already been shipped, we cannot apply any changes to it. If you are unhappy with your order when it arrives, please contact us for any changes you may require.
-                </p>
-              </div>
-            </li>
-            <li class="bg-white my-2 shadow-lg" x-data="accordion(5)">
-              <h2
-                @click="handleClick()"
-                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
-              >
-                <span>What shipping options do you have?</span>
-                <svg
-                  :class="handleRotate()"
-                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                </svg>
-              </h2>
-              <div
-                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
-                x-ref="tab"
-                :style="handleToggle()"
-              >
-                <p class="p-3 text-gray-900">
-                  For USA domestic orders we offer FedEx and USPS shipping.
-                </p>
-              </div>
-            </li>
-            <li class="bg-white my-2 shadow-lg" x-data="accordion(6)">
-              <h2
-                @click="handleClick()"
-                class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
-              >
-                <span>What payment methods do you accept?</span>
-                <svg
-                  :class="handleRotate()"
-                  class="fill-current text-purple-700 h-6 w-6 transform transition-transform duration-500"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
-                </svg>
-              </h2>
-              <div
-                class="border-l-2 border-purple-600 overflow-hidden max-h-0 duration-500 transition-all"
-                x-ref="tab"
-                :style="handleToggle()"
-              >
-                <p class="p-3 text-gray-900">
-                  Any method of payments acceptable by you. For example: We accept MasterCard, Visa, American Express, PayPal, JCB Discover, Gift Cards, etc.
-                </p>
-              </div>
-            </li>
-          </ul>
+                <li class="relative border-b border-gray-200" x-data="{selected:null}">
+                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
+                        <div class="flex items-center justify-between">
+                            <span> I'd like to run automated tests with reCAPTCHA. What should I do? </span>
+                            <span class="ico-plus"></span>
+                        </div>
+                    </button>
+
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''">
+                        <div class="p-6">
+                            <p>For reCAPTCHA v3, create a separate key for testing environments. Scores may not be accurate as reCAPTCHA v3 relies on seeing real traffic.</p>
+                            <p>For reCAPTCHA v2, use the following test keys. You will always get No CAPTCHA and all verification requests will pass.</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="relative border-b border-gray-200" x-data="{selected:null}">
+                    <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
+                        <div class="flex items-center justify-between">
+                            <span> Can I run reCAPTCHA v2 and v3 on the same page? </span>
+                            <span class="ico-plus"></span>
+                        </div>
+                    </button>
+
+                    <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
+                        <div class="p-6">
+                            <p>To do this, load the v3 site key as documented, and then explicitly render v2 using grecaptcha.render.</p>
+                            <p>You are allowed to hide the badge as long as you include the reCAPTCHA branding visibly in the user flow. Please include the following text:</p>
+                            <p>Yes, please use "www.recaptcha.net" in your code in circumstances when "www.google.com" is not accessible.</p>
+                            <ul>
+                                <li>First, replace &lt;script src="https://www.google.com/recaptcha/api.js" async defer&gt;&lt;/script&gt; with &lt;script src="https://www.recaptcha.net/recaptcha/api.js" async defer&gt;&lt;/script&gt;</li>
+                                <li>After that, apply the same to everywhere else that uses "www.google.com/recaptcha/" on your site.</li>
+                            </ul>
+                            <p>After that, apply the same to everywhere else that uses "www.google.com/recaptcha/" on your site.</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
-      </div>
+    </div>
+</div>
+    <!-- Testing -->
+    <div x-data="{ accordion: false, accordion_inner: false}">
+      <!-- Button -->
+      <button class="h-10 bg-blue-200" x-bind="accordion_main">Press me - <span class="text-sm" x-html="accordion"></span></button>
 
-  <script>
-    document.addEventListener('alpine:init', () => {
-      Alpine.store('accordion', {
-        tab: 0
-      });
-      
-      Alpine.data('accordion', (idx) => ({
-        init() {
-          this.idx = idx;
-        },
-        idx: -1,
-        handleClick() {
-          this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
-        },
-        handleRotate() {
-          return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
-        },
-        handleToggle() {
-          return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
-        }
-      }));
-    })
-  </script>
+      <!-- First accordion -->
+      <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="main" :style="accordion && 'max-height: ' + $refs.main.scrollHeight + 'px'">
+          <!-- Second button -->
+          <button class="h-10 bg-red-200" x-bind="accordion_secondary">Inner <span x-html="accordion_inner"></span></button>
+          <p class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="new" :style="accordion_inner && 'max-height: ' + $refs.new.scrollHeight + 'px'">Test</p>
+      </div>
+  </div>

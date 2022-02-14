@@ -6,7 +6,7 @@
     </form>
 
     <!-- Actual form -->
-    <form class="h-full pl-0.5" method="POST" id="mailing-list" x-data="contactForm()" @submit.prevent="submitData()" x-cloak>
+    <form class="h-full pl-0.5" method="POST" id="mailing-list" x-data="contactForm()" @submit.prevent="submitData()" @keydown="resetWarnings()" x-cloak>
         <!-- Form -->
         <div class="flex flex-col space-y-1">
             <!-- Setup (Related to netlify) -->
@@ -21,19 +21,19 @@
             </div>
 
             <!-- Input -->
-            <div x-show="!sucess" class="" @keydown="{suess = true}">
-                <label class="mb-1 m-1 block text-gray-700 dark:text-gray-200">Email</label>
+            <div x-show="!sucess" class="" x-data="">
+                <label class="mb-1 m-1 block text-gray-700 dark:text-gray-200">Email </label>
                 <div class="relative flex flex-col space-y-1">
                     <!-- Actual input -->
-                    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" @keydown="{emailValid = false, emailMissing = false}" placeholder="jane@doe.dk" />
+                    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" placeholder="jane@doe.dk" />
 
                     <!-- Error handling -->
                     <div class="text-red-400">
-                        <svg x-show.transition="emailValid || emailMissing" class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <svg x-show="emailValid || emailMissing" x-transition class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
                         </svg>
-                        <p x-show.transition="emailValid">Please provide a valid email</p>
-                        <p x-show.transition="emailMissing">Please provide a email</p>
+                        <p x-show="emailValid">Please provide a valid email</p>
+                        <p x-show="emailMissing">Please provide a email</p>
                     </div>
                 </div>
             </div>
@@ -77,13 +77,21 @@
 
     /* Contact form */
     function contactForm() {
+        /* Set data */
         return {
             loading: false,
             sucess: false,
-            email: "",
+            email: '',
             emailValid: false,
             emailMissing: false,
 
+            /* Reset warnings */
+            resetWarnings() {
+                this.emailMissing = false;
+                this.emailValid = false;
+            },
+
+            /* Submit data */
             submitData() {
                 /* Set loading loading */
                 this.loading = true;
