@@ -1,16 +1,6 @@
 {
   "board_members": [
     {
-      "name": "Peter Nejsum",
-      "photo": "src/images/peter.jpg",
-      "position": "Member at large",
-      "current_board_member": true,
-      "start_date": "2019",
-      "end_date": "",
-      "email": "pn@clin.au.dk",
-      "web_url": "https://pure.au.dk/portal/en/persons/peter-lindberg-nejsum(ee468e32-0a8b-4cd3-9473-60335cf27df9).html"
-    },
-    {
       "name": "Malene Møller Jørgensen",
       "photo": "src/images/malenemoller.jpg",
       "position": "President",
@@ -69,6 +59,16 @@
       "end_date": "",
       "email": "mstos@arlafoods.com",
       "web_url": "https://www.arlafoodsingredients.com/about/our-capabilities/nutrition-science/"
+    },
+    {
+      "name": "Peter Nejsum",
+      "photo": "src/images/peter.jpg",
+      "position": "Member at large",
+      "current_board_member": true,
+      "start_date": "2019",
+      "end_date": "",
+      "email": "pn@clin.au.dk",
+      "web_url": "https://pure.au.dk/portal/en/persons/peter-lindberg-nejsum(ee468e32-0a8b-4cd3-9473-60335cf27df9).html"
     },
     {
       "name": "Jonas Ellegaard Nielsen",
