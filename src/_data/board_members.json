@@ -1,26 +1,6 @@
 {
   "board_members": [
     {
-      "name": "Per Svenningsen",
-      "photo": "src/images/per.png",
-      "position": "Secretary",
-      "current_board_member": true,
-      "start_date": "2021",
-      "end_date": "",
-      "email": "psvenningsen@health.sdu.dk",
-      "web_url": "https://portal.findresearcher.sdu.dk/da/persons/psvenningsen  "
-    },
-    {
-      "name": "Jonas Ellegaard Nielsen",
-      "photo": "src/images/jonas.jpg",
-      "position": "",
-      "current_board_member": true,
-      "start_date": "2021",
-      "end_date": "",
-      "email": " Jonas.Ellegaard.Nielsen@rsyd.dk",
-      "web_url": ""
-    },
-    {
       "name": "Kim Ryun Drasbek",
       "photo": "src/images/csm_kim_ryun_drasbek_2017_e784d4c535.jpg",
       "position": "Secretary",
@@ -71,6 +51,16 @@
       "web_url": "www.askeland.me"
     },
     {
+      "name": "Per Svenningsen",
+      "photo": "src/images/per.png",
+      "position": "Secretary",
+      "current_board_member": true,
+      "start_date": "2021",
+      "end_date": "",
+      "email": "psvenningsen@health.sdu.dk",
+      "web_url": "https://portal.findresearcher.sdu.dk/da/persons/psvenningsen  "
+    },
+    {
       "name": "Marie Stampe Ostenfeld",
       "photo": "src/images/marie.jpg",
       "position": "Member at large",
@@ -79,6 +69,16 @@
       "end_date": "",
       "email": "mstos@arlafoods.com",
       "web_url": "https://www.arlafoodsingredients.com/about/our-capabilities/nutrition-science/"
+    },
+    {
+      "name": "Jonas Ellegaard Nielsen",
+      "photo": "src/images/jonas.jpg",
+      "position": "",
+      "current_board_member": true,
+      "start_date": "2021",
+      "end_date": "",
+      "email": " Jonas.Ellegaard.Nielsen@rsyd.dk",
+      "web_url": ""
     }
   ]
 }
