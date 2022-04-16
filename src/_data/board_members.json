@@ -1,16 +1,6 @@
 {
   "board_members": [
     {
-      "name": "Kim Ryun Drasbek",
-      "photo": "src/images/csm_kim_ryun_drasbek_2017_e784d4c535.jpg",
-      "position": "Secretary",
-      "current_board_member": false,
-      "start_date": "2019",
-      "end_date": "2021",
-      "email": "",
-      "web_url": ""
-    },
-    {
       "name": "Malene Møller Jørgensen",
       "photo": "src/images/malenemoller.jpg",
       "position": "President",
@@ -73,11 +63,21 @@
     {
       "name": "Jonas Ellegaard Nielsen",
       "photo": "src/images/jonas.jpg",
-      "position": "",
+      "position": "Member at large",
       "current_board_member": true,
       "start_date": "2021",
       "end_date": "",
       "email": " Jonas.Ellegaard.Nielsen@rsyd.dk",
+      "web_url": ""
+    },
+    {
+      "name": "Kim Ryun Drasbek",
+      "photo": "src/images/csm_kim_ryun_drasbek_2017_e784d4c535.jpg",
+      "position": "Secretary",
+      "current_board_member": false,
+      "start_date": "2019",
+      "end_date": "2021",
+      "email": "",
       "web_url": ""
     }
   ]
