@@ -10,7 +10,7 @@ on:
       - 'src/**.md'
       - 'src/**.html'
       - 'src/**.njk'
-
+      - 'src/**.json'
 jobs:
   build:
 
