@@ -1,16 +1,6 @@
 {
   "board_members": [
     {
-      "name": "Marie Stampe Ostenfeld",
-      "photo": "/src/images/marie.jpg",
-      "position": "Member at large",
-      "current_board_member": true,
-      "start_date": "2019",
-      "end_date": "",
-      "email": "mstos@arlafoods.com",
-      "web_url": "https://www.arlafoodsingredients.com/about/our-capabilities/nutrition-science/"
-    },
-    {
       "name": "Kim Ryun Drasbek",
       "photo": "src/images/csm_kim_ryun_drasbek_2017_e784d4c535.jpg",
       "position": "Secretary",
@@ -59,6 +49,16 @@
       "end_date": "",
       "email": "a.askeland@rn.dk",
       "web_url": "www.askeland.me"
+    },
+    {
+      "name": "Marie Stampe Ostenfeld",
+      "photo": "/src/images/marie.jpg",
+      "position": "Member at large",
+      "current_board_member": true,
+      "start_date": "2019",
+      "end_date": "",
+      "email": "mstos@arlafoods.com",
+      "web_url": "https://www.arlafoodsingredients.com/about/our-capabilities/nutrition-science/"
     }
   ]
 }
