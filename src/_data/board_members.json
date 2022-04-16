@@ -2,7 +2,7 @@
   "board_members": [
     {
       "name": "Per Svenningsen",
-      "photo": "/src/images/per.png",
+      "photo": "src/images/per.png",
       "position": "Secretary",
       "current_board_member": true,
       "start_date": "2021",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Jonas Ellegaard Nielsen",
-      "photo": "/src/images/jonas.jpg",
+      "photo": "src/images/jonas.jpg",
       "position": "",
       "current_board_member": true,
       "start_date": "2021",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Marie Stampe Ostenfeld",
-      "photo": "/src/images/marie.jpg",
+      "photo": "src/images/marie.jpg",
       "position": "Member at large",
       "current_board_member": true,
       "start_date": "2019",
