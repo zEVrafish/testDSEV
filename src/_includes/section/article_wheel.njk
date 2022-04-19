@@ -20,7 +20,9 @@
                 <div class="h-full max-w-5xl mx-auto w-full overflow-hidden pl-5 pr-5">
                     <div class="carousel md:pr-16 md:pl-16 w-full h-auto" data-flickity='{ "pageDots": false, "wrapAround": true , "autoPlay": 4500, "contain": true, "cellAlign": "right" }'>
                         <!-- Settings for articles -->
-                        {% set total_posts = collections.posts | length %} {% set article_list = collections.articles | head(-6) %} {% for article in article_list | reverse %}
+                        {% set total_posts = collections.posts | length %} 
+                        {% set article_list = collections.articles | head(-6) %} 
+                        {% for article in article_list | reverse %}
                         <a href="{{ article.data.link }}" class="carousel-cell carousel-style h-72" style="background-color: {{ article.data.color }};" target="_blank">
                             <div class="flex h-full flex-col justify-between space-y-3 p-3">
                                 <!-- Image -->

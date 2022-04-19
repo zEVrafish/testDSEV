@@ -1,0 +1,27 @@
+<div class="bg-modal" x-cloak x-show="membership" @keydown.escape="membership = false">
+    <div class="h-full flex flex-col justify-center">
+        <!-- Dialog -->
+        <div class="relative flex flex-col bg-white w-2/3 h-auto mx-auto max-w-md rounded-lg shadow-lg" @click.away="membership = false">
+            <!-- Top bar -->
+            <div>
+                <!-- Close icon -->
+                <button @click="membership = false" class="absolute right-0 top-0 p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
+                    </svg>
+                </button>
+
+                <!-- Title -->
+                <div class="rounded-t-lg w-full shadow-lg bg-white h-auto text-left p-2 pl-4">
+                    <h2 class="text-2xl font-montserrat">How to become a member</h2>
+                </div>
+            </div>
+
+            <!-- Text -->
+            <div>
+                Placeholder text
+            </div>
+        </div>
+    </div>
+</div>

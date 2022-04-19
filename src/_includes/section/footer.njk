@@ -1,7 +1,7 @@
 <!-- Footer -->
 <div class="flex flex-row items-center fill-current space-x-2 text-xs">
     <!-- Copyright -->
-    <div class="flex flex-row space-x-2" x-data="{ year: calculate_year() }">
+    <div class="flex flex-row space-x-2" x-data="{ year: new Date().getFullYear() }">
         <p>&copy;<span x-text="year"></span> - DSEV</p>
         <p>|</p>
     </div>

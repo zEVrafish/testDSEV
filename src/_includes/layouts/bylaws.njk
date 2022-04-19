@@ -11,21 +11,24 @@
         <link rel="stylesheet" href="/style.css" />
 
         <!-- Alpine js -->
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script type="module" src="/scripts/alpine.js"></script>
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+        <!-- Analytics -->
+        <script data-goatcounter="https://new-dsev.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
     </head>
+
+    <!-- Content -->
     <body class="bg-light-primary text-gray-900 dark:text-gray-100 dark:bg-dark-primary font-montserrat">
         <div class="flex flex-col h-screen justify-between">
             <!-- Navbar -->
-            <header class="container mx-auto flex max-w-4xl justify-between">{% include "section/navbar.njk" %}</header>
+            <header class="container mx-auto flex max-w-6xl justify-between">{% include "section/navbar.njk" %}</header>
 
             <!-- Content -->
             <main class="mx-auto flex-grow dark:text-gray-50">
                 <div class="text-center p-10 max-w-5xl">
                     <!-- Text -->
                     <h2 class="text-5xl p-2">Bylaws for the Danish Society of Extracellular Vesicles (DSEV)</h2>
-                    <h4>
-                        {{ date | readableDate }}
-                    </h4>
                 </div>
 
                 <!-- Content -->
