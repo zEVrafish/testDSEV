@@ -164,8 +164,8 @@ module.exports = function (eleventyConfig) {
     });
 
     /* Calculate remaining */
-    eleventyConfig.addFilter("remaining", (...numbers) => {
-        return 2 - numbers;
+    eleventyConfig.addFilter("remaining", (...n) => {
+        return n - 2;
     });
 
     /*--------- Shortcodes --------*/
