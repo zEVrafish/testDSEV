@@ -92,7 +92,7 @@
     },
     {
       "name": "Fabio Antenucci",
-      "photo": "",
+      "photo": "src/images/images.png",
       "position": "PR manager",
       "current_board_member": true,
       "start_date": "2019",
