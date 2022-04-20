@@ -1,13 +1,13 @@
 <!-- Form -->
 <div>
     <!-- Hidden part -->
-    <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field">
+    <form hidden name="test" data-netlify="true" netlify-honeypot="bot-field">
         <input name="name" />
         <input name="email" />
     </form>
 
     <!-- Actual form -->
-    <form class="" method="POST" id="contact" x-data="contactForm()" @submit.prevent="submitData()" @keydown="resetWarnings()" x-cloak>
+    <form class="" method="POST" id="test" x-data="contactForm()" @submit.prevent="submitData()" @keydown="resetWarnings()" x-cloak>
         <!-- Setup (Related to netlify) -->
         <div>
             <!-- Honeypot for bots (is hidden) -->
