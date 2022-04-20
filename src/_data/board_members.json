@@ -1,6 +1,16 @@
 {
   "board_members": [
     {
+      "name": "Ole Østergaard",
+      "photo": "",
+      "position": "Member at large",
+      "current_board_member": true,
+      "start_date": "2019",
+      "end_date": "",
+      "email": "",
+      "web_url": ""
+    },
+    {
       "name": "Malene Møller Jørgensen",
       "photo": "src/images/malenemoller.jpg",
       "position": "President",
