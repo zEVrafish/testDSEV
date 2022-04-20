@@ -1,6 +1,16 @@
 {
   "board_members": [
     {
+      "name": "Fabio Antenucci",
+      "photo": "",
+      "position": "PR manager",
+      "current_board_member": true,
+      "start_date": "2019",
+      "end_date": "",
+      "email": "",
+      "web_url": ""
+    },
+    {
       "name": "Ole Østergaard",
       "photo": "",
       "position": "Member at large",
