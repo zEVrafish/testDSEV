@@ -82,7 +82,7 @@
     },
     {
       "name": "Ole Østergaard",
-      "photo": "",
+      "photo": "src/images/images.png",
       "position": "Member at large",
       "current_board_member": true,
       "start_date": "2019",
