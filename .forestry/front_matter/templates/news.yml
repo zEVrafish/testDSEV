@@ -22,4 +22,5 @@ fields:
   label: Author
   description: The person which wrote it
 pages:
+- src/posts/national-ev-society-european-mobility-fellowship-scheme.md
 - src/posts/new-webpage.md

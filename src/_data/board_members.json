@@ -27,8 +27,8 @@
       "current_board_member": true,
       "start_date": "2020",
       "end_date": "",
-      "email": "",
-      "web_url": ""
+      "email": "anneborup@clin.au.dk",
+      "web_url": "linkedin.com/in/anne-borup-5a5185108"
     },
     {
       "name": "Anders Askeland",
@@ -78,6 +78,26 @@
       "start_date": "2021",
       "end_date": "",
       "email": " Jonas.Ellegaard.Nielsen@rsyd.dk",
+      "web_url": ""
+    },
+    {
+      "name": "Ole Østergaard",
+      "photo": "src/images/images.png",
+      "position": "Member at large",
+      "current_board_member": true,
+      "start_date": "2019",
+      "end_date": "",
+      "email": "",
+      "web_url": ""
+    },
+    {
+      "name": "Fabio Antenucci",
+      "photo": "src/images/images.png",
+      "position": "PR manager",
+      "current_board_member": true,
+      "start_date": "2019",
+      "end_date": "",
+      "email": "",
       "web_url": ""
     },
     {
