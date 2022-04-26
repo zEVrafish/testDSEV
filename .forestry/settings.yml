@@ -60,7 +60,7 @@ sections:
   create: documents
   match: "**/*"
   exclude: "*.json"
-upload_dir: images
+upload_dir: src/images
 public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
