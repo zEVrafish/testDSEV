@@ -1,0 +1,112 @@
+---
+label: Main settings
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Main title of webpage
+- type: text
+  name: url
+  label: Main URL
+  description: Main accessable URL.
+- type: text
+  name: language
+  label: Lanuage
+  default: en
+- type: text
+  name: description
+  label: Description
+  description: Description of Webpage
+- type: field_group
+  name: menu
+  label: Menu items
+  fields:
+  - name: about
+    type: field_group_list
+    fields:
+    - name: menu_name
+      type: text
+      config:
+        required: true
+      label: Menu name
+    - name: page
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: pages
+          file: 
+          path: 
+      label: Page
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: About
+    description: About menu
+  - name: resources
+    type: field_group_list
+    fields:
+    - name: menu_name
+      type: text
+      config:
+        required: true
+      label: Menu name
+      description: The displayed name
+    - name: page
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: pages
+          file: 
+          path: 
+      label: Page
+      description: The chosen page
+    config:
+      min: 
+      max: 
+      labelField: menu_name
+    label: Resources
+  description: Text of main menu items
+- type: field_group
+  name: contact_info
+  label: contact_info
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: email
+    label: email
+- type: field_group
+  name: footer
+  label: Footer settings
+  fields:
+  - type: text
+    name: copyright
+    label: copyright
+  - type: text
+    name: contact
+    label: contact
+  - type: text
+    name: source_text
+    label: source_text
+  - type: text
+    name: source_url
+    label: source_url
+  - type: text
+    name: admin_text
+    label: admin_text
+  - type: text
+    name: admin_url
+    label: admin_url
+pages:
+- src/_data/metadata.json

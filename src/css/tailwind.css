@@ -1,0 +1,68 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Standard tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default form style */
+@layer base {
+    [type='text'],
+    [type='email'],
+    [type='url'],
+    [type='password'],
+    [type='number'],
+    [type='date'],
+    [type='datetime-local'],
+    [type='month'],
+    [type='search'],
+    [type='tel'],
+    [type='time'],
+    [type='week'],
+    [multiple],
+    textarea,
+    select {
+        @apply w-full border-gray-300 rounded-md shadow-sm
+    }
+}
+
+/* Extend tailwind components */
+@layer components {
+    .carousel-style {
+        @apply mr-2 w-full md:w-carousel rounded-lg h-full;
+    }
+    .card-banner {
+        @apply z-10 bg-white dark:bg-gray-200 sm:w-full w-3/4 rounded-md flex flex-col space-y-2 text-center p-3 shadow-lg mx-auto;
+    }
+    .bg-modal {
+        @apply fixed top-0 left-0 w-full h-full bg-gray-600 bg-opacity-50 z-50;
+    }
+    .menu-button {
+        @apply md:inline-block bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200  focus:outline-none focus:ring;
+    }
+}
+
+/* Extend CSS utilities */
+@layer utilities {
+    
+    /* Curved logo */
+    .curved {
+        border-bottom-left-radius: 95% 90%;
+        border-bottom-right-radius: 95% 90%;
+    }
+    .full-width {
+        min-width: 150vw;
+        margin-left: -25vw;
+        margin-right: -25vw;
+    }
+    .margin-test {
+        margin-top: -10px;
+    }
+
+    /* Hide alpine components when loading */
+    [x-cloak] {
+        display: none;
+    }
+
+}

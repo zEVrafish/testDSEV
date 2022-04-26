@@ -1,0 +1,148 @@
+<!-- Banner -->
+<div class="w-screen overflow-hidden">
+    <div class="w-screen space-y-3 h-auto flex flex-col justify-between bg-gray-500 dark:bg-gray-500 curved z-0 full-width bg-no-repeat bg-cover bg-left bg-fixed filter saturate-50 bg-blend-multiply backdrop-filter contrast-75 bg-clip-padding pb-24" style="background-image: {% test 'src/images/EVs.jpg' %};">
+        <div class="w-screen mx-auto bg-transparent">
+            <!-- Text -->
+            <div class="pt-4 align-middle text-center text-white">
+                <div class="flex flex-col space-y-2">
+                    <h2 class="text-3xl sm:text-4xl font-medium pl-2 pr-2">Danish Society for Extracellular Vesicles</h2>
+                    <hr class="border-0 bg-gray-100 text-gray-500 h-0.5 w-16 mx-auto" />
+                    <p class="text-gray-300 pl-4 pr-4">Supporting Extracellular Vesicle Research and Education across Denmark!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cards -->
+<div class="z-50 -mt-20 w-full pl-4 pr-4 grid sm:grid-cols-3 grid-cols-1 gap-4 max-w-2xl text-black mx-auto" x-data="{ contact: false, membership: false }">
+    <!-- News -->
+    <a href="https://www.new.dsev.dk/pages/news/" class="z-50">
+        <button type="button" class="card-banner sm:h-3/4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none">
+            <!-- Logo -->
+            <div class="text-dsev flex fill_current h-16 w-full">
+                {{ '/src/images/newspaper_black_24dp.svg' | svgContents("fill-current block h-12 w-12 block mx-auto my-auto") | safe }}
+            </div>
+    
+            <!-- Heading -->
+            <div class="w-full">
+                <h2 class="text-xl">News & updates</h2>
+                <p class="text-sm text-gray-600">DSEV news and updates!</p>
+            </div>
+        </button>
+    </a>
+
+    <!-- Membership -->
+    <button type="button" class="card-banner hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" @click="membership = !membership">
+        <!-- Logo -->
+        <div class="text-dsev flex fill_current h-16 w-full">
+            {{ '/src/images/icons/icon_registration.svg' | svgContents("fill-current block h-12 w-12 block mx-auto my-auto") | safe }}
+        </div>
+
+        <!-- Heading -->
+        <div class="h-auto w-full">
+            <h2 class="text-xl">Membership</h2>
+            <p class="text-sm text-gray-600">How to become a member!</p>
+        </div>
+    </button>
+
+    <!-- Contact us (card) -->
+    <button type="button" class="card-banner sm:h-3/4 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" @click="contact = !contact">
+        <!-- Logo -->
+        <div class="text-dsev flex fill_current h-16 w-full">
+            {{ '/src/images/icons/icon_phone.svg' | svgContents("fill-current  block h-12 w-12 block mx-auto my-auto") | safe }}
+        </div>
+
+        <!-- Heading -->
+        <div class="h-auto w-full">
+            <h2 class="text-xl">Contact</h2>
+            <p class="text-sm text-gray-600">Write us a message</p>
+        </div>
+    </button>
+
+    <!-- Modal -->
+    {% include "modal/modal_contact.njk" %}
+    {% include "modal/modal_membership.njk" %}
+
+</div>
+<script>
+    /* Check for valid email */
+    function isEmail(value) {
+        return new RegExp("^\\S+@\\S+[\\.][0-9a-z]+$").test(String(value).toLowerCase());
+    }
+
+    /* Contact form */
+    function contactEmail() {
+        return {
+            loading: false,
+            sucess: false,
+            email: "",
+            emailValid: false,
+            emailMissing: false,
+            name: "",
+            nameMissing: false,
+            message: "",
+            messageMissing: false,
+
+            submitData() {
+                /* Set loading loading */
+                this.loading = true;
+                let error = false;
+
+                /* Check if email is valid or not */
+                if (this.email == "") {
+                    this.emailMissing = true;
+                    this.loading = false;
+                    error = true;
+                } else if (!isEmail(this.email)) {
+                    this.emailValid = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Check if name is missing */
+                if (this.name == "") {
+                    this.nameMissing = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Check if message is missing */
+                if (this.message == "") {
+                    this.messageMissing = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Run code if no error */
+                if (error) {
+                    error = false;
+                    return;
+                } else {
+                    /* Generate formdata element */
+                    let formElement = document.getElementById("contact");
+                    let body = new URLSearchParams(new FormData(formElement)).toString();
+
+                    /* Submit form */
+                    return fetch("/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: body,
+                    })
+                        .then((response) => {
+                            if (response.ok) {
+                                formElement.reset();
+                                /* Show sucess */
+                                this.sucess = true;
+                            } else {
+                                throw new Error(`Something went wrong: ${response.statusText}`);
+                            }
+                        })
+                        .catch((error) => console.error(error));
+                }
+            },
+        };
+    }
+</script>

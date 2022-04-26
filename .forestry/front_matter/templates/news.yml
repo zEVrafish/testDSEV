@@ -1,0 +1,27 @@
+---
+label: News
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The news title
+- type: datetime
+  name: date
+  label: Publication date
+  description: The date the article was published
+  config:
+    date_format: YYYY-MM-DD
+    display_utc: false
+    required: true
+  default: now
+- name: author
+  type: text
+  config:
+    required: false
+  label: Author
+  description: The person which wrote it
+pages:
+- src/posts/call-for-applications-to-move-european-mobility-fellowship.md
+- src/posts/national-ev-society-european-mobility-fellowship-scheme.md
+- src/posts/new-webpage.md

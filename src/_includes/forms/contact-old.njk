@@ -1,0 +1,90 @@
+<!-- Form -->
+<div>
+    <!-- Hidden part -->
+    <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field">
+        <input name="name" />
+        <input name="email" />
+        <input name="message" />
+    </form>
+
+    <!-- Actual form -->
+    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactEmail()" @submit.prevent="submitData()" x-cloak>
+        <!-- Setup (Related to netlify) -->
+        <div>
+            <!-- Honeypot for bots (is hidden) -->
+            <p hidden>
+                <label>ignore: <input name="bot-field" /></label>
+            </p>
+
+            <!-- Netlify parse (Must be included for netlify to work) -->
+            <input type="hidden" name="form-name" value="contact" />
+        </div>
+        
+        <!-- Form -->
+        <div x-show="!sucess">
+            <!-- Input form -->
+            <div class="p-3 flex flex-col space-y-4">
+                <!-- Ñame -->
+                <div class="flex flex-col space-y-1">
+                    <!-- Label -->
+                    <label for="name" class="block text-md font-medium text-gray-700 font-montserrat">
+                        Name
+                    </label>
+
+                    <!-- Input -->
+                    <div class="">
+                        <input id="text" type="text" required class="" name="name" x-model="name" placeholder="Your name" />
+
+                        <!-- Error handling -->
+                        <div class="text-red-400">
+                            <svg x-show.transition="nameMissing" class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                            </svg>
+                            <p x-show.transition="nameMissing">Please provide a name</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col space-y-1">
+                    <label>Email</label>
+                    <!-- Actual input -->
+                    <div class="relative">
+                        <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal" name="email" x-model="email" @keydown="{emailValid = false, emailMissing = false}" placeholder="jane@doe.dk" />
+
+                        <!-- Error handling -->
+                        <div class="text-red-400">
+                            <svg x-show.transition="emailValid || emailMissing" class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                            </svg>
+                            <p x-show.transition="emailValid">Please provide a valid email</p>
+                            <p x-show.transition="emailMissing">Please provide a email</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="flex flex-col space-y-1">
+                    <!-- Label -->
+                    <label class="text-l">Message</label>
+
+                    <div class="relative">
+                        <!-- Text area -->
+                        <textarea class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal h-32" name="message" form="contact" @keydown="{messageMissing = false}" x-model="message" placeholder="Your message here"></textarea>
+
+                        <!-- Error handling -->
+                        <div class="text-red-400">
+                            <svg x-show.transition="messageMissing" class="absolute w-6 h-6 text-red-600 fill-current right-1.5 top-1.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M11.953,2C6.465,2,2,6.486,2,12s4.486,10,10,10s10-4.486,10-10S17.493,2,11.953,2z M13,17h-2v-2h2V17z M13,13h-2V7h2V13z" />
+                            </svg>
+                            <p x-show.transition="messageMissing">Please provide a message</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <object class="pb-4 pl-4 pt-2">
+                <button type="submit" class="w-1/3 rounded-md bg-blue-600 text-gray-50">Contact</button>
+            </object>
+        </div>
+    </form>
+</div>

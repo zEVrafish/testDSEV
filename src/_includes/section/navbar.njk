@@ -1,0 +1,133 @@
+<!-- Navbar -->
+<nav class="w-full flex flex-col h-auto" x-data="{ accordion: false }" x-cloak>
+    <div class="flex flex-col justify-between mx-auto w-full h-auto font-montserrat text-md p-3">
+        <!-- Main menu -->
+        <div class="flex flex-row justify-between w-full">
+            <!-- Logo -->
+            <a class="" href="/">
+                <div class="dark:hidden">{% logo "src/images/logo_full-black.png", "DSEV logo (Light theme)", "object-fill w-52" %}</div>
+                <div class="hidden dark:block">{% logo "src/images/logo_full-white.png", "DSEV logo (Dark theme)", "object-fill w-52" %}</div>
+            </a>
+
+            <!-- Desktop menu (lg) -->
+            <div class="hidden md:flex flex-row items-end">
+                <!-- Buttons -->
+                <div class="md:flex flex-row space-x-5">
+                    <!-- Home -->
+                    <a href="/" class="menu-button">Home</a>
+
+                    <!-- Rest of pages -->
+                    {% for name, item in menu %}
+                    <nav x-data="{ dropdownOpen: false }" class="relative" x-cloak>
+                        <!-- Button -->
+                        <button class="menu-button flex flex-row justify-center space-x-1" @click="dropdownOpen = !dropdownOpen">
+                            <span>{{ name | capatilize }}</span>
+                            <svg viewBox="0 0 20 20" :class="{'rotate-180': dropdownOpen, 'rotate-0': !dropdownOpen}" class="inline w-4 h-4 my-auto transition-transform duration-200 transform fill-current"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div x-show="dropdownOpen" @click.away="dropdownOpen = false" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="z-50 absolute right-0 mt-2 lg:max-w-xl max-w-xs w-screen origin-top-right shadow-xl">
+                            <div class="px-2 pt-2 pb-4 bg-light-secondary dark:bg-dark-secondary rounded-md shadow-xl dark-mode:bg-gray-700 z-50">
+                                <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
+                                    {% for post in collections[name] %}
+                                    <a class="flex row items-start rounded-lg bg-transparent p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 dark:text-gray-900 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ post.url }}">
+                                        <!-- Inner menu -->
+                                        <div class="flex flex-row">
+                                            <div class="w-1/5 mx-auto text-gray-50 pl-2 pr-2 bg-red-900 rounded-lg h-24">
+                                                {{ post.data.figure | svgContents("fill-current mx-auto h-full w-full") | safe  }}
+                                            </div>
+                                            <div class="ml-3 w-4/5">
+                                                <p class="font-semibold">{{ post.data.title }}</p>
+                                                <p class="text-sm">{{ post.data.description }}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    {% endfor %}
+                </div>
+
+                <!-- Toggle dark mode -->
+                <div class="ml-3 flex flex-row space-x-3">
+                    <p>|</p>
+
+                    <button id="switchTheme">
+                        <svg class="dark:hidden w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" /></svg>
+                        <svg class="hidden dark:block w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="5" />
+                            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile button -->
+            <div class="md:hidden flex flex-col justify-end">
+                <!-- Button -->
+                <button class="relative p-3 focus:outline-none flex justify-self-end" @click="accordion = !accordion">
+                    <div class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                        <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out" :class="{'rotate-45': accordion,' -translate-y-1.5': !accordion }"></span>
+                        <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out" :class="{'opacity-0': accordion } "></span>
+                        <span aria-hidden="true" class="block absolute h-0.5 w-5 bg-current transform transition duration-300 ease-in-out" :class="{'-rotate-45': accordion, ' translate-y-1.5': !accordion}"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile accordion -->
+        <div class="md:hidden relative overflow-hidden transition-all max-h-0 duration-700" x-ref="main_accordion" :style="accordion && 'max-height: ' + ($refs.main_accordion.scrollHeight) + 'px'">
+            <!-- Rest of menu -->
+            {% for name, item in menu %} {% set post_n = collections[name] | length %}
+            <nav x-data="{accordion_inner: false, posts: {{ post_n }}}" class="pt-3">
+                <!-- Main menu -->
+                <button x-bind="toggle_subaccordion" class="flex w-full items-center p-3 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 dark:text-gray-900 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
+                    <!-- Text -->
+                    <span class="dark:text-gray-700 text-lg items-center w-full h-full">
+                        {{ name | capatilize }}
+                    </span>
+
+                    <!-- Icon -->
+                    <svg viewBox="0 0 20 20" :class="{'rotate-180': accordion_inner, 'rotate-0': !accordion_inner}" class="inline w-4 h-4 my-auto transition-transform duration-200 transform fill-current"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+
+                <!-- Submenues -->
+                {% for post in collections[name] %}
+
+                <div class="relative overflow-hidden transition-all max-h-0 duration-700" x-ref="secondary_accordion" :style="accordion_inner && 'max-height: ' + ($refs.secondary_accordion.scrollHeight) + 'px'">
+                    <!-- Item -->
+                    <a class="flex flex-row justify-start bg-gray-300 p-2 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 dark:text-gray-900 hover:text-gray-50 focus:text-blue-700 hover:bg-blue-700 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="{{ post.url }}">
+                        <!-- Icon -->
+                        <div class="w-5 rounded-lg h-5 ml-5 my-auto">
+                            {{ post.data.figure | svgContents("fill-current mx-auto h-full w-full") | safe  }}
+                        </div>
+
+                        <!-- Inner menu -->
+                        <div class="ml-2">
+                            <p class="">{{ post.data.title }}</p>
+                        </div>
+                    </a>
+                </div>
+
+                {% endfor %}
+            </nav>
+
+            {% endfor %}
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener("alpine:init", () => {
+        Alpine.bind("toggle_subaccordion", () => ({
+            type: "button",
+
+            "@click"() {
+                this.accordion_inner = !this.accordion_inner;
+                this.$refs.main_accordion.style["max-height"] = this.$refs.main_accordion.scrollHeight + this.$refs.secondary_accordion.scrollHeight * this.posts + "px";
+            },
+        }));
+    });
+</script>

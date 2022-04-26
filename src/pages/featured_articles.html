@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+tags:
+    - resources
+title: Featured articles
+figure: "/src/images/article_black_24dp.svg"
+description: Submit or view previously featured articles
+---
+
+<div class="flex flex-col h-full p-4 max-w-5xl mx-auto">
+    <!--  text -->
+    <div class="flex flex-col space-y-2 pb-4 pl-4 mx-auto">
+        <h2 class="text-4xl font-semibold font-montserrat">Previously featured articles</h2>
+    </div>
+    <div>
+        {% for article in collections.articles | reverse %}
+        <a href="{{ article.data.link }}" class="flex flex-col p-4">
+            <div class="font-montserrat font-semibold text-xl">{{ article.data.article_name }}</div>
+            <div class="pt-1 font-montserrat">{{ article.data.authors }}</div>
+        </a>
+        {% endfor %}
+    </div>
+</div>

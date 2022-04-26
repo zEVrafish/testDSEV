@@ -1,0 +1,129 @@
+<!-- Form -->
+<div>
+    <!-- Hidden part -->
+    <form hidden name="contact" data-netlify="true" netlify-honeypot="bot-field">
+        <input name="name" />
+        <input name="email" />
+        <input name="message" />
+    </form>
+
+    <!-- Actual form -->
+    <form class="h-full pl-0.5" method="POST" id="contact" x-data="contactNewForm()" @submit.prevent="submitData()" x-cloak>
+        <!-- Setup (Related to netlify) -->
+        <div>
+            <!-- Honeypot for bots (is hidden) -->
+            <p hidden>
+                <label>ignore: <input name="bot-field" /></label>
+            </p>
+
+            <!-- Netlify parse (Must be included for netlify to work) -->
+            <input type="hidden" name="form-name" value="contact" />
+        </div>
+
+        <!-- Form -->
+        <div class="p-2 space-y-4" x-show="!sucess">
+            <!-- Input form -->
+            <div class="flex flex-col space-y-4">
+                <!-- Ñame -->
+                <div class="flex flex-col space-y-1">
+                    <!-- Label -->
+                    <label for="name" class="block text-md font-medium text-gray-700 font-montserrat"> Name </label>
+
+                    <!-- Input -->
+                    <div class="">
+                        <input id="name" type="text" required class="" name="name" x-model="name" placeholder="Your name" />
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="flex flex-col space-y-1">
+                    <!-- Label -->
+                    <label for="email" class="block text-md font-medium text-gray-700 font-montserrat">Email</label>
+
+                    <!-- Input -->
+                    <div class="relative">
+                        <input id="email" name="email" type="email" autocomplete="email" placeholder="jane@doe.dk" required class="" x-model="email" />
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <div class="flex flex-col space-y-1">
+                    <!-- Label -->
+                    <label for="message" class="block text-md font-medium text-gray-700 font-montserrat">Message</label>
+
+                    <div class="relative">
+                        <!-- Text area -->
+                        <textarea id="message" required class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-1.5 px-4 block w-full appearance-none leading-normal h-32" name="message" form="contact" x-model="message" placeholder="Your message here"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <button type="submit" class="inline-flex justify-center w-full px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" x-bind:disabled="loading">
+                <!-- Active -->
+                <template x-if="!loading">
+                    <div class="space-x-3 p-1 my-auto justify-between pl-3 pr-3">
+                        <p class="text-center self-center">Send message</p>
+                    </div>
+                </template>
+
+                <!-- Loading - Maybe create round thingy inside box instead? -->
+                <template x-if="loading">
+                    <div class="flex flex-row space-x-1 justify-center">
+                        <p class="self-center">Sending</p>
+                        <div class="">
+                            <svg class="animate-spin text-gray-100 fill-current h-7 w-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M73 50c0-12.7-10.3-23-23-23S27 37.3 27 50m3.9 0c0-10.5 8.5-19.1 19.1-19.1S69.1 39.5 69.1 50" /></svg>
+                        </div>
+                    </div>
+                </template>
+            </button>
+        </div>
+
+        <!-- Message -->
+        <div x-show="sucess" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 transform scale-90" x-transition:enter-end="opacity-100 transform scale-100" x-transition:leave="transition ease-in duration-300" x-transition:leave-start="opacity-100 transform scale-100" x-transition:leave-end="opacity-0 transform scale-90">
+            <div class="bg-green-100 border-l-4 border-green-500 text-green-700 p-4 my-4" role="success">
+                <p>Message sent</p>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function contactNewForm() {
+        /* Set data */
+        return {
+                loading: false,
+                sucess: false,
+                email: "",
+                name: "",
+                message: "",
+        submitData() {
+            /* Set loading loading */
+            this.loading = true;
+
+            /* Generate formdata element */
+            let formElement = document.getElementById("contact");
+            let body = new URLSearchParams(new FormData(formElement)).toString();
+
+                /* Submit form */
+                return fetch("/", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded",
+                    },
+                    body: body,
+                })
+                    .then((response) => {
+                        if (response.ok) {
+                            formElement.reset();
+                            /* Show sucess */
+                            this.sucess = true;
+                        } else {
+                            throw new Error(`Something went wrong: ${response.statusText}`);
+                        }
+                    })
+                    .catch((error) => console.error(error));
+            },
+        };
+    }
+</script>
