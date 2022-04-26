@@ -4,14 +4,13 @@ title: Call for applications to MOVE European Mobility Fellowship
 author: Malene Møller Jørgensen
 
 ---
-
 ![](src/images/move.jpg "MOVE")
 
-The Danish Society of Extracellular Vesicles (DSEV) has collaborated with other Extracellular Vesicle societies across Europe to form MOVE (MObility for Vesicles research in Europe) to allow early-stage scientists to work in another lab European laboratory.
-The MOVE Fellowship aims to foster collaboration between different European EV Societies and Networks members. The Fellowship will enable Early Career Researchers (the applicants) to travel to another lab in Europe (the hosts) to develop both their technical skills and expand their
-professional networks.
-The Fellowship is intended for research technicians, Ph.D. students, and early-stage postdoctoral researchers (≤ five years, excluding career breaks). There may be some exceptions, for example, suitable applications from master students.
-The Fellowship will cover travel and subsistence (but not bench fees or salary) to work within a host lab at an academic institution in a different European country for between one and three months, up to a maximum value of 15.000Dkr. The travel must be performed within 12 months after being awarded.
+The Danish Society of Extracellular Vesicles (DSEV) has collaborated with other Extracellular Vesicle societies across Europe to form MOVE (MObility for Vesicles research in Europe) to allow early-stage scientists to work in another lab European laboratory. 
+
+The MOVE Fellowship aims to foster collaboration between different European EV Societies and Networks members. The Fellowship will enable Early Career Researchers (the applicants) to travel to another lab in Europe (the hosts) to develop both their technical skills and expand their professional networks. 
+
+The Fellowship is intended for research technicians, Ph.D. students, and early-stage postdoctoral researchers (≤ five years, excluding career breaks). There may be some exceptions, for example, suitable applications from master students. The Fellowship will cover travel and subsistence (but not bench fees or salary) to work within a host lab at an academic institution in a different European country for between one and three months, up to a maximum value of 15.000Dkr. The travel must be performed within 12 months after being awarded.
 
 Process:
 
