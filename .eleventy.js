@@ -39,15 +39,15 @@ async function image_image(src, alt, classes) {
     /* Set format - Macos does not support avif */
     let format = ["avif", "webp", "jpeg"];
 
-    /* Finalisse src */
-    var src_new = "src"
-    var test = src_new.concat(src)
+    /* Create final src */
+    var src_new = ""
+    var src_new = src_new.concat("/src", src)
 
     /* Write metadata */
-    let metadata = await Image(test, {
+    let metadata = await Image(src_new, {
         widths: [300, 600],
         formats: format,
-        urlPath: "/images/",
+        urlPath: "/src/images/",
         outputDir: "_site/images/",
     });
 
