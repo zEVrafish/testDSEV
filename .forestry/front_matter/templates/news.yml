@@ -22,5 +22,6 @@ fields:
   label: Author
   description: The person which wrote it
 pages:
+- src/posts/call-for-applications-to-move-european-mobility-fellowship.md
 - src/posts/national-ev-society-european-mobility-fellowship-scheme.md
 - src/posts/new-webpage.md
