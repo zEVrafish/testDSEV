@@ -4,7 +4,7 @@ name: Deploy site
 
 on:
   push:
-    branches: [vite]
+    branches: [vite, main]
     paths:
       - 'src/**.js}'
       - 'src/**.md'
