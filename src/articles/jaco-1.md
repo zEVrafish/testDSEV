@@ -6,7 +6,7 @@ article_name: 'Lipid-based strategies used to identify extracellular vesicles in
 authors: Botha, J., Handberg, A., & Simonsen, J. B. (2022).
 doi: https://doi.org/10.1002/jev2.12200
 link: https://onlinelibrary.wiley.com/doi/full/10.1002/jev2.12200
-journal_image: src/images/isevshortlogo_2019-1598380929133.webp
+journal_image: /images/isevshortlogo_2019-1598380929133.webp
 published: 2022-04-20T00:00:00+02:00
 
 ---

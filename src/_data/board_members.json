@@ -12,7 +12,7 @@
     },
     {
       "name": "Aase Handberg",
-      "photo": "src/images/250px-aase_handberg.jpg",
+      "photo": "/images/250px-aase_handberg.jpg",
       "position": "Vice president",
       "current_board_member": true,
       "start_date": "2020",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Anne Borup",
-      "photo": "src/images/unnamed.jpg",
+      "photo": "/images/unnamed.jpg",
       "position": "Treasurer",
       "current_board_member": true,
       "start_date": "2020",
@@ -32,7 +32,7 @@
     },
     {
       "name": "Anders Askeland",
-      "photo": "src/images/tdhixnpq_400x400.jpg",
+      "photo": "/images/tdhixnpq_400x400.jpg",
       "position": "Web manager",
       "current_board_member": true,
       "start_date": "2020",
@@ -42,7 +42,7 @@
     },
     {
       "name": "Per Svenningsen",
-      "photo": "src/images/per.png",
+      "photo": "/images/per.png",
       "position": "Secretary",
       "current_board_member": true,
       "start_date": "2021",
@@ -52,7 +52,7 @@
     },
     {
       "name": "Marie Stampe Ostenfeld",
-      "photo": "src/images/marie.jpg",
+      "photo": "/images/marie.jpg",
       "position": "Member at large",
       "current_board_member": true,
       "start_date": "2019",
@@ -62,7 +62,7 @@
     },
     {
       "name": "Peter Nejsum",
-      "photo": "src/images/peter.jpg",
+      "photo": "/images/peter.jpg",
       "position": "Member at large",
       "current_board_member": true,
       "start_date": "2019",
@@ -72,7 +72,7 @@
     },
     {
       "name": "Jonas Ellegaard Nielsen",
-      "photo": "src/images/jonas.jpg",
+      "photo": "/images/jonas.jpg",
       "position": "Member at large",
       "current_board_member": true,
       "start_date": "2021",
@@ -82,7 +82,7 @@
     },
     {
       "name": "Ole Østergaard",
-      "photo": "src/images/images.png",
+      "photo": "/images/images.png",
       "position": "Member at large",
       "current_board_member": true,
       "start_date": "2019",
@@ -92,7 +92,7 @@
     },
     {
       "name": "Fabio Antenucci",
-      "photo": "src/images/images.png",
+      "photo": "/images/images.png",
       "position": "PR manager",
       "current_board_member": true,
       "start_date": "2019",
@@ -102,7 +102,7 @@
     },
     {
       "name": "Kim Ryun Drasbek",
-      "photo": "src/images/csm_kim_ryun_drasbek_2017_e784d4c535.jpg",
+      "photo": "/images/csm_kim_ryun_drasbek_2017_e784d4c535.jpg",
       "position": "Secretary",
       "current_board_member": false,
       "start_date": "2019",

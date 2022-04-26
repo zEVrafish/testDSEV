@@ -7,7 +7,7 @@ authors: Henriksen, N. L., Aasmul-Olsen, K., Venkatasubramanian, R., Nygaard, M.
   Sprenger, R. R., Heckmann, A. B., ... & Thymann, T. (2021)
 doi: https://doi.org/10.3390/nu13030718
 link: https://www.mdpi.com/2072-6643/13/3/718
-journal_image: src/images/nutrients-logo.webp
+journal_image: /images/nutrients-logo.webp
 published: 2022-04-20T00:00:00+02:00
 
 ---

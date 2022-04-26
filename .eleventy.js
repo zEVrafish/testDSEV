@@ -40,14 +40,14 @@ async function image_image(src, alt, classes) {
     let format = ["avif", "webp", "jpeg"];
 
     /* Finalisse src */
-    var src_new = "/src"
+    var src_new = "src"
     var test = src_new.concat(src)
 
     /* Write metadata */
     let metadata = await Image(test, {
         widths: [300, 600],
         formats: format,
-        urlPath: "/src/images/",
+        urlPath: "/images/",
         outputDir: "_site/images/",
     });
 
