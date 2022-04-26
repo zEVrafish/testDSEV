@@ -4,7 +4,7 @@ title: Call for applications to MOVE European Mobility Fellowship
 author: Malene Møller Jørgensen
 
 ---
-![](src/images/move.jpg "MOVE")
+![Minion](/images/1280px-scientific_reports_logo-svg.png)
 
 The Danish Society of Extracellular Vesicles (DSEV) has collaborated with other Extracellular Vesicle societies across Europe to form MOVE (MObility for Vesicles research in Europe) to allow early-stage scientists to work in another lab European laboratory. 
 

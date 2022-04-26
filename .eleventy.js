@@ -3,6 +3,9 @@ const { DateTime } = require("luxon");
 const Image = require("@11ty/eleventy-img");
 const svgContents = require("eleventy-plugin-svg-contents");
 const slugify = require("slugify");
+const { string } = require("nunjucks/src/filters");
+const md = require('markdown-it')()
+
 
 /*--------- Functions --------*/
 /* Optimize logo (eleventy-img) */
@@ -36,11 +39,15 @@ async function image_image(src, alt, classes) {
     /* Set format - Macos does not support avif */
     let format = ["avif", "webp", "jpeg"];
 
+    /* Finalisse src */
+    var src_new = "/src"
+    var test = src_new.concat(src)
+
     /* Write metadata */
-    let metadata = await Image(src, {
+    let metadata = await Image(test, {
         widths: [300, 600],
         formats: format,
-        urlPath: "/images/",
+        urlPath: "/src/images/",
         outputDir: "_site/images/",
     });
 
