@@ -3,4 +3,4 @@
 ![Uptime](https://badgen.net/uptime-robot/month/m789803897-921a0f2ba2d7f70eca951cc0)
 
 # Website for Danish Society for Extracellular Vesicles
-This repository contains code for rendering the webpage [www.dsev.dk](www.dsev.dk).
+This repository contains code for rendering the webpage [http://www.dsev.dk](www.dsev.dk).
