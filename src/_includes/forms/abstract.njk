@@ -126,7 +126,7 @@
     </form>
 
     <!-- Form -->
-    <form name="abstractForm" enctype="multipart/form-data" data-netlify="true" x-data="abstractSubmission()" @submit.prevent="submitData()" x-cloak>
+    <form name="abstractForm" enctype="multipart/form-data" data-netlify="true" x-data="abstractSubmission()" @submit.prevent="submitAbstract()" x-cloak>
         <!-- Name -->
         <label>
             <span>Name:</span>
@@ -143,6 +143,8 @@
         <button type="submit">Submit</button>
     </form>
 </div>
+<p class="result"></p>
+
 
 <script>
     function abstractSubmission() {
@@ -150,11 +152,22 @@
         return {
             name: "",
             file: "",
-        submitAbstract() {
-            return fetch("/", {
-                body: new FormData(event.target),
-            method: "POST",
-        })
+            submitAbstract() {
+                /* Get form data */
+                let formElement = document.getElementById("abstract");
+                let body = new URLSearchParams(new FormData(formElement)).toString();
+
+                /* Submit form */
+                return fetch("/", {
+                    body: body,
+                    method: "POST",
+            })
+            .then(() => {
+                result.innerText = "Success";
+            })
+            .catch((error) => {
+                result.innerText = `Failed: ${error}`;
+            });
         }
     };
 
