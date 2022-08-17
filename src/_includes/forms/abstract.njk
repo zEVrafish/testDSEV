@@ -116,24 +116,70 @@
         </div>
     </form>
 </div>
+
+
+<!-- New test -->
+<div>
+    <!-- Hidden part -->
+    <form hidden name="abstractForm" enctype="multipart/form-data" data-netlify="true" netlify-honeypot="bot-field">
+        <input name="name" />
+        <input name="file" />
+    </form>
+
+    <!-- Form -->
+    <form name="abstractForm" enctype="multipart/form-data" data-netlify="true" x-data="abstractSubmission()" @submit.prevent="submitData()" x-cloak>
+        <!-- Name -->
+        <label>
+            <span>Name:</span>
+            <input name="name" type="text" x-model="name"/>
+        </label>
+
+        <!-- File -->
+        <label>
+            <span>Add file:</span>
+            <input name="file" type="file" x-model="file"/>
+        </label>
+
+        <!-- Submit -->
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+
+
 <form name="fileForm" enctype="multipart/form-data" data-netlify="true">
     <p>
-      <label>
+        <label>
         <span>Name:</span>
         <input name="name" type="text"/>
-      </label>
+        </label>
     </p>
     <p>
-      <label>
+        <label>
         <span>Add file:</span>
         <input name="file" type="file"/>
-      </label>
+        </label>
     </p>
     <button>Submit</button>
-  </form>
-  <p class="result"></p>
+</form>
+<p class="result"></p>
+
+
 <script>
-    document.forms.fileForm.addEventListener("submit", (event) => {
+    function abstractSubmission() {
+        /* Set data */
+        return {
+            name: "",
+            file: "",
+        submitAbstract() {
+            return fetch("/", {
+                body: new FormData(event.target),
+            method: "POST",
+        })
+        }
+    };
+    
+document.forms.fileForm.addEventListener("submit", (event) => {
   event.preventDefault();
   const result = document.querySelector(".result");
   fetch("/", {
