@@ -10,7 +10,7 @@
     </form>
 
     <!-- Actual form -->
-    <form class="h-full pl-0.5" method="POST" id="abstract" x-data="abstractSubmit()" @submit.prevent="submitData()" x-cloak>
+    <form class="h-full pl-0.5" method="POST" enctype="multipart/form-data" data-netlify="true" id="abstract" x-data="abstractSubmit()" @submit.prevent="submitData()" x-cloak>
         <!-- Setup (Related to netlify) -->
         <div>
             <!-- Honeypot for bots (is hidden) -->
@@ -138,9 +138,6 @@
                 /* Submit form */
                 return fetch("/", {
                     method: "POST",
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded",
-                    },
                     body: body,
                 })
                     .then((response) => {
