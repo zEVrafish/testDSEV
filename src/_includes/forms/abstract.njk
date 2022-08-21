@@ -88,29 +88,32 @@ Result: <p class="result"></p>
 <!-- Submit script -->
 <script>
     document.forms.abstractForm.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const result = document.querySelector(".result");
+        event.preventDefault();
+        const result = document.querySelector(".result");
     
-    /* Check file type (docx) */
-    var files = event.target.files;
-    var filename = files[0].name;
-    var extension = files[0].type;
-    
-    /* Send info */
-    if(extension == "docx") {
-        fetch("/", {
-            body: new FormData(event.target),
-            method: "POST",
-        })
-        .then(() => {
-            result.innerText = "Success";
-        })
-        .catch((error) => {
-            result.innerText = `Failed: ${error}`;
-        });
-    } else {
-        result.innerText = "Wrong filetype"
-    }
+        /* Check file type (docx) */
+        var files = event.target.files;
+        var filename = files[0].name;
+        var extension = files[0].type;
 
-});
+        alert("I am an alert box!");
+    
+        /* Send info */
+        if(extension == "docx"){
+            alert("It is docx");
+
+            fetch("/", {
+                body: new FormData(event.target),
+                method: "POST",
+            })
+            .then(() => {
+                result.innerText = "Success";
+            })
+            .catch((error) => {
+                result.innerText = `Failed: ${error}`;
+            });
+        } else {
+            alert("Not docx!");
+        }
+    });
 </script>
