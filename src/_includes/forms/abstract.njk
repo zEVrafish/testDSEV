@@ -97,7 +97,7 @@ Result: <p class="result"></p>
         var extension = files[0].type;
     
         /* Send info */
-        alert(`I am ${extension}`);
+        result.innerText = `Extension: ${extension}`;
 
         fetch("/", {
             body: new FormData(event.target),
