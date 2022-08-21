@@ -90,14 +90,6 @@ Result: <p class="result"></p>
     document.forms.abstractForm.addEventListener("submit", (event) => {
         event.preventDefault();
         const result = document.querySelector(".result");
-    
-        /* Check file type (docx) */
-        var files = event.target.files;
-        var filename = files[0].name;
-        var extension = files[0].type;
-    
-        /* Send info */
-        result.innerText = `Extension: ${extension}`;
 
         fetch("/", {
             body: new FormData(event.target),
