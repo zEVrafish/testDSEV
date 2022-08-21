@@ -95,25 +95,19 @@ Result: <p class="result"></p>
         var files = event.target.files;
         var filename = files[0].name;
         var extension = files[0].type;
-
-        alert("I am an alert box!");
     
         /* Send info */
-        if(extension == "docx"){
-            alert("It is docx");
+        alert(`I am ${extension}`);
 
-            fetch("/", {
-                body: new FormData(event.target),
-                method: "POST",
-            })
-            .then(() => {
-                result.innerText = "Success";
-            })
-            .catch((error) => {
-                result.innerText = `Failed: ${error}`;
-            });
-        } else {
-            alert("Not docx!");
-        }
+        fetch("/", {
+            body: new FormData(event.target),
+            method: "POST",
+        })
+        .then(() => {
+            result.innerText = "Success";
+        })
+        .catch((error) => {
+            result.innerText = `Failed: ${error}`;
+        });        
     });
 </script>
