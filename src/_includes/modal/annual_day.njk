@@ -1,29 +1,30 @@
 
-<div x-data="{ open: true }" @keydown.escape="open = false" class="fixed bottom-0 left-0 p-4">
+<div x-data="{ open: true }" @keydown.escape="open = false" class="z-50 fixed bottom-0 left-0 p-4">
     <div x-show="open" class="flex flex-col justify-center w-full h-full">
         <!-- Dialog -->
         <div class="flex flex-col bg-white mx-auto max-w-md rounded-lg shadow-lg" @click.away="conference = false">
             <!-- Top bar -->
-            <div>
+            <div class="flex flex-row rounded-t-lg w-full shadow-lg justify-between">
+                <!-- Title -->
+                <div class=" bg-white h-auto text-left p-2 pl-4">
+                    <h2 class="text-2xl font-montserrat">Annual DSEV meeting</h2>
+                </div>
                 <!-- Close icon -->
-                <button @click="open = false" class="absolute right-0 top-0 p-8">
+                <button @click="open = false" class="p-4">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
                         <path d="M0 0h24v24H0z" fill="none" />
                         <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
                     </svg>
                 </button>
 
-                <!-- Title -->
-                <div class="rounded-t-lg w-full shadow-lg bg-white h-auto text-left p-2 pl-4">
-                    <h2 class="text-2xl font-montserrat">Annual DSEV symposium</h2>
-                </div>
+   
             </div>
 
             <!-- Text -->
             <div class="p-4 flex flex-col space-y-4">
                 <p>
                     The third annual meeting of the Danish Society of Extracellular Vesicles will take place on:
-                    Thursday, October 6th, 2022, from 9 – 17.30 at Roskilde University Center.          
+                    Thursday, October 6th, 2022, from 09:00 – 17:30 at Roskilde University Center.          
                 </p> 
                 <p>
                     Register <a class="text-blue-400" href="https://events.au.dk/dsev2022">here</a>.
