@@ -111,6 +111,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ "./src/css/tailwind.css": "./style.css" });
     eleventyConfig.addPassthroughCopy({ "./src/images": "./images/" });
     eleventyConfig.addPassthroughCopy({ "./src/images/icons": "./icons/" });
+    eleventyConfig.addPassthroughCopy({ "./src/_data": "./data/" });
 
     // Will watch for changes during dev
     eleventyConfig.addWatchTarget("./src");
