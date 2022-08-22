@@ -8,10 +8,6 @@
 
 <!-- Actual form -->
 <form name="abstractForm" enctype="multipart/form-data" data-netlify="true">
-    <!-- Honeypot for bots (is hidden) -->
-    <p hidden>
-        <label>ignore: <input name="bot-field" /></label>
-    </p>
 
     <!-- Form -->
     <div x-show="show">
@@ -97,7 +93,11 @@
             <button id="file-submit" type="submit" class="text-white bg-blue-700 cursor-not-allowed hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" disabled>Submit abstract</button>
         </div>
     </div>
-
+    
+    <!-- Honeypot for bots (is hidden) -->
+    <p hidden>
+        <label>ignore: <input name="bot-field" /></label>
+    </p>
 </form>
 
 <!-- Submit script -->
@@ -132,7 +132,7 @@
             method: "POST",
         })
         .then(() => {
-            alert("Form submitted");
+            alert("Abstract successfully submitted");
             abstractForm.reset();
 
         })
