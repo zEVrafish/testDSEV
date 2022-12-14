@@ -1,16 +1,6 @@
 {
   "board_members": [
     {
-      "name": "Reza Yarani",
-      "photo": "/images/dsc02587-min.JPG",
-      "position": "Member at large",
-      "current_board_member": true,
-      "start_date": "2022",
-      "end_date": "",
-      "email": "Reza.yarani.01@regionh.dk",
-      "web_url": "https://www.linkedin.com/in/reza-yarani-8b326439/"
-    },
-    {
       "name": "Malene Møller Jørgensen",
       "photo": "/images/malenemoller.jpg",
       "position": "President",
@@ -119,6 +109,16 @@
       "end_date": "2021",
       "email": "",
       "web_url": ""
+    },
+    {
+      "name": "Reza Yarani",
+      "photo": "/images/dsc02587-min.JPG",
+      "position": "Member at large",
+      "current_board_member": true,
+      "start_date": "2022",
+      "end_date": "",
+      "email": "Reza.yarani.01@regionh.dk",
+      "web_url": "https://www.linkedin.com/in/reza-yarani-8b326439/"
     }
   ]
 }
