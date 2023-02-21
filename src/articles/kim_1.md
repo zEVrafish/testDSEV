@@ -7,6 +7,5 @@ authors: Gu, T., Just, J., Stenz, K. T., Yan, Y., Sieljacks, P., Wang, J., ... &
 doi: ''
 link: https://www.mdpi.com/1422-0067/23/6/3334
 journal_image: "/images/ijms-logo.webp"
-published: 2023-02-21T00:00:00+01:00
-
+published: 2023-02-21T00:00:00+01:00 
 ---
