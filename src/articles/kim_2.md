@@ -5,6 +5,6 @@ authors: Lunding, M., Blauenfeldt, R., Just, J., & Kim Ryun, D. (2022)
 doi: ''
 link: http://www.conditionmed.org/Data/View/13890?type=100
 journal_image: "/images/journal.png"
-published: 
+published: 2022-06-08T00:00:00+02:00
 
 ---
