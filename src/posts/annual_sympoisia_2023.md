@@ -1,6 +1,6 @@
 ---
 title: Annual symposium 2023
-date: 2023-08-15:00:00+02:00
+date: 2023-08-15
 author: Anders Askeland
 
 ---
