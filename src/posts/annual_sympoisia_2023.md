@@ -22,7 +22,7 @@ Please see the guidelines and download the template from the DSEV homepage [http
 
 **Deadlines**:
 
-* Deadline for abstract submission September 1st, 2023
+* Deadline for abstract submission September 4th, 2023
 
 * Registration closes September 15th, 2023.
 
