@@ -12,6 +12,7 @@ on:
       - 'src/**.html'
       - 'src/**.njk'
       - 'src/**.json'
+      - 'admin/*'
   pull_request:
     branches: [ "main" ]
     paths:
