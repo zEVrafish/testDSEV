@@ -1,6 +1,6 @@
 ---
 title: Testing time
-date: 2024-07-01Ttrue
+date: 2024-07-01T
 author: Who
 ---
 Wasssasa
