@@ -26,4 +26,4 @@ Please see the guidelines and download the template from the DSEV homepage [http
 
 * Registration closes September 15th, 2023.
 
-* Notification on submitted abstracts September 19th, 2023
+* Notification on submitted abstracts September 19th, 2023   
