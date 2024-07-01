@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: netlify_cms
-media_folder: "images"
+media_folder: "src/images"
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
     label: "posts" # Used in the UI
@@ -13,5 +13,4 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", time_format: true, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-
 
