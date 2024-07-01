@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: test_cms
+  branch: netlify_cms
 media_folder: "images"
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/blog
