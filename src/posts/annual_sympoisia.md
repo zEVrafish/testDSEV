@@ -6,4 +6,4 @@ author: Anders Askeland
 ---
 Registration for the second annual DSEV symposia is closed. The symposium will be held at Vejle Hospital on the 28th of October 2021 (2021-10-28). 
 
-We look forward to seeing you all there!
+We look forward to seeing you all there!  
