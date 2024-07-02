@@ -45,7 +45,7 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.5
       with:
-        branch: test_cms
+        branch: deploy
         folder: '_site'
         clean: true
         clean-exclude: |
