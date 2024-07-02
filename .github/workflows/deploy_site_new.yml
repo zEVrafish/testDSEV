@@ -12,6 +12,8 @@ on:
       - 'src/**.html'
       - 'src/**.njk'
       - 'src/**.json'
+      - 'admin/**.yml'
+      - 'admin/**.html'
   pull_request:
     branches: [ "main" ]
     paths:
@@ -25,8 +27,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
-
 
     steps:
     - name: Checkout repo/get files

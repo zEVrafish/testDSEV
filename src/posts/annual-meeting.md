@@ -23,7 +23,7 @@ Registration for the symposium is linked to a DSEV membership, and the payment o
 Deadline for abstract submission September 12th, 2022  
 Registration closes September 28th, 2022
 
-**Accommodation:** 
+**Accommodation:**   
 
 We suggest that overnight guests stay at the Prindsen Zleep hotel in Roskilde. Room costs are 700 kr to 1050 kr per night. It is in the city center, well situated relative to the train station and Roskilde is one stop from Trekroner. [https://www.zleep.com/da/hotel/roskilde/](https://www.zleep.com/da/hotel/roskilde/ "https://www.zleep.com/da/hotel/roskilde/")
 

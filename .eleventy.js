@@ -6,6 +6,8 @@ const slugify = require("slugify");
 const { string } = require("nunjucks/src/filters");
 const md = require('markdown-it')()
 
+// add to .eleventy.js
+
 
 /*--------- Functions --------*/
 /* Optimize logo (eleventy-img) */
@@ -106,6 +108,8 @@ module.exports = function (eleventyConfig) {
     /*--------- General --------*/
     // Plugins
     eleventyConfig.addPlugin(svgContents);
+
+    eleventyConfig.addPassthroughCopy("admin");
 
     // Pass trough files (You dont need to write entire path)
     eleventyConfig.addPassthroughCopy({ "./src/css/tailwind.css": "./style.css" });

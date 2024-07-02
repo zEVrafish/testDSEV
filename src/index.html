@@ -27,3 +27,15 @@ layout: layouts/base.njk
 <div>
     {% include "src/_includes/section/article_wheel.njk" %}
 </div>
+
+<script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
