@@ -106,6 +106,7 @@ dist
 
 # Vscode
 .vscode
+*.code-workspace
 
 # Prettier
 .prettierrc
