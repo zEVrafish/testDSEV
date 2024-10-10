@@ -30,7 +30,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
-      - {label: "Provider", name: "provider", widget: "string"}
+      - {label: "Course Provider", name: "provider", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "jobs"
     label: "Job Postings"
