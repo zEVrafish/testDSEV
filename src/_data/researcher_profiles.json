@@ -1,0 +1,9 @@
+{
+  "researcher_profiles": [
+    {
+      "name": "Foo Bar",
+      "position": "Dr.",
+      "description": "*Hello*, **World** in `Markdown`!"
+    }
+  ]
+}
