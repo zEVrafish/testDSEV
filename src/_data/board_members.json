@@ -2,7 +2,7 @@
   "board_members": [
     {
       "name": "Malene Møller Jørgensen",
-      "photo": "/images/malenemoller.jpg",
+      "photo": "/images/malene.png",
       "position": "President",
       "current_board_member": true,
       "start_date": "2020",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Per Svenningsen",
-      "photo": "/images/per.png",
+      "photo": "/images/per2.png",
       "position": "Vice President",
       "current_board_member": true,
       "start_date": "2021",
@@ -22,7 +22,7 @@
     },
     {
       "name": "Peter Nejsum",
-      "photo": "/images/peter.jpg",
+      "photo": "/images/peter.png",
       "position": "Member at Large",
       "current_board_member": true,
       "start_date": "2019",
