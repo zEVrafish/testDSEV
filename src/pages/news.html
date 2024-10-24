@@ -15,12 +15,13 @@ description: View previous news and updates from DSEV
     <div>
 
         {% for post in collections.posts | reverse %}
+        {% if 'jobs' not in post.data.tags and 'research' not in post.data.tags and 'courses' not in post.data.tags %}
         <div class="pt-4 flex flex-col">
             <a class="text-lg tracking-normal text-blue-500" href="{{ post.url }}">{{ post.data.title }} </a>
             <time class="text-sm tracking-tight text-gray-600 postlist-date" datetime="{{ post.date | htmlDateString }}">
                 {{ post.date | readableDate }}
             </time>
         </div>
-        {% endfor %}
+        {% endif %} {% endfor %}
     </div>
 </div>
