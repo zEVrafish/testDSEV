@@ -30,6 +30,9 @@ figure: "/src/images/groups_black_24dp.svg"
                 <div class="">
                     <p class="font-semibold text-lg">{{ inner_data.name }}</p>
                     <p class="text-indigo-900">{{ inner_data.position }}</p>
+                    {% if inner_data.description %}
+                        {{ inner_data.description | markdown | safe }}
+                    {% endif %}
                 </div>
 
                 <!-- Icons -->
@@ -44,9 +47,6 @@ figure: "/src/images/groups_black_24dp.svg"
                         {{ '/src/images/icons/icon_link.svg' | svgContents("fill-current h-6 w-6 block mx-auto my-auto") | safe }}
                     </a>
                     {% endif %}
-                    {% if inner_data.description %}
-                        {{ inner_data.description | safe }}
-                    {% endif %}
                 </div>
             </div>
         </div>
@@ -55,7 +55,4 @@ figure: "/src/images/groups_black_24dp.svg"
 
         <!--  Cards -->
     </div>
-
-    </div>
-
 </div>

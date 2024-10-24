@@ -180,6 +180,11 @@ module.exports = function (eleventyConfig) {
         return n - 2;
     });
 
+    /* Markdown */
+    eleventyConfig.addFilter("markdown", (content) => {
+        return md.render(content);
+    });
+
     /*--------- Shortcodes --------*/
     eleventyConfig.addNunjucksAsyncShortcode("logo", image_logo);
     eleventyConfig.addNunjucksAsyncShortcode("image", image_image);
