@@ -14,7 +14,7 @@ description: Learn about extracellular vesicle research infrastructure in Denmar
     </div>
     <div>
 
-        {% for post in collections.research | reverse %}
+        {% for post in collections.research_infrastructure | reverse %}
         <div class="pt-4 flex flex-col">
             <a class="text-lg tracking-normal text-blue-500" href="{{ post.url }}">{{ post.data.title }} </a>
             <time class="text-sm tracking-tight text-gray-600 postlist-date" datetime="{{ post.date | htmlDateString }}">
