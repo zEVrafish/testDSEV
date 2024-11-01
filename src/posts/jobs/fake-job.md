@@ -3,8 +3,6 @@ title: Fake job
 date: 2024-11-01
 employer: Fake University
 ---
-Summary
-
 ### Expected start date and duration of employment
 
 xxxx
