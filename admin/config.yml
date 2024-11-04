@@ -14,9 +14,9 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "research"
+  - name: "research_infrastructure"
     label: "Research Infrastructure"
-    folder: "src/posts/research"
+    folder: "src/posts/research_infrastructure"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
