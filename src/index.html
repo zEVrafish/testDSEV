@@ -20,6 +20,123 @@ layout: layouts/base.njk
     <noscript class="text-3xl font-bold"> If you see this line, it means that your JavaSript is disabled. Several features of this webpage might not display correctly. </noscript>
 </div>
 
+<!-- Middle section -->
+<div class="w-full pl-4 pr-4 grid sm:grid-cols-2 grid-cols-1 gap-4 max-w-2xl text-black mx-auto" x-data="{ contact: false, membership: false }">
+  <!-- Membership -->
+  <button type="button" class="card-banner hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" @click="membership = !membership">
+      <!-- Logo -->
+      <div class="text-dsev flex fill_current h-8 w-full">
+          {{ '/src/images/icons/icon_registration.svg' | svgContents("fill-current block h-12 w-12 block mx-auto my-auto") | safe }}
+      </div>
+
+      <!-- Heading -->
+      <div class="h-auto w-full">
+          <h2 class="text-lg">Membership</h2>
+          <p class="text-xs text-gray-600">How to become a member!</p>
+      </div>
+  </button>
+
+  <!-- Contact us (card) -->
+  <button type="button" class="card-banner hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" @click="contact = !contact">
+      <!-- Logo -->
+      <div class="text-dsev flex fill_current h-8 w-full">
+          {{ '/src/images/icons/icon_phone.svg' | svgContents("fill-current  block h-12 w-12 block mx-auto my-auto") | safe }}
+      </div>
+
+      <!-- Heading -->
+      <div class="h-auto w-full">
+          <h2 class="text-lg">Contact</h2>
+          <p class="text-xs text-gray-600">Write us a message</p>
+      </div>
+  </button>
+
+  <!-- Modal -->
+  {% include "modal/modal_contact.njk" %}
+  {% include "modal/modal_membership.njk" %}
+
+  <script>
+    /* Check for valid email */
+    function isEmail(value) {
+        return new RegExp("^\\S+@\\S+[\\.][0-9a-z]+$").test(String(value).toLowerCase());
+    }
+
+    /* Contact form */
+    function contactEmail() {
+        return {
+            loading: false,
+            sucess: false,
+            email: "",
+            emailValid: false,
+            emailMissing: false,
+            name: "",
+            nameMissing: false,
+            message: "",
+            messageMissing: false,
+
+            submitData() {
+                /* Set loading loading */
+                this.loading = true;
+                let error = false;
+
+                /* Check if email is valid or not */
+                if (this.email == "") {
+                    this.emailMissing = true;
+                    this.loading = false;
+                    error = true;
+                } else if (!isEmail(this.email)) {
+                    this.emailValid = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Check if name is missing */
+                if (this.name == "") {
+                    this.nameMissing = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Check if message is missing */
+                if (this.message == "") {
+                    this.messageMissing = true;
+                    this.loading = false;
+                    error = true;
+                }
+
+                /* Run code if no error */
+                if (error) {
+                    error = false;
+                    return;
+                } else {
+                    /* Generate formdata element */
+                    let formElement = document.getElementById("contact");
+                    let body = new URLSearchParams(new FormData(formElement)).toString();
+
+                    /* Submit form */
+                    return fetch("/", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/x-www-form-urlencoded",
+                        },
+                        body: body,
+                    })
+                        .then((response) => {
+                            if (response.ok) {
+                                formElement.reset();
+                                /* Show sucess */
+                                this.sucess = true;
+                            } else {
+                                throw new Error(`Something went wrong: ${response.statusText}`);
+                            }
+                        })
+                        .catch((error) => console.error(error));
+                }
+            },
+        };
+    }
+  </script>
+</div>
+
 <!-- News and mailing list -->
 <div class="">{% include "src/_includes/section/news_mail.njk" %}</div>
 
