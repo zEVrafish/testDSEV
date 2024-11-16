@@ -1,7 +1,7 @@
 ---
-title: Nano Flow Cytometry
+title: Small-Particle Flow Cytometry
 date: 2024-11-01
-author: Beckman Coulter CytoFLEX nano
+author: Aarhus University
 ---
 #### Description
 
@@ -11,8 +11,6 @@ A dedicated small-particle flow cytometer capable of resolving particles down to
 
 FACS Core Facility at Aarhus University\
 <https://biomed.au.dk/research/core-facilities/facs-core-facility>
-
-
 
 #### Access
 
