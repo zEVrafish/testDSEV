@@ -1,14 +1,23 @@
 ---
-title: Fake job
-date: 2024-11-01
-employer: Fake University
+title: Fully-funded 3-year PhD position on genetic engineering of extracellular
+  vesicles in vivo
+date: 2025-01-10
+employer: Aarhus University
 ---
 ### Brief job description
 
-ssss
+Have you ever dreamt about homing nanomachines repairing organs from inside your body? We have an open PhD position to tackle this challenge using an extracellular vesicle approach through genetic modification of our pet model organism, zebrafish.
+
+--- Important info ---
+Project duration: 3 years
+Place of work: Aarhus University
+Expected start date: 1st May 2025
+
+The application deadline is 1st Feb 2025, but **please do contact me (yuya.hayashi@mbg.au.dk) early before submitting an application**.
 
 
 
 ### Contact information
 
-Person e-mail & webpage
+Further details can be found in the official call here:
+<https://phd.nat.au.dk/for-applicants/open-calls/february-2025/drone-developing-an-extracellular-vesicle-approach-for-in-vivo-delivery-of-rna-origami-nanoscaffolds>
