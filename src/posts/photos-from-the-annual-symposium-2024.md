@@ -7,4 +7,8 @@ The 5th DSEV Annual Symposium in 2024 was held in Aalborg with 84 participants a
 
 ![](/images/dsev2024_group-photo.jpg "Group photo")
 
+![](/images/dsev2024_group-photo2.jpg "Group photo from above")
+
+
+
 Left: Keynote Speaker Cecilia Lässer from Gothenburg University, Sweden; Right: Malene Møller Jørgensen (DSEV President)
