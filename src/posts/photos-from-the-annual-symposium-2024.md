@@ -13,9 +13,13 @@ Group photo
 
 
 
+
+
 ![](/images/dsev2024_group-photo2.jpg "Group photo from above")
 
 Group photo from above (photo: Ole Østergaard)
+
+
 
 
 
@@ -26,6 +30,8 @@ Group photo from above (photo: Ole Østergaard)
 
 
 
+
+
 ![](/images/dsev2024_camille.jpg "Best poster award")
 
 **Best poster award (left)**: Camille Menaceur Vandenbroucke; *Aarhus University, Denmark* (photo: Ole Østergaard)\
@@ -33,10 +39,14 @@ Group photo from above (photo: Ole Østergaard)
 
 
 
+
+
 ![](/images/dsev2024_yuya.jpg "Best oral presentation")
 
 **Best oral presentation award (left)**: Yuya Hayashi; *Aarhus University, Denmark* (photo: Ole Østergaard)
 *"Decrypting the Blood-Streamed RNA Communication in Tissue Regeneration"*
+
+
 
 
 
