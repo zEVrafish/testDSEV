@@ -20,8 +20,8 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
-      - {label: "Author", name: "author", widget: "string"}
+      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Infrastructure", name: "infrastructure", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "courses"
     label: "Courses Available"
@@ -29,8 +29,10 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
       - {label: "Course Provider", name: "provider", widget: "string"}
+      - {label: "Course Level", name: "level", widget: "string"}
+      - {label: "Semester", name: "semester", widget: "string"}
+      - {label: "Course Organiser", name: "organiser", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "jobs"
     label: "Job Postings"
@@ -38,8 +40,12 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
+      - {label: "Location", name: "location", widget: "string"}
       - {label: "Employer", name: "employer", widget: "string"}
+      - {label: "Application Deadline", name: "deadline", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
+      - {label: "Expected Start Date", name: "startdate", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
+      - {label: "Duration of Employment", name: "duration", widget: "string"}
+      - {label: "Place of Work", name: "workplace", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "articles"
     label: "Featured articles"
