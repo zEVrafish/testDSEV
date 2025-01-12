@@ -138,6 +138,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addFilter("readableDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy");
     });
+    eleventyConfig.addFilter("readableDateTime", (dateObj) => {
+        return DateTime.fromISO(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy, 'at' HH:mm");
+    });
     eleventyConfig.addFilter("htmlDateString", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
     });
