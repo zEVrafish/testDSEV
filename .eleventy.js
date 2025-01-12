@@ -131,6 +131,11 @@ module.exports = function (eleventyConfig) {
     });
 
     /*--------- Filters --------*/
+    // Collections
+    eleventyConfig.addFilter('filterByTag', function(posts, tag) {
+      return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
+    });
+
     // Extract test
     eleventyConfig.addFilter("onlyTag", (tag) => {});
 
