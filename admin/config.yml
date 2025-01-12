@@ -41,7 +41,7 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Employer", name: "employer", widget: "string"}
-      - {label: "Application Deadline", name: "deadline", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD HH:mm"}
+      - {label: "Application Deadline", name: "deadline", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DDTHH:mm"}
       - {label: "Expected Start Date", name: "startdate", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
       - {label: "Duration of Employment", name: "duration", widget: "string"}
       - {label: "Place of Work", name: "workplace", widget: "string"}
