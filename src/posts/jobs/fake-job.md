@@ -2,11 +2,11 @@
 date: 2025-01-10
 title: Fully-funded 3-year PhD position on genetic engineering of extracellular
   vesicles in vivo
-location: xxx
 employer: Aarhus University
-deadline: 2025-01-13
+deadline: 2025-01-13 12:00
 startdate: 2025-02-01
 duration: 1 year
+location: xxx
 workplace: Universitetsparken, Aarhus
 ---
 ### Brief job description

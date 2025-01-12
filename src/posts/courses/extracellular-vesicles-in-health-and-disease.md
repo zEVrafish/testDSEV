@@ -2,6 +2,9 @@
 title: Extracellular Vesicles in Health and Disease
 date: 2024-11-01
 provider: Aarhus University (Faculty of Health)
+level: Master
+semester: 5 ECTS
+organiser: Peter Lindbjerg Nejsum, PhD
 ---
 ### Brief description
 
