@@ -2,11 +2,11 @@
 date: 2025-01-10
 title: Fully-funded 3-year PhD position on genetic engineering of extracellular
   vesicles in vivo
-employer: Aarhus University
-deadline: 2025-01-13T12:00
-startdate: 2025-02-01
+employer: Yuya Hayashi
+deadline: 2025-02-01T00:00
+startdate: 2025-05-01
 duration: 3 years
-workplace: Universitetsparken, Aarhus
+workplace: Aarhus University
 ---
 ### Brief job description
 
