@@ -11,7 +11,8 @@
             <div class="flex flex-col h-64 sm:w-2/3 sm:h-full bg-gray-200 dark:bg-dark-secondary p-4">
                 <h3 class="text-3xl font-montserrat dark:text-gray-100">Latest news</h3>
                 <div class="flex flex-col space-y-2">
-                    {% set total_posts = collections.posts | length %} {% set postslist = collections.posts | head(-2) %} {% for post in postslist | reverse %}
+                    {% set news_posts = collections.posts | filterByTag('news') %}
+                    {% set total_posts = news_posts | length %} {% set postslist = news_posts | head(-2) %} {% for post in postslist | reverse %}
                     <div class="pl-1 flex flex-col">
                         <a class="text-lg tracking-normal text-blue-500" href="{{ post.url }}">{{ post.data.title }} </a>
                         <time class="text-sm tracking-tight text-gray-600 postlist-date" datetime="{{ post.date | htmlDateString }}">

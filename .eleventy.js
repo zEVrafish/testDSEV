@@ -131,12 +131,20 @@ module.exports = function (eleventyConfig) {
     });
 
     /*--------- Filters --------*/
+    // Collections
+    eleventyConfig.addFilter('filterByTag', function(posts, tag) {
+      return posts.filter(post => post.data.tags && post.data.tags.includes(tag));
+    });
+
     // Extract test
     eleventyConfig.addFilter("onlyTag", (tag) => {});
 
     // Datetime
     eleventyConfig.addFilter("readableDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy");
+    });
+    eleventyConfig.addFilter("readableDateTime", (dateObj) => {
+        return DateTime.fromISO(dateObj, { zone: "utc" }).toFormat("LLLL dd, yyyy, 'at' HH:mm");
     });
     eleventyConfig.addFilter("htmlDateString", (dateObj) => {
         return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy-LL-dd");
@@ -178,6 +186,11 @@ module.exports = function (eleventyConfig) {
     /* Calculate remaining */
     eleventyConfig.addFilter("remaining", (...n) => {
         return n - 2;
+    });
+
+    /* Markdown */
+    eleventyConfig.addFilter("markdown", (content) => {
+        return md.render(content);
     });
 
     /*--------- Shortcodes --------*/

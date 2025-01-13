@@ -2,6 +2,8 @@
 title: Small-Particle Flow Cytometry
 date: 2024-11-01
 author: Aarhus University
+location: FACS Core Facility, Aarhus University
+infrastructure: Small-Particle Flow Cytometer
 ---
 #### Description
 

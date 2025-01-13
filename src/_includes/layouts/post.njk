@@ -24,12 +24,66 @@
             <main class="flex-grow w-full">
                 <div class="mx-auto text-center p-10 max-w-5xl">
 
-                    <h2 class="text-5xl p-2">
+                    <h2 class="text-5xl p-2" style="text-wrap: pretty;">
                         {{ title }}
                     </h2>
+
                     <h4>
-                        {{ date | readableDate}}
+                        {% if location %}
+                            {{ location }}
+                        {% elif provider %}
+                            {{ provider }}
+                        {% elif employer %}
+                            {{ employer }}
+                        {% else %}
+                            {{ date | readableDate}}
+                        {% endif %}
                     </h4>
+
+                    <!-- Extra data block -->
+                    <div 
+                      class="mt-4 mx-auto w-max grid gap-y-2 gap-x-4 sm:grid-cols-[auto_1fr]">
+
+                      {% if infrastructure %}
+                        <div class="font-bold text-right">Infrastructure:</div>
+                        <div class="text-left">{{ infrastructure }}</div>
+                      {% endif %}
+
+                      {% if level %}
+                        <div class="font-bold text-right">Course Level:</div>
+                        <div class="text-left">{{ level }}</div>
+                      {% endif %}
+
+                      {% if semester %}
+                        <div class="font-bold text-right">Semester:</div>
+                        <div class="text-left">{{ semester }}</div>
+                      {% endif %}
+
+                      {% if organiser %}
+                        <div class="font-bold text-right">Course Organiser:</div>
+                        <div class="text-left">{{ organiser }}</div>
+                      {% endif %}
+
+                      {% if deadline %}
+                        <div class="font-bold text-right">Application Deadline:</div>
+                        <div class="text-left">{{ deadline | readableDateTime }}</div>
+                      {% endif %}
+
+                      {% if startdate %}
+                        <div class="font-bold text-right">Expected Start Date:</div>
+                        <div class="text-left">{{ startdate | readableDate }}</div>
+                      {% endif %}
+
+                      {% if duration %}
+                        <div class="font-bold text-right">Duration of Employment:</div>
+                        <div class="text-left">{{ duration }}</div>
+                      {% endif %}
+
+                      {% if workplace %}
+                        <div class="font-bold text-right">Place of Work:</div>
+                        <div class="text-left">{{ workplace }}</div>
+                      {% endif %}
+                    </div>
                 </div>
                 <article class="prose dark:prose-invert p-5 mx-auto ">
                 {{ content | safe }}
