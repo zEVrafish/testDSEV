@@ -7,6 +7,7 @@ deadline: 2025-02-01T00:00
 startdate: 2025-05-01
 duration: 3 years
 workplace: Aarhus University
+institution_logo: /images/aulogo.png
 ---
 ### Brief job description
 
