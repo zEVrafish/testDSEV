@@ -5,7 +5,7 @@ tags:
 title: Bylaws
 date: '2019-01-02T00:00:00.000+01:00'
 figure: "/src/images/gavel_black_24dp.svg"
-description: Bylaws for the Danish Society of Extracellular Vesicles (DSEV)
+description: Bylaws of the Danish Society for Extracellular Vesicles (DSEV)
 
 ---
 ## NAME and OBJECTIVE:
