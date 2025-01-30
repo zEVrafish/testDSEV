@@ -25,13 +25,19 @@
                 <!-- Settings for entries -->
                 {% set item_list = collections.posts | filterByTag('courses', 'jobs') %}
                 {% for item in item_list | reverse %}
-                <a href="{{ item.data.link }}" class="carousel-cell carousel-style h-72" style="background-color: white;" target="_blank">
+                <a href="{{ item.url }}" class="carousel-cell carousel-style h-72" style="background-color: rgb(245 245 245);" target="_blank">
                     <div class="flex h-full flex-col justify-between space-y-3 p-3">
                         <!-- Image -->
-                        <div class="h-1/2 sm:h-1/3 md:h-1/2">{% image item.data.institution_logo, "Institution logo", "object-contain h-full w-4/6 mx-auto" %}</div>
+                        <div class="h-2/5 sm:h-1/4 md:h-2/5 p-4">
+                            {% if 'courses' in item.data.tags %}
+                                {% image "/images/icons/icon_education.svg", "Course logo", "object-contain h-full w-4/6 mx-auto" %}
+                            {% elif 'jobs' in item.data.tags %}
+                                {% image "/images/icons/icon_phone.svg", "Job logo", "object-contain h-full w-4/6 mx-auto" %}
+                            {% endif %}
+                        </div>
 
                         <!-- Text container -->
-                        <div class="h-1/2 sm:h-4/6 md:h-1/2 flex flex-col justify-between space-y-1">
+                        <div class="h-3/5 sm:h-3/4 md:h-3/5 flex flex-col justify-between space-y-1">
                             <!-- Xs & small viewports -->
                             <h2 class="font-semibold md:w-11/12 text-gray-900 md:text-sm sm:text-lg lg:text-base text-sm mx-auto text-center w-3/4 sm:w-10/12 h-2/3 overflow-hidden">
                                 {{ item.data.title }}

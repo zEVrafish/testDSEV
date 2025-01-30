@@ -5,7 +5,6 @@ provider: Aarhus University (Faculty of Health)
 level: Master
 semester: 5 ECTS
 organiser: Peter Lindbjerg Nejsum, PhD
-institution_logo: /images/aulogo.png
 ---
 ### Brief description
 
