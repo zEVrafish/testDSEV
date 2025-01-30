@@ -14,15 +14,39 @@ collections:
       - {label: "Publish Date", name: "date", widget: "datetime", time_format: HH:mm:ssZ, date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
       - {label: "Author", name: "author", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "research_infrastructure"
-    label: "Research Infrastructure"
-    folder: "src/posts/research_infrastructure"
-    create: true
-    fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Location", name: "location", widget: "string"}
-      - {label: "Infrastructure", name: "infrastructure", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - label: "Research Infrastructure"
+    name: "research_infrastructure"
+    editor:
+      preview: false
+    files:
+      - label: "Research Infrastructure"
+        name: "research_infrastructure"
+        file: "src/_data/research_infrastructure.json"
+        fields:
+          - label: "Research Infrastructure"
+            name: "research_infrastructure"
+            widget: "list"
+            fields:
+              - label: "Title"
+                name: "title"
+                widget: "string"
+                required: true
+              - label: "Photo"
+                name: "photo"
+                widget: "image"
+                required: false
+              - label: "Location"
+                name: "location"
+                widget: "string"
+                required: true
+              - label: "Infrastructure"
+                name: "infrastructure"
+                widget: "string"
+                required: true
+              - label: "Body"
+                name: "body"
+                widget: "markdown"
+                required: true
   - name: "courses"
     label: "Courses Available"
     folder: "src/posts/courses"
