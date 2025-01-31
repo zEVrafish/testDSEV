@@ -1,9 +1,9 @@
 ---
-title: Small-Particle Flow Cytometry
+title: Beckman Coulter CytoFLEX nano
 date: 2024-11-01
 author: Aarhus University
 location: FACS Core Facility, Aarhus University
-infrastructure: Small-Particle Flow Cytometer
+infrastructure: Small-Particle Flow Cytometry
 ---
 #### Description
 
