@@ -8,6 +8,8 @@ collections:
   - name: "news" # Used in routes, e.g., /admin/collections/blog
     label: "News" # Used in the UI
     folder: "src/posts/news" # The path to the folder where the documents are stored
+    media_folder: "src/images/photos" # Folder where uploaded media files will be stored
+    public_folder: "/images/photos" # URL path to access the media files
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string"}
@@ -16,6 +18,8 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Research Infrastructure"
     name: "research_infrastructure"
+    media_folder: "src/images/research_equipment" # Folder where uploaded media files will be stored
+    public_folder: "/images/research_equipment" # URL path to access the media files
     editor:
       preview: false
     files:
@@ -85,6 +89,8 @@ collections:
       - {label: "Publish date", name: "published", widget: "datetime", time_format: "HH:mm:ssZ", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
   - label: "Board Members"
     name: "board_members"
+    media_folder: "src/images/portraits" # Folder where uploaded media files will be stored
+    public_folder: "/images/portraits" # URL path to access the media files
     editor:
       preview: false
     files:
@@ -134,6 +140,8 @@ collections:
                 required: false
   - label: "Researcher Profiles"
     name: "researcher_profiles"
+    media_folder: "src/images/portraits" # Folder where uploaded media files will be stored
+    public_folder: "/images/portraits" # URL path to access the media files
     editor:
       preview: false
     files:
