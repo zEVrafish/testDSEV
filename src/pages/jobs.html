@@ -18,7 +18,7 @@ description: Scientific jobs advertised by DSEV members
         <div class="pt-4 flex flex-col">
             <a class="text-lg tracking-normal text-blue-500" href="{{ post.url }}">{{ post.data.title }} </a>
             <time class="text-sm tracking-tight text-gray-600 postlist-date" datetime="{{ post.date | htmlDateString }}">
-                {{ post.date | readableDate }}
+                {{ post.data.employer }}
             </time>
         </div>
         {% endfor %}

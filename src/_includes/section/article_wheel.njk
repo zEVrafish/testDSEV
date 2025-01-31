@@ -39,7 +39,14 @@
                         <!-- Text container -->
                         <div class="h-3/5 sm:h-3/4 md:h-3/5 flex flex-col justify-between space-y-1">
                             <!-- Xs & small viewports -->
-                            <h2 class="font-semibold md:w-11/12 text-gray-900 md:text-sm sm:text-lg lg:text-base text-sm mx-auto text-center w-3/4 sm:w-10/12 h-2/3 overflow-hidden">
+                            <h1 class="font-bold md:w-11/12 text-gray-400 md:text-sm sm:text-lg lg:text-base text-sm mx-auto w-3/4 sm:w-10/12 h-1/6 overflow-hidden" style="font-variant-caps: small-caps;">
+                                {% if 'courses' in item.data.tags %}
+                                    course
+                                {% elif 'jobs' in item.data.tags %}
+                                    job posting
+                                {% endif %}
+                            </h1>
+                            <h2 class="font-semibold md:w-11/12 text-gray-900 md:text-sm sm:text-lg lg:text-base text-sm mx-auto text-center w-3/4 sm:w-10/12 h-1/2 overflow-hidden">
                                 {{ item.data.title }}
                             </h2>
                             <h3 class="md:text-xs overflow-hidden md:w-10/12 sm:text-sm text-xs lg:text-sm text-gray-700 text-center mx-auto w-8/12 sm:w-4/5 h-1/3">
