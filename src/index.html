@@ -23,7 +23,7 @@ layout: layouts/base.njk
 <!-- Middle section -->
 <div class="w-full pl-4 pr-4 grid sm:grid-cols-2 grid-cols-1 gap-4 max-w-2xl text-black mx-auto" x-data="{ contact: false, membership: false }">
   <!-- Membership -->
-  <button type="button" class="card-banner hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" @click="membership = !membership">
+  <button type="button" class="card-banner bg-light-secondary dark:bg-dark-secondary hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-dark-tertiary dark:focus:bg-dark-tertiary focus:outline-none" @click="membership = !membership">
       <!-- Logo -->
       <div class="text-dsev flex fill_current h-8 w-full">
           {{ '/src/images/icons/icon_registration.svg' | svgContents("fill-current block h-12 w-12 block mx-auto my-auto") | safe }}
@@ -31,13 +31,13 @@ layout: layouts/base.njk
 
       <!-- Heading -->
       <div class="h-auto w-full">
-          <h2 class="text-lg">Membership</h2>
-          <p class="text-xs text-gray-600">How to become a member</p>
+          <h2 class="text-lg dark:text-white">Membership</h2>
+          <p class="text-xs text-gray-600 dark:text-gray-400">How to become a member</p>
       </div>
   </button>
 
   <!-- Contact us (card) -->
-  <button type="button" class="card-banner hover:bg-gray-200 focus:bg-gray-200 focus:outline-none" @click="contact = !contact">
+  <button type="button" class="card-banner bg-light-secondary dark:bg-dark-secondary hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-dark-tertiary dark:focus:bg-dark-tertiary focus:outline-none" @click="contact = !contact">
       <!-- Logo -->
       <div class="text-dsev flex fill_current h-8 w-full">
           {{ '/src/images/icons/icon_email.svg' | svgContents("fill-current  block h-12 w-12 block mx-auto my-auto") | safe }}
@@ -45,8 +45,8 @@ layout: layouts/base.njk
 
       <!-- Heading -->
       <div class="h-auto w-full">
-          <h2 class="text-lg">Contact</h2>
-          <p class="text-xs text-gray-600">Write us a message</p>
+          <h2 class="text-lg dark:text-white">Contact</h2>
+          <p class="text-xs text-gray-600 dark:text-gray-400">Write us a message</p>
       </div>
   </button>
 
