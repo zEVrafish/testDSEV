@@ -18,7 +18,7 @@ figure: "/src/images/groups_black_24dp.svg"
         {% for name, item in board_members %} 
         {% for inner_data in item %} 
         {% if inner_data.current_board_member %} 
-        <div class="flex flex-col bg-white shadow-xl h-auto w-auto rounded-lg p-2">
+        <div class="flex flex-col bg-light-secondary dark:bg-dark-secondary shadow-xl h-auto w-auto rounded-lg p-2">
             <!-- Image -->
             <div class="flex items-center justify-center p-4">
                 {% image inner_data.photo, "Portrait", "w-44 h-44 rounded-full object-cover object-top" %}
@@ -28,7 +28,7 @@ figure: "/src/images/groups_black_24dp.svg"
             <div class="flex flex-row justify-between pl-4 pr-4 pb-4">
                 <div class="">
                     <p class="font-semibold text-lg">{{ inner_data.name }}</p>
-                    <p class="text-indigo-900">{{ inner_data.position }}</p>
+                    <p class="text-indigo-900 dark:text-indigo-100">{{ inner_data.position }}</p>
                 </div>
 
                 <!-- Icons -->
@@ -57,15 +57,15 @@ figure: "/src/images/groups_black_24dp.svg"
         {% for name, item in board_members %} 
         {% for inner_data in item %} 
         {% if not inner_data.current_board_member %} 
-        <div class="flex flex-col bg-white shadow-xl h-auto w-auto rounded-lg p-2">
+        <div class="flex flex-col bg-light-secondary dark:bg-dark-secondary shadow-xl h-auto w-auto rounded-lg p-2">
             <!-- Image -->
             <div class="flex items-center justify-center p-4">{% image inner_data.photo, "Portrait", "w-44 h-44 rounded-full object-cover object-top" %}</div>
 
             <!-- Text -->
             <div class="pl-4 pr-4 pb-4">
                 <p class="font-semibold text-lg">{{ inner_data.name }}</p>
-                <p class="text-indigo-900">{{ inner_data.position }}</p>
-                <p class="italic text-xs text-gray-700">{{ inner_data.start_date }} - {{ inner_data.end_date }}</p>
+                <p class="text-indigo-900 dark:text-indigo-100">{{ inner_data.position }}</p>
+                <p class="italic text-xs text-gray-700 dark:text-gray-300">{{ inner_data.start_date }} - {{ inner_data.end_date }}</p>
             </div>
         </div>
 
