@@ -18,14 +18,14 @@ collections:
       - {label: "Body", name: "body", widget: "markdown"}
   - label: "Research Infrastructure"
     name: "research_infrastructure"
-    media_folder: "/src/images/infrastructure" # Folder where uploaded media files will be stored
-    public_folder: "/images/infrastructure" # URL path to access the media files
     editor:
       preview: false
     files:
       - label: "Research Infrastructure"
         name: "research_infrastructure"
         file: "src/_data/research_infrastructure.json"
+        media_folder: "/src/images/portraits" # Folder where uploaded media files will be stored
+        public_folder: "/images/portraits" # URL path to access the media files
         fields:
           - label: "Research Infrastructure"
             name: "research_infrastructure"
@@ -93,14 +93,14 @@ collections:
       - {label: "Publish date", name: "published", widget: "datetime", time_format: "HH:mm:ssZ", date_format: "YYYY-MM-DD", format: "YYYY-MM-DD"}
   - label: "Board Members"
     name: "board_members"
-    media_folder: "/src/images/portraits" # Folder where uploaded media files will be stored
-    public_folder: "/images/portraits" # URL path to access the media files
     editor:
       preview: false
     files:
       - label: "Board Members"
         name: "board_members"
         file: "src/_data/board_members.json"
+        media_folder: "/src/images/portraits" # Folder where uploaded media files will be stored
+        public_folder: "/images/portraits" # URL path to access the media files
         fields:
           - label: "Board Members"
             name: "board_members"
@@ -144,14 +144,14 @@ collections:
                 required: false
   - label: "Researcher Profiles"
     name: "researcher_profiles"
-    media_folder: "/src/images/portraits" # Folder where uploaded media files will be stored
-    public_folder: "/images/portraits" # URL path to access the media files
     editor:
       preview: false
     files:
       - label: "Researcher Profiles"
         name: "researcher_profiles"
         file: "src/_data/researcher_profiles.json"
+        media_folder: "/src/images/portraits" # Folder where uploaded media files will be stored
+        public_folder: "/images/portraits" # URL path to access the media files
         fields:
           - label: "Researcher Profiles"
             name: "researcher_profiles"
