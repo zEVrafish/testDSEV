@@ -39,7 +39,7 @@ figure: "/src/images/groups_black_24dp.svg"
                     </a>
                     {% endif %}
                     {% if inner_data.web_url %}
-                    <a href="http://{{ inner_data.web_url }}" class="flex justify-center">
+                    <a href="https://{{ inner_data.web_url }}" target="_blank" class="flex justify-center">
                         {{ '/src/images/icons/icon_link.svg' | svgContents("fill-current h-6 w-6 block mx-auto my-auto") | safe }}
                     </a>
                     {% endif %}
