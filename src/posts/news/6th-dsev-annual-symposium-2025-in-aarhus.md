@@ -3,8 +3,8 @@ title: 6th DSEV Annual Symposium 2025 in Aarhus
 date: 2025-07-03
 author: na
 ---
-Registration and abstract submission for the 6th annual symposium are now open!\
-Signup here: <https://events.au.dk/dsev-annualsymposium2025>
+Registration and abstract submission are now open!\
+Signup here: [https://events.au.dk/dsev-annualsymposium2025](https://events.au.dk/dsev-annualsymposium2025_blank)
 
 ## Venue
 
