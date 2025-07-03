@@ -4,7 +4,7 @@ date: 2025-07-03
 author: na
 ---
 Registration and abstract submission are now open!\
-Signup here: [https://events.au.dk/dsev-annualsymposium2025](https://events.au.dk/dsev-annualsymposium2025_blank)
+Signup here: <https://events.au.dk/dsev-annualsymposium2025>
 
 ## Venue
 
