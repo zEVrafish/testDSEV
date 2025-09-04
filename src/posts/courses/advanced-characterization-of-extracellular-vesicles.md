@@ -3,7 +3,7 @@ title: Advanced Characterization of Extracellular Vesicles
 date: 2024-11-01
 provider: Aalborg University (Faculty of Medicine)
 level: PhD
-semester: Autumn, 5 days in Nov (3 ECTS)
+semester: Autumn, 5 days in November (3 ECTS)
 organiser: Maiken Mellergaard, Malene M Jørgensen, and Aase Handberg
 ---
 ### Brief description
