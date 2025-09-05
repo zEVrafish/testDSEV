@@ -24,4 +24,4 @@ The students participating in this course should have basic knowledge on EVs and
 
 ### Contact
 
-Maiken Mellergaard ([maiken.pedersen@rn.dk](<mailto: maiken.pedersen@rn.dk>))
+Associate Professor Maiken Mellergaard ([maiken.pedersen@rn.dk](<mailto: maiken.pedersen@rn.dk>))
