@@ -12,7 +12,7 @@ Extracellular vesicles (EVs) have been shown to be released from all three domai
 
 In this course, we will cover basic aspects of EVs, which will include their nomenclature, biogenesis, release and uptake, as well as EV cargos. Different isolation methods will be introduced, such as ultracentrifugation, size exclusion chromatography and precipitation techniques, and their pros and cons will be discussed. Different methods to identify, characterize and enumerate EVs will be presented and discussed as well as how to explore their content. As it is not a trivial task to work with EVs, we will discuss critical considerations during the collection and isolation of EVs from various sample types, including non-model organisms. We will then discuss how to explore EV function in vitro and in vivo and, lastly the diagnostic and therapeutic potential of EVs (e.g. as drug delivery systems, vaccines).
 
-**Admission requirements**
+### **Admission requirements**
 
 To apply for the course you must have passed a relevant Bachelor's degree.
 
@@ -22,6 +22,9 @@ It is recommended that the students have basic knowledge of molecular biology an
 
 **General:** 
 
-Exchange Students: nomination from your home university
-
+Exchange Students: nomination from your home university\
 Freemovers: documentation for English Language proficiency
+
+### Contact
+
+Professor Peter Lindbjerg Nejsum ([pn@clin.au.dk](<mailto: pn@clin.au.dk>))
