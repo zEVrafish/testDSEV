@@ -1,7 +1,7 @@
 ---
 date: 2025-01-10
-title: (deadline passed) Fully-funded 3-year PhD position on genetic engineering
-  of extracellular vesicles in vivo
+title: "[Applications Closed] Fully-funded 3-year PhD position on genetic
+  engineering of extracellular vesicles in vivo"
 employer: Aarhus University
 deadline: 2025-02-01T23:59
 startdate: 2025-05-01
