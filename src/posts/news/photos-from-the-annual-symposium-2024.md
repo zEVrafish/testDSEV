@@ -1,5 +1,5 @@
 ---
-title: Photos from the Annual Symposium 2024
+title: Photos from 5th DSEV Annual Symposium 2024 in Aalborg
 date: 2025-01-10
 author: Yuya Hayashi
 ---
