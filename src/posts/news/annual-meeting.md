@@ -1,8 +1,7 @@
 ---
+title: 3rd DSEV Annual Symposium 2022 in Roskilde
 date: 2022-08-22T13:01:50+02:00
-title: Annual meeting
-author: ''
-
+author: Yuya Hayashi
 ---
 Registration and abstract submission for the 3rd Annual meeting at DSEV is now open. 
 
