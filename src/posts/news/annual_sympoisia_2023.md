@@ -1,8 +1,7 @@
 ---
-title: Annual symposium 2023
+title: 4th DSEV Annual Symposium 2023 in Odense
 date: 2023-08-15
 author: Anders Askeland
-
 ---
 Registration and abstract submission for the 4th Annual meeting at DSEV is now open. 
 
