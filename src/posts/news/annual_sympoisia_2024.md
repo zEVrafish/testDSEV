@@ -1,6 +1,7 @@
 ---
-title: Annual symposium 2024
+title: 5th DSEV Annual Symposium 2024 in Aalborg
 date: 2024-07-01
+author: Yuya Hayashi
 ---
 
 Registration and abstract submission for the 5th Annual meeting at DSEV are now open!
