@@ -1,7 +1,7 @@
 ---
 title: 6th DSEV Annual Symposium 2025 in Aarhus
 date: 2025-07-03
-author: na
+author: Yuya Hayashi
 ---
 Registration and abstract submission are now open!\
 Signup here: <https://events.au.dk/dsev-annualsymposium2025>
