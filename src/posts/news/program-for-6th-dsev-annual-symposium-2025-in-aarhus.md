@@ -1,5 +1,5 @@
 ---
-title: Program for 6th DSEV Annual Symposium 2025 in Aarhus
+title: Programme for 6th DSEV Annual Symposium 2025 in Aarhus
 date: 2025-09-09
 author: Yuya Hayashi
 ---
