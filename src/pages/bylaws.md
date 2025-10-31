@@ -33,7 +33,7 @@ description: Bylaws of the Danish Society for Extracellular Vesicles (DSEV)
 §9. The Society's accounts are to be audited by two accountants who are elected along with two deputies from among the members at the General Assembly. 
 > (2). Summary of the audited account must be presented at the General Assembly and the details made available for general viewing upon request from a member.
 
-##ACTIVITIES OF THE SOCIETY 
+## ACTIVITIES OF THE SOCIETY 
 §10. The Society's year is the calendar year.
 §11. To participate in the Society's activities, she/he must hold valid membership (cf. §4) unless being invited as a guest or sponsor on a specific event. The Board may also
 arrange an open event where a registration fee is not required for participation, but participation in such an event does not grant membership.
