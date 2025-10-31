@@ -21,16 +21,18 @@ description: Bylaws of the Danish Society for Extracellular Vesicles (DSEV)
 §5. If a member wishes to terminate his or her membership, the member must submit a written request to this effect to the Board prior to January 1 of the year to give up the membership. 
 > (2). The Board is empowered to delete a member from the Society's list of members if the person has not paid membership fee for two consecutive years, despite written warnings. 
 
-§6. By decision of a general assembly, and subsequent to a proposal by the Board or by at least ten of the Society's members, the Society can award honorary membership. Such members do not pay membership fee but have the same rights as the Society's ordinary members. MANAGEMENT OF THE SOCIETY: 
+§6. By decision of a general assembly, and subsequent to a proposal by the Board or by at least ten of the Society's members, the Society can award honorary membership. Such members do not pay membership fee but have the same rights as the Society's ordinary members.
 
+## MANAGEMENT OF THE SOCIETY: 
 §7. The Society is managed by the Board consisting of one-five members: a president, a vice-president, a treasurer, a secretary, and a PR-manager (in collaboration with the secretary), as well as two other members as well as 1-2 deputy board members. The composition of the Board intent to reflect the Society's geographical distribution. 
 > (2). The president is elected directly by the general assembly (cf. §14), while the Board is to appoint the vice-president, treasurer, and secretary, PR-manager from among the board members. 
  
 §8. The Board members are elected for 2 years at a time, but re-election can take place. The incumbency of the president is, however, limited to 3 consecutive election periods. After leaving the office of president, she/he may be elected to the Board again, though not for the office of president. After four years' absence from that office, she/he may be re-elected as president. 
 
 §9. The Society's accounts are to be audited by two accountants who are elected from among the members at the ordinary general assembly. 
-> (2). The audited account must be made available for general viewing at a place to be announced by the Board at least 8 days prior to the general assembly. ACTIVITIES OF THE SOCIETY 
+> (2). The audited account must be made available for general viewing at a place to be announced by the Board at least 8 days prior to the general assembly.
 
+## ACTIVITIES OF THE SOCIETY 
 §10. The Society's year is the calendar year. §11. Payment of membership fee is to be announced when announcing the annual meeting. In order to stay a member, the member shall pay the fee before the annual meeting. The membership fee is to be determined by the Board and must be approved by the general assembly.
 
 §12. Meetings in the Society are to be announced in writing to each member, and if possible and appropriate in the relevant scientific publications. Such announcements are normally to be made public at least 7 days before the meeting in question.
@@ -41,7 +43,6 @@ description: Bylaws of the Danish Society for Extracellular Vesicles (DSEV)
 §14. For presentation at the general assembly, the Board is to prepare an annual report that contains a brief overview of the Society's activities the past year. 
 
 ## GENERAL ASSEMBLY. AMENDMENTS TO BYLAWS AND DISSOLUTION OF THE SOCIETY:
-
 §15. The Society's general assembly is to be held once a year in conjunction with the Annual Scientific meeting in the last quarter of the year. The agenda is to contain the following topics: 
 1. Election of a notetaker.
 2. Election of meeting leader.
@@ -69,8 +70,6 @@ description: Bylaws of the Danish Society for Extracellular Vesicles (DSEV)
 
 §20. Changes or amendments to these bylaws may only be made following approving vote at an ordinary general assembly. The full wording of the amendment is to be sent out to two weeks before the general assembly.
 > (2). A proposed amendment may only be voted upon if it was made known to the members upon announcement of the general assembly.
-
-
 > (3). Approval of the proposed amendment is only valid when two-thirds of the members present at the meeting vote for the proposal.
 
 
