@@ -18,6 +18,7 @@ description: Bylaws of the Danish Society for Extracellular Vesicles (DSEV)
 
 §4. The membership is linked to registration of participation in the Society's activities such as the Annual Symposium (cf. §13). Admission of honorary membership is described in §6.
 > (2). The membership is valid for one year and is renewed by participating in an event organised by the Society where registration fee is required.
+
 > (3). The membership rights of Board members do not lapse as long as they remain on the Board, and they can be re-elected in their absence at the General Assembly.
 
 §5. The Board is empowered to delete a member from the Society's list of members if the person fails, despite written warnings, to settle the payment incurred for participation in the Society's activities.
@@ -67,6 +68,7 @@ arrange an open event where a registration fee is not required for participation
 
 §20. Changes or amendments to these bylaws may only be made following approving vote at the General Assembly. The full wording of the amendment(s) shall be sent out to each member two weeks before the General Assembly.
 > (2). A proposed amendment may only be voted upon if it was made known to the members in full.
+
 > (3). Approval of the proposed amendment(s) is only valid when at least two-thirds of the members present at the General Assembly vote for the proposal.
 
 §21. Dissolution of the Society can only take place if based on a proposal from the Board or on a written and motivated proposal that has been submitted to the Board by at least twenty members. The proposal must first be debated and approved by an ordinary General Assembly, and subsequently, by an extraordinary General Assembly. The latter must take place at least three weeks after, and at the most two months after, the ordinary General Assembly. To be valid, the proposal must be approved by both General Assemblies by a
