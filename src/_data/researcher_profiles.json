@@ -19,7 +19,7 @@
     {
       "name": "Maiken Mellergaard",
       "photo": "/images/portraits/maiken.png",
-      "position": "Aalborg University Hospital & Aalborg University",
+      "position": "Aalborg University Hospital",
       "email": "maiken.pedersen@rn.dk",
       "web_url": "vbn.aau.dk/da/persons/maikenmp",
       "description": "### EV Expertise\n\nTissue-specific EVs, High-resolution flow cytometry, Immunology, Immunometabolism\n\n### Affiliation\n\nSenior Scientist\\\nDepartment of Clinical Biochemistry\\\n(Aalborg University Hospital)\n\nAssociate Professor\\\nDepartment of Clinical Medicine\\\n(Aalborg University)\n\n### Censor Corps\n\nYes\n\n### MOVE Host\n\nYes[](<>) ([Aase Handberg](https://aalborguh.rn.dk/da/Forskning/Forskningsomraader/Forskningscentre/The-CardioMetabolic-and-Biomedical-Research-Group))"
@@ -28,7 +28,7 @@
       "name": "Aase Handberg",
       "photo": "/images/portraits/aase.png",
       "email": "aaha@rn.dk",
-      "position": "Aalborg University Hospital & Aalborg University",
+      "position": "Aalborg University Hospital",
       "web_url": "aalborguh.rn.dk/da/Forskning/Forskningsomraader/Forskningscentre/The-CardioMetabolic-and-Biomedical-Research-Group",
       "description": "### EV Expertise\n\nTissue-specific EVs, High-resolution flow cytometry, Obesity complications\n\n### Affiliation\n\nChief Physician\\\nDepartment of Clinical Biochemistry\\\n(Aalborg University Hospital)\n\nProfessor\\\nDepartment of Clinical Medicine\\\n(Aalborg University)\n\n### Censor Corps\n\nNo\n\n### MOVE Host\n\nYes[](<>)"
     },
@@ -41,7 +41,7 @@
       "photo": "/images/portraits/peter2.png"
     },
     {
-      "description": "### EV Expertise\n\nEV Array, EV biomarkers, Microarray, Multimarker analysis\n\n### Affiliation\n\nHead of Research, Senior Scientist\\\nDepartment of Clinical Immunology\n\nAssociate Professor\\\nDepartment of Clinical Medicine\n\n### Censor Corps\n\nYes (until 2026)\n\n### MOVE Host\n\nYes[](<>)",
+      "description": "### EV Expertise\n\nEV Array, EV biomarkers, Microarray, Multimarker analysis\n\n### Affiliation\n\nHead of Research, Senior Scientist\\\nDepartment of Clinical Immunology\\\n(Aalborg University Hospital)\n\nAssociate Professor\\\nDepartment of Clinical Medicine\\\n(Aalborg University)\n\n### Censor Corps\n\nYes (until 2026)\n\n### MOVE Host\n\nYes[](<>)",
       "name": "Malene Møller Jørgensen",
       "photo": "/images/portraits/malene2.png",
       "position": "Aalborg University Hospital",
@@ -54,7 +54,7 @@
       "position": "Aalborg University Hospital",
       "email": "srk@rn.dk",
       "web_url": "vbn.aau.dk/en/persons/srk",
-      "description": "### EV Expertise\n\nEVs in coagulation processes, EVs as markers of cancer and Alzheimer's disease\n\n### Affiliation\n\nProfessor, Senior Consultant\\\nDepartment of Clinical Medicine\\\n(Aalborg University)\\\nDepartment of Clinical Biochemistry\\\n(Aalborg University Hospital)\n\n### Censor Corps\n\nNo\n\n### MOVE Host\n\nNo"
+      "description": "### EV Expertise\n\nEVs in coagulation processes, EVs as markers of cancer and Alzheimer's disease\n\n### Affiliation\n\nProfessor, Senior Consultant\\\nDepartment of Clinical Medicine\\\n(Aalborg University)\n\nDepartment of Clinical Biochemistry\\\n(Aalborg University Hospital)\n\n### Censor Corps\n\nNo\n\n### MOVE Host\n\nNo"
     },
     {
       "name": "Christian Vægter",
@@ -87,6 +87,38 @@
       "email": "aidah@health.sdu.dk",
       "web_url": "portal.findresearcher.sdu.dk/en/persons/Aidah",
       "description": "### EV Expertise\n\nImmunoregulatory properties of EVs in cancer and chronic inflammation, High-resolution flow cytometry\n\n### Affiliation\n\nAssociate Professor\\\nDepartment of Molecular Medicine\n\n### Censor Corps\n\nNo\n\n### MOVE Host\n\nNo"
+    },
+    {
+      "name": "Jan Trige Rasmussen",
+      "photo": "/images/portraits/jtr.png",
+      "position": "Aarhus University",
+      "email": "jatr@mbg.au.dk",
+      "web_url": "mbg.au.dk/en/research/research-areas/cellular-health-intervention-and-nutrition/jan-trige-rasmussen",
+      "description": "### EV Expertise\n\nMilk EV, Large-scale purification, Chromatography, EV characterization, miRNA, Bioactivities\n\n### Affiliation\n\nSenior Researcher\\\nDepartment of Molecular Biology and Genetics\n\n### Censor Corps\n\nYes\n\n### MOVE Host\n\nNo"
+    },
+    {
+      "name": "Ole Østergaard",
+      "photo": "/images/portraits/ole.png",
+      "position": "University of Copenhagen",
+      "email": "ole.ostergaard@cpr.ku.dk",
+      "web_url": "www.cpr.ku.dk/staff/?pure=en/persons/88428",
+      "description": "### EV Expertise\n\nMass spectrometry-based proteome profiling of EVs from body fluids and cell lines\n\n### Affiliation\n\nResearcher\\\nNovo Nordisk Foundation Center for Protein Research\n\n### Censor Corps\n\nNo\n\n### MOVE Host\n\nNo"
+    },
+    {
+      "name": "Suzette Sørensen",
+      "photo": "/images/portraits/ss.png",
+      "position": "North Denmark Regional Hospital",
+      "email": "suzette.soerensen@rn.dk",
+      "web_url": "vbn.aau.dk/en/persons/sus",
+      "description": "### EV Expertise\n\nIsolation of gut microbiota-derived EVs (GM-EVs) from biomaterial, 16S rRNA gene sequencing of EV associated DNA, GM-EVs in metabolism and gut-brain-axis\n\n### Affiliation\n\nSenior Scientist\\\nCenter for Clinical Research\\\n(North Denmark Regional Hospital)\n\nAssociate Professor\\\nDepartment of Clinical Medicine\\\n(Aalborg University)\n\n### Censor Corps\n\nNo\n\n### MOVE Host\n\nNo"
+    },
+    {
+      "description": "### EV Expertise\n\nPlasma, microRNA, and Beta cells\n\n### Affiliation\n\nProfessor\\\nDepartment of Science and Environment\n\n### Censor Corps\n\nYes\n\n### MOVE Host\n\nNo[](<>)",
+      "name": "Louise Torp Dalgaard",
+      "photo": "/images/portraits/ltd.png",
+      "position": "Roskilde University",
+      "email": "ltd@ruc.dk",
+      "web_url": "microrna.ruc.dk/"
     }
   ]
 }
