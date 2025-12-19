@@ -4,12 +4,12 @@ tags:
 - about
 title: Global EV Societies
 date: '2019-01-02T00:00:00.000+01:00'
-figure: "/src/images/gavel_black_24dp.svg"
-description: Global EV Societies
+figure: "/src/images/groups_black_24dp.svg"
+description: Explore EV networks
 
 ---
 ## International Society for Extracellular Vesicles (ISEV)
-[ISEV](https://www.isev.org) is the largest society for EV researchers across the world.
+<a href="https://www.isev.org" target="_blank" rel="noopener noreferrer">ISEV</a> is the largest society for EV researchers across the world.
 See [Global EV Societies](https://www.isev.org/national-societies-global-ev-network) for a directory of national societies.
 
 ## Student Network on Extracellular Vesicles (SNEV)
@@ -20,7 +20,7 @@ At DSEV, we have a SNEV ambassador whose aim is to connect student members of DS
 ## MObility for VEsicles research in Europe (MOVE) 
 [MOVE](https://www.ukev.org.uk/move-mobility-ev-europe/) is not a society itself but an alliance to promote mobility of ECRs across Europe through providing short-term fellowships (MOVEr). At DSEV, a MOVE fellowship is granted annually following selection by the DSEV Board.
 
-# MOVE application process
+### MOVE application process
 The fellowship is intended for research technicians, PhD students and early-stage postdoctoral researchers (≤ five years, excluding career breaks). There may be some exceptions, for example, suitable applications from master students. The fellowship will cover travel and subsistence (but not bench fees or salary) to work within a host lab at an academic institution in a different European country for between one and three months, up to a maximum value of DKK 15.000. The travel must be performed within 12 months after being awarded.
 
 Process:
