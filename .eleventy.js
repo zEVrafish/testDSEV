@@ -12,8 +12,8 @@ const md = require('markdown-it')()
 /*--------- Functions --------*/
 /* Optimize logo (eleventy-img) */
 async function image_logo(src, alt, classes) {
-    /* Set format - Macos does not support avif */
-    let format = ["avif", "png"];
+    /* Set format */
+    let format = ["png"];
 
     /* Write metadata */
     let metadata = await Image(src, {
@@ -38,8 +38,8 @@ async function image_logo(src, alt, classes) {
 
 /* Optimize images (eleventy-img) */
 async function image_image(src, alt, classes) {
-    /* Set format - Macos does not support avif */
-    let format = ["avif", "webp", "jpeg", "png"];
+    /* Set format */
+    let format = ["webp", "jpeg", "png"];
 
     /* Add src */
     var src_new = ""
