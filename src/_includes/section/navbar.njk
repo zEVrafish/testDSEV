@@ -29,7 +29,8 @@
                         <div x-show="dropdownOpen" @click.away="dropdownOpen = false" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="z-50 absolute right-0 mt-2 lg:max-w-xl max-w-xs w-screen origin-top-right shadow-xl">
                             <div class="px-2 pt-2 pb-4 bg-light-secondary dark:bg-dark-secondary rounded-md shadow-xl z-50">
                                 <div class="grid lg:grid-cols-2 grid-cols-1 gap-4">
-                                    {% for post in collections[name] %}
+                                    {% set sorted = collections[name] | sort(attribute="data.title") %}
+                                    {% for post in sorted %}
                                     <a class="flex items-start rounded-lg bg-transparent p-2 
                                               hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline 
                                               text-gray-900 dark:text-gray-200 
