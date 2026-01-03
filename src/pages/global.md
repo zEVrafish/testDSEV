@@ -4,7 +4,7 @@ tags:
 - about
 title: Global EV Societies
 date: '2019-01-02T00:00:00.000+01:00'
-figure: "/src/images/groups_black_24dp.svg"
+figure: "/src/images/icons/icon_link.svg"
 description: Explore EV networks
 
 ---

@@ -21,7 +21,22 @@ layout: layouts/base.njk
 </div>
 
 <!-- Middle section -->
-<div class="w-full pl-4 pr-4 grid sm:grid-cols-2 grid-cols-1 gap-4 max-w-2xl text-black mx-auto" x-data="{ contact: false, membership: false }">
+<div class="w-full pl-4 pr-4 grid sm:grid-cols-3 grid-cols-1 gap-4 max-w-2xl text-black mx-auto" x-data="{ contact: false, membership: false }">
+
+  <!-- Grants -->
+  <button type="button" class="card-banner bg-light-secondary dark:bg-dark-secondary hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-dark-tertiary dark:focus:bg-dark-tertiary focus:outline-none" @click="grants = !grants">
+      <!-- Logo -->
+      <div class="text-dsev flex fill_current h-8 w-full">
+          {{ '/src/images/icons/icon_gavel.svg' | svgContents("fill-current block h-12 w-12 block mx-auto my-auto") | safe }}
+      </div>
+
+      <!-- Heading -->
+      <div class="h-auto w-full">
+          <h2 class="text-lg dark:text-white">Grants</h2>
+          <p class="text-xs text-gray-600 dark:text-gray-400">How to apply</p>
+      </div>
+  </button>
+
   <!-- Membership -->
   <button type="button" class="card-banner bg-light-secondary dark:bg-dark-secondary hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-dark-tertiary dark:focus:bg-dark-tertiary focus:outline-none" @click="membership = !membership">
       <!-- Logo -->
