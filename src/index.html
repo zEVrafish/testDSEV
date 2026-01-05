@@ -21,20 +21,20 @@ layout: layouts/base.njk
 </div>
 
 <!-- Middle section -->
-<div class="w-full pl-4 pr-4 grid sm:grid-cols-3 grid-cols-1 gap-4 max-w-2xl text-black mx-auto" x-data="{ contact: false, membership: false, grants: false }">
+<div class="w-full pl-4 pr-4 grid sm:grid-cols-3 grid-cols-1 gap-4 max-w-2xl text-black mx-auto" x-data="{ contact: false, membership: false }">
 
   <!-- Grants -->
   <a href="/pages/grants/" class="z-40">
   <button type="button" class="card-banner bg-light-secondary dark:bg-dark-secondary hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-dark-tertiary dark:focus:bg-dark-tertiary focus:outline-none">
       <!-- Logo -->
-      <div class="text-dsev flex fill_current h-8 w-full">
+      <div class="text-dsev flex fill_current h-16 w-full">
           {{ '/src/images/icons/icon_gavel.svg' | svgContents("fill-current block h-12 w-12 block mx-auto my-auto") | safe }}
       </div>
 
       <!-- Heading -->
       <div class="h-auto w-full">
-          <h2 class="text-lg dark:text-white">Grants</h2>
-          <p class="text-xs text-gray-600 dark:text-gray-400">How to apply</p>
+          <h2 class="text-xl">Grants</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400">How to apply</p>
       </div>
   </button>
   </a>
@@ -42,28 +42,28 @@ layout: layouts/base.njk
   <!-- Membership -->
   <button type="button" class="card-banner bg-light-secondary dark:bg-dark-secondary hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-dark-tertiary dark:focus:bg-dark-tertiary focus:outline-none" @click="membership = !membership">
       <!-- Logo -->
-      <div class="text-dsev flex fill_current h-8 w-full">
+      <div class="text-dsev flex fill_current h-16 w-full">
           {{ '/src/images/icons/icon_registration.svg' | svgContents("fill-current block h-12 w-12 block mx-auto my-auto") | safe }}
       </div>
 
       <!-- Heading -->
       <div class="h-auto w-full">
-          <h2 class="text-lg dark:text-white">Membership</h2>
-          <p class="text-xs text-gray-600 dark:text-gray-400">How to become a member</p>
+          <h2 class="text-xl">Membership</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400">How to become a member</p>
       </div>
   </button>
 
   <!-- Contact us (card) -->
   <button type="button" class="card-banner bg-light-secondary dark:bg-dark-secondary hover:bg-gray-200 focus:bg-gray-200 dark:hover:bg-dark-tertiary dark:focus:bg-dark-tertiary focus:outline-none" @click="contact = !contact">
       <!-- Logo -->
-      <div class="text-dsev flex fill_current h-8 w-full">
+      <div class="text-dsev flex fill_current h-16 w-full">
           {{ '/src/images/icons/icon_email.svg' | svgContents("fill-current  block h-12 w-12 block mx-auto my-auto") | safe }}
       </div>
 
       <!-- Heading -->
       <div class="h-auto w-full">
-          <h2 class="text-lg dark:text-white">Contact</h2>
-          <p class="text-xs text-gray-600 dark:text-gray-400">Write us a message</p>
+          <h2 class="text-xl">Contact</h2>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Write us a message</p>
       </div>
   </button>
 
