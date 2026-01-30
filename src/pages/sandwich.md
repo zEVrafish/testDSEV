@@ -1,7 +1,7 @@
 ---
 layout: layouts/sandwich.njk
 tags:
-- grants
+- applications
 title: Sandwich grant
 date: '2019-01-02T00:00:00.000+01:00'
 figure: "/src/images/icons/icon_gavel.svg"
@@ -9,27 +9,28 @@ description: How to apply
 
 ---
 
-## MObility for VEsicles research in Europe (MOVE) 
-<a href="https://www.ukev.org.uk/move-mobility-ev-europe/" target="_blank" rel="noopener noreferrer">MOVE</a> is not a society itself but an alliance to promote mobility of ECRs across Europe through providing short-term fellowships (MOVEr). At DSEV, a MOVE fellowship is granted annually following selection by the DSEV Board.
+## New DSEV Initiative: Sandwich Grants for Local EV Communities
+DSEV’s mission is to advance EV research by promoting scientific communication among researchers in Denmark at all career stages. Our annual symposium is an excellent opportunity to connect EV researchers nationwide, and we now also wish to support local EV communities through a new initiative we have termed: "Sandwich Grant".
 
-### MOVE application process
-The fellowship is intended for research technicians, PhD students and early-stage postdoctoral researchers (≤ five years, excluding career breaks). There may be some exceptions, for example, suitable applications from master students. The fellowship will cover travel and subsistence (but not bench fees or salary) to work within a host lab at an academic institution in a different European country for between one and three months, up to a maximum value of DKK 15.000. The travel must be performed within 12 months after being awarded.
+### Aim
+The aim of the Sandwich grant is to strengthen research communication and education at the local community level. The grant is intended to cover basic catering (sandwiches and refreshments) to increase attendance at local meetings, raise awareness of EV research, and foster scientific collaboration. We envision the grant serving as a catalyst for establishing and sustaining local communities for open scientific discussion and new collaborations across departments.
 
-Process:
+### Grant size
+DSEV allocates a total of DKK 5.000 per semester for a couple of Sandwich grants.
 
-1. Identify a suitable registered host lab for your project (<a href="https://www.ukev.org.uk/move-mobility-ev-europe/" target="_blank" rel="noopener noreferrer">Find a host lab in the official MOVE website</a>).
-2. Contact the host lab directly to discuss your proposed project.
-3. Apply for the fellowship by directly mailing to [DSEV(mailto)](mailto:contact@dsev.dk).
-4. The fellowship will be awarded at the DSEV Annual Meeting.
-5. The travel must be performed within 12 months after being awarded and documented with a short presentation (15 minutes) at General Assembly in the following year.
+### Requirements and grant conditions
+The requirements are simple. Your local EV community must have:
 
+1. a name
+2. a website or equivalent (e.g. a LinkedIn page)
+3. members from research groups
+4. a designated contact person
 
-The application must include:
+If awareded, DSEV requests three things from grant recipients before processing reimbursement.
 
-1. Short motivation (10 lines)
-2. Project description (1 page)
-3. CV including a list of publications (max two pages)
-4. Budget (travel, accommodation, consumables, including any co-financing from the sending institution and the host lab)
-5. Signed hosting letter (1 page)
+1. To acknowledge the financial support on the community website or equivalent
+2. To send a photo with attendees at the activities to [web@dsev.dk](mailto:web@dsev.dk) for use on DSEV's social media accounts and website
+3. To keep receipts of the expenses within the amount granted and send them to [contact@dsev.dk](mailto:contact@dsev.dk)
 
-<i>Please note that the intellectual properties, ethical approvements, non-disclosure agreements, and data ownership are held with the host labs. We recommend the home lab of the participant and the foreign host lab agree on these matters. DSEV renounces any liability regarding approvements and agreements.</i>
+### Application process
+The deadline for the Spring 2026 call is 1st March 2026. The applicant should download the form <a href="data/Sandwich_grant_application_form.docx">here</a> and submit the completed form to [contact@dsev.dk](mailto:contact@dsev.dk).

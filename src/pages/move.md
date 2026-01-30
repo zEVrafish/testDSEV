@@ -1,7 +1,7 @@
 ---
 layout: layouts/move.njk
 tags:
-- grants
+- applications
 title: MOVE fellowships
 date: '2019-01-02T00:00:00.000+01:00'
 figure: "/src/images/icons/icon_gavel.svg"
