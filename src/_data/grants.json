@@ -4,15 +4,17 @@
       "title": "MOVE fellowships",
       "call": "One fellowship awarded at DSEV Annual Symposium",
       "type": "MOVE",
-      "body": "#### What we support\n\nOne-three months of research stays at a MOVE host lab in Europe.\n\n#### Grant size\n\nmax. DKK 15.000\n\n#### Eligibility\n\nPhD students, postdocs, research technicians\n\n#### How to apply\n\n<a href="/pages/move/" target="_blank" rel="noopener noreferrer">See details here</a>",
-      "photo": "/images/portraits/fish.png"
+      "body": "#### What we support\n\nOne-three months of research stays at a MOVE host lab in Europe.\n\n#### Grant size\n\nmax. DKK 15.000\n\n#### Eligibility\n\nPhD students, postdocs, research technicians",
+      "photo": "/images/portraits/fish.png",
+	  "page": "/pages/move/"
     },
     {
       "title": "Sandwich grants",
       "type": "Sandwich",
       "photo": "/images/portraits/cytoflexnanosdu.png",
       "call": "Every academic semester",
-      "body": "#### What we support\n\nBasic catering (sandwiches and refreshments) at local meetings.\n\n#### Grant size\n\nDSEV allocates a total budget of max. DKK 5.000 per semester\n\n#### Eligibility\n\nLocal EV community\n\n#### How to apply\n\n<a href="/pages/sandwich/" target="_blank" rel="noopener noreferrer">See details here</a>"
+      "body": "#### What we support\n\nBasic catering (sandwiches and refreshments) at local meetings.\n\n#### Grant size\n\nDSEV allocates a total budget of max. DKK 5.000 per semester\n\n#### Eligibility\n\nLocal EV community",
+	  "page": "/pages/sandwich/"
     }
   ]
 }

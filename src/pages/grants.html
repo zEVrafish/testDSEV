@@ -30,22 +30,17 @@ description: Opportunities for financial support from DSEV
             <div class="flex flex-row justify-between pl-4 pr-4 pb-4 pt-4">
                 <div class="">
                     <p class="font-semibold text-lg">{{ inner_data.title }}</p>
-                    <p class="text-indigo-900 dark:text-indigo-100">{{ inner_data.location }}</p>
+                    <p class="text-indigo-900 dark:text-indigo-100">{{ inner_data.call }}</p>
                 </div>
 
-                <!-- Icons 
+                <!-- Icons -->
                 <div class="flex flex-row space-x-2 text-gray-500">
-                    {% if inner_data.email %}
-                    <a href="mailto: {{ inner_data.email }}" class="flex justify-center">
-                        {{ '/src/images/icons/icon_email.svg' | svgContents("fill-current h-6 w-6 block mx-auto my-auto") | safe }}
+                    <p class="font-semibold text-lg">
+					<a href="https://{{ inner_data.page }}" class="flex justify-center">
+                        How to Apply
                     </a>
-                    {% endif %}
-                    {% if inner_data.web_url %}
-                    <a href="http://{{ inner_data.web_url }}" class="flex justify-center">
-                        {{ '/src/images/icons/icon_link.svg' | svgContents("fill-current h-6 w-6 block mx-auto my-auto") | safe }}
-                    </a>
-                    {% endif %}
-                </div>-->
+					</p>
+                </div>
             </div>
 
             <!-- Description -->
