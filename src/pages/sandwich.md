@@ -33,4 +33,5 @@ If awareded, DSEV requests three things from grant recipients before processing 
 3. To keep receipts of the expenses within the amount granted and send them to [contact@dsev.dk](mailto:contact@dsev.dk)
 
 ### Application process
-The deadline for the Spring 2026 call is 1st March 2026. The applicant should download the form <a href="data/Sandwich_grant_application_form.docx">here</a> and submit the completed form to [contact@dsev.dk](mailto:contact@dsev.dk).
+The deadline for the Spring 2026 call is 1st March 2026. The applicant should download the form <a href="https://dsev.dk/data/sandwich_grant_application_form.docx">here</a> and submit the completed form to [contact@dsev.dk](mailto:contact@dsev.dk).
+
