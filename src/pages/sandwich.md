@@ -23,15 +23,15 @@ The requirements are simple. Your local EV community must have:
 
 1. a name
 2. a website or equivalent (e.g. a LinkedIn page)
-3. members from research groups
-4. a designated contact person
+3. members from more than one research groups
+4. a designated contact person (applicant)
 
 If awareded, DSEV requests three things from grant recipients before processing reimbursement.
 
 1. To acknowledge the financial support on the community website or equivalent
-2. To send a photo with attendees at the activities to [web@dsev.dk](mailto:web@dsev.dk) for use on DSEV's social media accounts and website
-3. To keep receipts of the expenses within the amount granted and send them to [contact@dsev.dk](mailto:contact@dsev.dk)
+2. To send a photo with attendees at the activities to [photos@dsev.dk](mailto:photos@dsev.dk) for use on DSEV's social media accounts and website
+3. To retain all receipts and submit a single reimbursement request to the Treasurer at the end of each semester
 
 ### Application process
-The deadline for the Spring 2026 call is 1st March 2026. The applicant should download the form <a href="https://dsev.dk/data/sandwich_grant_application_form.docx">here</a> and submit the completed form to [contact@dsev.dk](mailto:contact@dsev.dk).
+Twice a year at the beginning of each academic semester, submitted applications are considered by the DSEV board for allocation of the grants. The deadlines are 1st Sep (Autumn call) and 1st Feb (Spring call). The applicant should download the latest form <a href="https://dsev.dk/data/sandwich_grant_application_form_v2.docx">here</a> and submit the completed form to [application@dsev.dk](mailto:application@dsev.dk).
 
