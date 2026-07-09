@@ -55,7 +55,7 @@ In the past years, we have seen a couple of no-shows due to illness etc. at the 
 
 *2. Group payment – electronic invoice*
 
-Group payment is accepted through an electronic invoice sent to a single person in charge of the payment on behalf of the group. During the registration process, please indicate the name of the person in charge. **\[Important] WHEN all group participants are registered**, the responsible person should contact the Treasurer Jonas Ellegaard Nielsen (j.ellegaard@rn.dk) specifying EAN and the total number of group participants, with or without the dinner option, to trigger an electronic invoice.
+Group payment is accepted through an electronic invoice sent to a single person in charge of the payment on behalf of the group. During the registration process, please indicate the name of the person in charge. **\[Important] WHEN all group participants are registered**, the responsible person should contact the Treasurer Jonas Ellegaard Nielsen (j.ellegaard\[at]rn.dk) specifying EAN and the total number of group participants, with or without the dinner option, to trigger an electronic invoice.
 
 \--------------------------------
 
